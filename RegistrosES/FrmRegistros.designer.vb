@@ -33,11 +33,9 @@ Partial Class FrmRegistros
         Me.Label3 = New System.Windows.Forms.Label()
         Me.RegistroBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet1 = New SCAP_LMBA_Tech.DataSet1()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -109,16 +107,6 @@ Partial Class FrmRegistros
         Me.RegistroBindingSource.DataMember = "Registro"
         Me.RegistroBindingSource.DataSource = Me.DataSet1BindingSource
         '
-        'DataSet1BindingSource
-        '
-        Me.DataSet1BindingSource.DataSource = Me.DataSet1
-        Me.DataSet1BindingSource.Position = 0
-        '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'FrmRegistros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -134,7 +122,6 @@ Partial Class FrmRegistros
         Me.ToolStrip1.PerformLayout()
         CType(Me.RegistroBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -149,6 +136,5 @@ Partial Class FrmRegistros
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents DataSet1BindingSource As BindingSource
-    Friend WithEvents DataSet1 As DataSet1
     Friend WithEvents RegistroBindingSource As BindingSource
 End Class

@@ -181,6 +181,11 @@
     <Compile Include="Horarios\FrmModHor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\Datasets\LMBADataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LMBADataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Main\Form1.designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
@@ -246,14 +251,6 @@
     </Compile>
     <Compile Include="RegistrosES\FrmRegistros.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reportes\Datasets\DSRegistros.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DSRegistros.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\Datasets\DSRegistros.vb">
-      <DependentUpon>DSRegistros.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -335,9 +332,19 @@
     <EmbeddedResource Include="RegistrosES\FrmRegistros.resx">
       <DependentUpon>FrmRegistros.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Report1.rdlc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Reportes\Datasets\LMBADataSet.xsc">
+      <DependentUpon>LMBADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Datasets\LMBADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LMBADataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reportes\Datasets\LMBADataSet.xss">
+      <DependentUpon>LMBADataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -348,17 +355,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="Reportes\Datasets\DSRegistros.xsc">
-      <DependentUpon>DSRegistros.xsd</DependentUpon>
-    </None>
-    <None Include="Reportes\Datasets\DSRegistros.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DSRegistros.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Reportes\Datasets\DSRegistros.xss">
-      <DependentUpon>DSRegistros.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Iconos\Custom-Icon-Design-Mono-General-1-Add.ico" />
