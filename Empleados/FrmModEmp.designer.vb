@@ -22,165 +22,180 @@ Partial Class FrmModEmp
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.BtnBack1 = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TxtEmailCorp = New System.Windows.Forms.TextBox()
+        Me.TxtTelefono = New System.Windows.Forms.TextBox()
+        Me.CbxDpto = New System.Windows.Forms.ComboBox()
+        Me.CbxCargo = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtCedula = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TxtPrimerApellido = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TbCargo2 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TxtPrimerNombre = New System.Windows.Forms.TextBox()
+        Me.Label0 = New System.Windows.Forms.Label()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtID = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.TxtSegundoNombre = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TxtSegundoApellido = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TxtEmail = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.CbxSexo = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.TxtDireccion = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.TxtObservacion = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.TxtPIN = New System.Windows.Forms.TextBox()
+        Me.CbxHorario = New System.Windows.Forms.ComboBox()
+        Me.BtnPIN = New System.Windows.Forms.Button()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.TxtPIN2 = New System.Windows.Forms.TextBox()
+        Me.BtnPIN2 = New System.Windows.Forms.Button()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.ChkEstado = New System.Windows.Forms.CheckBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.DtpIngreso = New System.Windows.Forms.DateTimePicker()
+        Me.DtpNac = New System.Windows.Forms.DateTimePicker()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'BtnBack1
+        'TxtEmailCorp
         '
-        Me.BtnBack1.Location = New System.Drawing.Point(23, 379)
-        Me.BtnBack1.Name = "BtnBack1"
-        Me.BtnBack1.Size = New System.Drawing.Size(75, 23)
-        Me.BtnBack1.TabIndex = 44
-        Me.BtnBack1.Text = "Regresar"
-        Me.BtnBack1.UseVisualStyleBackColor = True
+        Me.TxtEmailCorp.Location = New System.Drawing.Point(128, 171)
+        Me.TxtEmailCorp.Name = "TxtEmailCorp"
+        Me.TxtEmailCorp.Size = New System.Drawing.Size(163, 20)
+        Me.TxtEmailCorp.TabIndex = 8
         '
-        'TextBox4
+        'TxtTelefono
         '
-        Me.TextBox4.Location = New System.Drawing.Point(134, 312)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(189, 23)
-        Me.TextBox4.TabIndex = 43
-        Me.TextBox4.Text = "armandomeza@lmba.com"
+        Me.TxtTelefono.Location = New System.Drawing.Point(128, 208)
+        Me.TxtTelefono.Name = "TxtTelefono"
+        Me.TxtTelefono.Size = New System.Drawing.Size(163, 20)
+        Me.TxtTelefono.TabIndex = 10
         '
-        'TextBox3
+        'CbxDpto
         '
-        Me.TextBox3.Location = New System.Drawing.Point(134, 273)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(189, 23)
-        Me.TextBox3.TabIndex = 42
-        Me.TextBox3.Text = "88888888"
+        Me.CbxDpto.FormattingEnabled = True
+        Me.CbxDpto.Location = New System.Drawing.Point(440, 135)
+        Me.CbxDpto.Name = "CbxDpto"
+        Me.CbxDpto.Size = New System.Drawing.Size(163, 21)
+        Me.CbxDpto.TabIndex = 7
         '
-        'ComboBox2
+        'CbxCargo
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(134, 233)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(189, 23)
-        Me.ComboBox2.TabIndex = 41
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(134, 195)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(189, 23)
-        Me.ComboBox1.TabIndex = 40
-        Me.ComboBox1.Text = "Jefe"
+        Me.CbxCargo.FormattingEnabled = True
+        Me.CbxCargo.Location = New System.Drawing.Point(128, 135)
+        Me.CbxCargo.Name = "CbxCargo"
+        Me.CbxCargo.Size = New System.Drawing.Size(163, 21)
+        Me.CbxCargo.TabIndex = 6
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(70, 315)
+        Me.Label7.Location = New System.Drawing.Point(22, 174)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(39, 15)
+        Me.Label7.Size = New System.Drawing.Size(92, 13)
         Me.Label7.TabIndex = 39
-        Me.Label7.Text = "Email:"
+        Me.Label7.Text = "Email Corporativo:"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(54, 276)
+        Me.Label6.Location = New System.Drawing.Point(62, 211)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(55, 15)
+        Me.Label6.Size = New System.Drawing.Size(52, 13)
         Me.Label6.TabIndex = 38
         Me.Label6.Text = "Teléfono:"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(23, 236)
+        Me.Label5.Location = New System.Drawing.Point(349, 138)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(86, 15)
+        Me.Label5.Size = New System.Drawing.Size(77, 13)
         Me.Label5.TabIndex = 37
         Me.Label5.Text = "Departamento:"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(70, 198)
+        Me.Label4.Location = New System.Drawing.Point(76, 138)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(42, 15)
+        Me.Label4.Size = New System.Drawing.Size(38, 13)
         Me.Label4.TabIndex = 36
         Me.Label4.Text = "Cargo:"
         '
-        'TextBox2
+        'TxtCedula
         '
-        Me.TextBox2.Location = New System.Drawing.Point(134, 156)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(189, 23)
-        Me.TextBox2.TabIndex = 35
-        Me.TextBox2.Text = "001-010101-0101A"
+        Me.TxtCedula.Location = New System.Drawing.Point(440, 40)
+        Me.TxtCedula.Name = "TxtCedula"
+        Me.TxtCedula.Size = New System.Drawing.Size(163, 20)
+        Me.TxtCedula.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(62, 159)
+        Me.Label2.Location = New System.Drawing.Point(383, 43)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 15)
+        Me.Label2.Size = New System.Drawing.Size(43, 13)
         Me.Label2.TabIndex = 34
         Me.Label2.Text = "Cedula:"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'TextBox1
+        'TxtPrimerApellido
         '
-        Me.TextBox1.Location = New System.Drawing.Point(134, 118)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(189, 23)
-        Me.TextBox1.TabIndex = 33
-        Me.TextBox1.Text = "Meza Lopez"
+        Me.TxtPrimerApellido.Location = New System.Drawing.Point(128, 100)
+        Me.TxtPrimerApellido.Name = "TxtPrimerApellido"
+        Me.TxtPrimerApellido.Size = New System.Drawing.Size(163, 20)
+        Me.TxtPrimerApellido.TabIndex = 4
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(55, 121)
+        Me.Label1.Location = New System.Drawing.Point(38, 103)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 15)
+        Me.Label1.Size = New System.Drawing.Size(76, 13)
         Me.Label1.TabIndex = 32
-        Me.Label1.Text = "Apellidos:"
+        Me.Label1.Text = "Primer Apellido"
         '
-        'TbCargo2
+        'TxtPrimerNombre
         '
-        Me.TbCargo2.Location = New System.Drawing.Point(134, 83)
-        Me.TbCargo2.Name = "TbCargo2"
-        Me.TbCargo2.Size = New System.Drawing.Size(189, 23)
-        Me.TbCargo2.TabIndex = 31
-        Me.TbCargo2.Text = "Armando"
+        Me.TxtPrimerNombre.Location = New System.Drawing.Point(128, 70)
+        Me.TxtPrimerNombre.Name = "TxtPrimerNombre"
+        Me.TxtPrimerNombre.Size = New System.Drawing.Size(163, 20)
+        Me.TxtPrimerNombre.TabIndex = 2
         '
-        'Label3
+        'Label0
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(60, 86)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 15)
-        Me.Label3.TabIndex = 30
-        Me.Label3.Text = "Nombre:"
+        Me.Label0.AutoSize = True
+        Me.Label0.Location = New System.Drawing.Point(35, 70)
+        Me.Label0.Name = "Label0"
+        Me.Label0.Size = New System.Drawing.Size(79, 13)
+        Me.Label0.TabIndex = 30
+        Me.Label0.Text = "Primer Nombre:"
+        Me.Label0.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'ToolStrip1
         '
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator1, Me.ToolStripButton2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(434, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(632, 25)
         Me.ToolStrip1.TabIndex = 29
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -207,46 +222,297 @@ Partial Class FrmModEmp
         Me.ToolStripButton2.Text = "Cancelar"
         Me.ToolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
-        'TextBox5
+        'txtID
         '
-        Me.TextBox5.Enabled = False
-        Me.TextBox5.Location = New System.Drawing.Point(134, 49)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(189, 23)
-        Me.TextBox5.TabIndex = 30
-        Me.TextBox5.Text = "001"
+        Me.txtID.Enabled = False
+        Me.txtID.Location = New System.Drawing.Point(128, 40)
+        Me.txtID.Name = "txtID"
+        Me.txtID.Size = New System.Drawing.Size(163, 20)
+        Me.txtID.TabIndex = 30
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(93, 52)
+        Me.Label8.Location = New System.Drawing.Point(93, 43)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(21, 15)
+        Me.Label8.Size = New System.Drawing.Size(21, 13)
         Me.Label8.TabIndex = 45
         Me.Label8.Text = "ID:"
         '
+        'TxtSegundoNombre
+        '
+        Me.TxtSegundoNombre.Location = New System.Drawing.Point(440, 70)
+        Me.TxtSegundoNombre.Name = "TxtSegundoNombre"
+        Me.TxtSegundoNombre.Size = New System.Drawing.Size(163, 20)
+        Me.TxtSegundoNombre.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(333, 73)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(93, 13)
+        Me.Label3.TabIndex = 30
+        Me.Label3.Text = "Segundo Nombre:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(336, 103)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(90, 13)
+        Me.Label9.TabIndex = 32
+        Me.Label9.Text = "Segundo Apellido"
+        '
+        'TxtSegundoApellido
+        '
+        Me.TxtSegundoApellido.Location = New System.Drawing.Point(440, 100)
+        Me.TxtSegundoApellido.Name = "TxtSegundoApellido"
+        Me.TxtSegundoApellido.Size = New System.Drawing.Size(163, 20)
+        Me.TxtSegundoApellido.TabIndex = 5
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(347, 177)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(79, 13)
+        Me.Label10.TabIndex = 39
+        Me.Label10.Text = "Email Personal:"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'TxtEmail
+        '
+        Me.TxtEmail.Location = New System.Drawing.Point(440, 174)
+        Me.TxtEmail.Name = "TxtEmail"
+        Me.TxtEmail.Size = New System.Drawing.Size(163, 20)
+        Me.TxtEmail.TabIndex = 9
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(392, 211)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(34, 13)
+        Me.Label11.TabIndex = 38
+        Me.Label11.Text = "Sexo:"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'CbxSexo
+        '
+        Me.CbxSexo.FormattingEnabled = True
+        Me.CbxSexo.Location = New System.Drawing.Point(440, 206)
+        Me.CbxSexo.Name = "CbxSexo"
+        Me.CbxSexo.Size = New System.Drawing.Size(163, 21)
+        Me.CbxSexo.TabIndex = 11
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(58, 320)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(55, 13)
+        Me.Label12.TabIndex = 38
+        Me.Label12.Text = "Dirección:"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'TxtDireccion
+        '
+        Me.TxtDireccion.Location = New System.Drawing.Point(128, 317)
+        Me.TxtDireccion.Name = "TxtDireccion"
+        Me.TxtDireccion.Size = New System.Drawing.Size(472, 20)
+        Me.TxtDireccion.TabIndex = 18
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(43, 355)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(70, 13)
+        Me.Label13.TabIndex = 38
+        Me.Label13.Text = "Observación:"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'TxtObservacion
+        '
+        Me.TxtObservacion.Location = New System.Drawing.Point(128, 352)
+        Me.TxtObservacion.Name = "TxtObservacion"
+        Me.TxtObservacion.Size = New System.Drawing.Size(472, 20)
+        Me.TxtObservacion.TabIndex = 19
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(67, 245)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(47, 13)
+        Me.Label14.TabIndex = 39
+        Me.Label14.Text = "Horario: "
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(398, 248)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(28, 13)
+        Me.Label15.TabIndex = 39
+        Me.Label15.Text = "PIN:"
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'TxtPIN
+        '
+        Me.TxtPIN.Location = New System.Drawing.Point(440, 245)
+        Me.TxtPIN.Name = "TxtPIN"
+        Me.TxtPIN.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TxtPIN.Size = New System.Drawing.Size(93, 20)
+        Me.TxtPIN.TabIndex = 13
+        '
+        'CbxHorario
+        '
+        Me.CbxHorario.FormattingEnabled = True
+        Me.CbxHorario.Location = New System.Drawing.Point(128, 242)
+        Me.CbxHorario.Name = "CbxHorario"
+        Me.CbxHorario.Size = New System.Drawing.Size(163, 21)
+        Me.CbxHorario.TabIndex = 12
+        '
+        'BtnPIN
+        '
+        Me.BtnPIN.Location = New System.Drawing.Point(539, 245)
+        Me.BtnPIN.Name = "BtnPIN"
+        Me.BtnPIN.Size = New System.Drawing.Size(64, 20)
+        Me.BtnPIN.TabIndex = 14
+        Me.BtnPIN.Text = "Ver"
+        Me.BtnPIN.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(349, 285)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(75, 13)
+        Me.Label16.TabIndex = 39
+        Me.Label16.Text = "Confirmar PIN:"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'TxtPIN2
+        '
+        Me.TxtPIN2.Location = New System.Drawing.Point(440, 281)
+        Me.TxtPIN2.Name = "TxtPIN2"
+        Me.TxtPIN2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TxtPIN2.Size = New System.Drawing.Size(93, 20)
+        Me.TxtPIN2.TabIndex = 15
+        '
+        'BtnPIN2
+        '
+        Me.BtnPIN2.Location = New System.Drawing.Point(539, 281)
+        Me.BtnPIN2.Name = "BtnPIN2"
+        Me.BtnPIN2.Size = New System.Drawing.Size(64, 20)
+        Me.BtnPIN2.TabIndex = 16
+        Me.BtnPIN2.Text = "Ver"
+        Me.BtnPIN2.UseVisualStyleBackColor = True
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(67, 281)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(46, 13)
+        Me.Label17.TabIndex = 39
+        Me.Label17.Text = "Estado: "
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ChkEstado
+        '
+        Me.ChkEstado.AutoSize = True
+        Me.ChkEstado.Location = New System.Drawing.Point(128, 281)
+        Me.ChkEstado.Name = "ChkEstado"
+        Me.ChkEstado.Size = New System.Drawing.Size(15, 14)
+        Me.ChkEstado.TabIndex = 17
+        Me.ChkEstado.UseVisualStyleBackColor = True
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(20, 395)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(93, 13)
+        Me.Label18.TabIndex = 39
+        Me.Label18.Text = "Fecha de Ingreso:"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(20, 430)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(93, 13)
+        Me.Label19.TabIndex = 39
+        Me.Label19.Text = "Fecha Nacimiento"
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'DtpIngreso
+        '
+        Me.DtpIngreso.Location = New System.Drawing.Point(128, 392)
+        Me.DtpIngreso.Name = "DtpIngreso"
+        Me.DtpIngreso.Size = New System.Drawing.Size(209, 20)
+        Me.DtpIngreso.TabIndex = 20
+        '
+        'DtpNac
+        '
+        Me.DtpNac.Location = New System.Drawing.Point(128, 427)
+        Me.DtpNac.Name = "DtpNac"
+        Me.DtpNac.Size = New System.Drawing.Size(209, 20)
+        Me.DtpNac.TabIndex = 21
+        '
         'FrmModEmp
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(434, 421)
-        Me.Controls.Add(Me.TextBox5)
+        Me.ClientSize = New System.Drawing.Size(632, 615)
+        Me.Controls.Add(Me.DtpNac)
+        Me.Controls.Add(Me.DtpIngreso)
+        Me.Controls.Add(Me.ChkEstado)
+        Me.Controls.Add(Me.BtnPIN2)
+        Me.Controls.Add(Me.BtnPIN)
+        Me.Controls.Add(Me.CbxSexo)
+        Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.BtnBack1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.TxtPIN2)
+        Me.Controls.Add(Me.TxtPIN)
+        Me.Controls.Add(Me.TxtEmail)
+        Me.Controls.Add(Me.TxtEmailCorp)
+        Me.Controls.Add(Me.TxtObservacion)
+        Me.Controls.Add(Me.TxtDireccion)
+        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.TxtTelefono)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.CbxDpto)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.CbxHorario)
+        Me.Controls.Add(Me.CbxCargo)
         Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TxtCedula)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TxtPrimerApellido)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TbCargo2)
+        Me.Controls.Add(Me.TxtSegundoApellido)
+        Me.Controls.Add(Me.TxtSegundoNombre)
+        Me.Controls.Add(Me.TxtPrimerNombre)
         Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label0)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "FrmModEmp"
         Me.Text = "FrmModEmp"
@@ -256,26 +522,50 @@ Partial Class FrmModEmp
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents BtnBack1 As Button
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TxtEmailCorp As TextBox
+    Friend WithEvents TxtTelefono As TextBox
+    Friend WithEvents CbxDpto As ComboBox
+    Friend WithEvents CbxCargo As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtCedula As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtPrimerApellido As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TbCargo2 As TextBox
-    Friend WithEvents Label3 As Label
+    Friend WithEvents TxtPrimerNombre As TextBox
+    Friend WithEvents Label0 As Label
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents ToolStripButton1 As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripButton2 As ToolStripButton
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtID As TextBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents TxtSegundoNombre As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents TxtSegundoApellido As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents TxtEmail As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents CbxSexo As ComboBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents TxtDireccion As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents TxtObservacion As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents TxtPIN As TextBox
+    Friend WithEvents CbxHorario As ComboBox
+    Friend WithEvents BtnPIN As Button
+    Friend WithEvents Label16 As Label
+    Friend WithEvents TxtPIN2 As TextBox
+    Friend WithEvents BtnPIN2 As Button
+    Friend WithEvents Label17 As Label
+    Friend WithEvents ChkEstado As CheckBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents DtpIngreso As DateTimePicker
+    Friend WithEvents DtpNac As DateTimePicker
 End Class

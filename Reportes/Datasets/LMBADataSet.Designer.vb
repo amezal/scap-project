@@ -49,11 +49,15 @@ Partial Public Class LMBADataSet
     
     Private tabletbl_userRol As tbl_userRolDataTable
     
+    Private tableEmpleadosDgv As EmpleadosDgvDataTable
+    
     Private relationRefDepartamento1 As Global.System.Data.DataRelation
     
     Private relationRefCargo16 As Global.System.Data.DataRelation
     
     Private relationRefHorario17 As Global.System.Data.DataRelation
+    
+    Private relationReftbl_user18 As Global.System.Data.DataRelation
     
     Private relationRefEmpleado13 As Global.System.Data.DataRelation
     
@@ -68,6 +72,8 @@ Partial Public Class LMBADataSet
     Private relationReftbl_rol10 As Global.System.Data.DataRelation
     
     Private relationReftbl_user11 As Global.System.Data.DataRelation
+    
+    Private relationRefDepartamento11 As Global.System.Data.DataRelation
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -133,6 +139,9 @@ Partial Public Class LMBADataSet
             End If
             If (Not (ds.Tables("tbl_userRol")) Is Nothing) Then
                 MyBase.Tables.Add(New tbl_userRolDataTable(ds.Tables("tbl_userRol")))
+            End If
+            If (Not (ds.Tables("EmpleadosDgv")) Is Nothing) Then
+                MyBase.Tables.Add(New EmpleadosDgvDataTable(ds.Tables("EmpleadosDgv")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -273,6 +282,16 @@ Partial Public Class LMBADataSet
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property EmpleadosDgv() As EmpleadosDgvDataTable
+        Get
+            Return Me.tableEmpleadosDgv
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
      Global.System.ComponentModel.BrowsableAttribute(true),  _
      Global.System.ComponentModel.DesignerSerializationVisibilityAttribute(Global.System.ComponentModel.DesignerSerializationVisibility.Visible)>  _
     Public Overrides Property SchemaSerializationMode() As Global.System.Data.SchemaSerializationMode
@@ -373,6 +392,9 @@ Partial Public Class LMBADataSet
             End If
             If (Not (ds.Tables("tbl_userRol")) Is Nothing) Then
                 MyBase.Tables.Add(New tbl_userRolDataTable(ds.Tables("tbl_userRol")))
+            End If
+            If (Not (ds.Tables("EmpleadosDgv")) Is Nothing) Then
+                MyBase.Tables.Add(New EmpleadosDgvDataTable(ds.Tables("EmpleadosDgv")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -478,9 +500,16 @@ Partial Public Class LMBADataSet
                 Me.tabletbl_userRol.InitVars
             End If
         End If
+        Me.tableEmpleadosDgv = CType(MyBase.Tables("EmpleadosDgv"),EmpleadosDgvDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableEmpleadosDgv) Is Nothing) Then
+                Me.tableEmpleadosDgv.InitVars
+            End If
+        End If
         Me.relationRefDepartamento1 = Me.Relations("RefDepartamento1")
         Me.relationRefCargo16 = Me.Relations("RefCargo16")
         Me.relationRefHorario17 = Me.Relations("RefHorario17")
+        Me.relationReftbl_user18 = Me.Relations("Reftbl_user18")
         Me.relationRefEmpleado13 = Me.Relations("RefEmpleado13")
         Me.relationRefregistroES12 = Me.Relations("RefregistroES12")
         Me.relationRefJustificacion14 = Me.Relations("RefJustificacion14")
@@ -488,6 +517,7 @@ Partial Public Class LMBADataSet
         Me.relationReftbl_rol9 = Me.Relations("Reftbl_rol9")
         Me.relationReftbl_rol10 = Me.Relations("Reftbl_rol10")
         Me.relationReftbl_user11 = Me.Relations("Reftbl_user11")
+        Me.relationRefDepartamento11 = Me.Relations("RefDepartamento11")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -522,13 +552,17 @@ Partial Public Class LMBADataSet
         MyBase.Tables.Add(Me.tabletbl_user)
         Me.tabletbl_userRol = New tbl_userRolDataTable()
         MyBase.Tables.Add(Me.tabletbl_userRol)
+        Me.tableEmpleadosDgv = New EmpleadosDgvDataTable()
+        MyBase.Tables.Add(Me.tableEmpleadosDgv)
         Me.relationRefDepartamento1 = New Global.System.Data.DataRelation("RefDepartamento1", New Global.System.Data.DataColumn() {Me.tableDepartamento.idDepartamentoColumn}, New Global.System.Data.DataColumn() {Me.tableCargo.idDepartamentoColumn}, false)
         Me.Relations.Add(Me.relationRefDepartamento1)
         Me.relationRefCargo16 = New Global.System.Data.DataRelation("RefCargo16", New Global.System.Data.DataColumn() {Me.tableCargo.idCargoColumn}, New Global.System.Data.DataColumn() {Me.tableEmpleado.idCargoColumn}, false)
         Me.Relations.Add(Me.relationRefCargo16)
         Me.relationRefHorario17 = New Global.System.Data.DataRelation("RefHorario17", New Global.System.Data.DataColumn() {Me.tableHorario.idHorarioColumn}, New Global.System.Data.DataColumn() {Me.tableEmpleado.idHorarioColumn}, false)
         Me.Relations.Add(Me.relationRefHorario17)
-        Me.relationRefEmpleado13 = New Global.System.Data.DataRelation("RefEmpleado13", New Global.System.Data.DataColumn() {Me.tableEmpleado.numCedulaColumn}, New Global.System.Data.DataColumn() {Me.tableempleadoRegistro.numCedulaColumn}, false)
+        Me.relationReftbl_user18 = New Global.System.Data.DataRelation("Reftbl_user18", New Global.System.Data.DataColumn() {Me.tabletbl_user.id_userColumn}, New Global.System.Data.DataColumn() {Me.tableEmpleado.id_userColumn}, false)
+        Me.Relations.Add(Me.relationReftbl_user18)
+        Me.relationRefEmpleado13 = New Global.System.Data.DataRelation("RefEmpleado13", New Global.System.Data.DataColumn() {Me.tableEmpleado.idEmpleadoColumn}, New Global.System.Data.DataColumn() {Me.tableempleadoRegistro.idEmpleadoColumn}, false)
         Me.Relations.Add(Me.relationRefEmpleado13)
         Me.relationRefregistroES12 = New Global.System.Data.DataRelation("RefregistroES12", New Global.System.Data.DataColumn() {Me.tableregistroES.idRegistroColumn}, New Global.System.Data.DataColumn() {Me.tableempleadoRegistro.idRegistroColumn}, false)
         Me.Relations.Add(Me.relationRefregistroES12)
@@ -542,6 +576,8 @@ Partial Public Class LMBADataSet
         Me.Relations.Add(Me.relationReftbl_rol10)
         Me.relationReftbl_user11 = New Global.System.Data.DataRelation("Reftbl_user11", New Global.System.Data.DataColumn() {Me.tabletbl_user.id_userColumn}, New Global.System.Data.DataColumn() {Me.tabletbl_userRol.id_userColumn}, false)
         Me.Relations.Add(Me.relationReftbl_user11)
+        Me.relationRefDepartamento11 = New Global.System.Data.DataRelation("RefDepartamento11", New Global.System.Data.DataColumn() {Me.tableDepartamento.idDepartamentoColumn}, New Global.System.Data.DataColumn() {Me.tableEmpleadosDgv.idDepartamentoColumn}, false)
+        Me.Relations.Add(Me.relationRefDepartamento11)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -613,6 +649,12 @@ Partial Public Class LMBADataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Private Function ShouldSerializetbl_userRol() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Private Function ShouldSerializeEmpleadosDgv() As Boolean
         Return false
     End Function
     
@@ -709,6 +751,9 @@ Partial Public Class LMBADataSet
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
     Public Delegate Sub tbl_userRolRowChangeEventHandler(ByVal sender As Object, ByVal e As tbl_userRolRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Delegate Sub EmpleadosDgvRowChangeEventHandler(ByVal sender As Object, ByVal e As EmpleadosDgvRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -1367,6 +1412,8 @@ Partial Public Class LMBADataSet
     Partial Public Class EmpleadoDataTable
         Inherits Global.System.Data.TypedTableBase(Of EmpleadoRow)
         
+        Private columnidEmpleado As Global.System.Data.DataColumn
+        
         Private columnnumCedula As Global.System.Data.DataColumn
         
         Private columnestado As Global.System.Data.DataColumn
@@ -1400,6 +1447,10 @@ Partial Public Class LMBADataSet
         Private columnidCargo As Global.System.Data.DataColumn
         
         Private columnidHorario As Global.System.Data.DataColumn
+        
+        Private columnid_user As Global.System.Data.DataColumn
+        
+        Private columnPIN As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -1435,6 +1486,14 @@ Partial Public Class LMBADataSet
             MyBase.New(info, context)
             Me.InitVars
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property idEmpleadoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnidEmpleado
+            End Get
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -1573,6 +1632,22 @@ Partial Public Class LMBADataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property id_userColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnid_user
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property PINColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPIN
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1626,14 +1701,19 @@ Partial Public Class LMBADataSet
                     ByVal emailPersonal As String,  _
                     ByVal emailCorporativo As String,  _
                     ByVal parentCargoRowByRefCargo16 As CargoRow,  _
-                    ByVal parentHorarioRowByRefHorario17 As HorarioRow) As EmpleadoRow
+                    ByVal parentHorarioRowByRefHorario17 As HorarioRow,  _
+                    ByVal parenttbl_userRowByReftbl_user18 As tbl_userRow,  _
+                    ByVal PIN As String) As EmpleadoRow
             Dim rowEmpleadoRow As EmpleadoRow = CType(Me.NewRow,EmpleadoRow)
-            Dim columnValuesArray() As Object = New Object() {numCedula, estado, primerNombre, segundoNombre, primerApellido, segundoApellido, fechaNacimiento, sexo, fechaIngreso, direccion, observacion, fotoEmpleado, telefono, emailPersonal, emailCorporativo, Nothing, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, numCedula, estado, primerNombre, segundoNombre, primerApellido, segundoApellido, fechaNacimiento, sexo, fechaIngreso, direccion, observacion, fotoEmpleado, telefono, emailPersonal, emailCorporativo, Nothing, Nothing, Nothing, PIN}
             If (Not (parentCargoRowByRefCargo16) Is Nothing) Then
-                columnValuesArray(15) = parentCargoRowByRefCargo16(0)
+                columnValuesArray(16) = parentCargoRowByRefCargo16(0)
             End If
             If (Not (parentHorarioRowByRefHorario17) Is Nothing) Then
-                columnValuesArray(16) = parentHorarioRowByRefHorario17(0)
+                columnValuesArray(17) = parentHorarioRowByRefHorario17(0)
+            End If
+            If (Not (parenttbl_userRowByReftbl_user18) Is Nothing) Then
+                columnValuesArray(18) = parenttbl_userRowByReftbl_user18(0)
             End If
             rowEmpleadoRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowEmpleadoRow)
@@ -1642,8 +1722,8 @@ Partial Public Class LMBADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function FindBynumCedula(ByVal numCedula As String) As EmpleadoRow
-            Return CType(Me.Rows.Find(New Object() {numCedula}),EmpleadoRow)
+        Public Function FindByidEmpleado(ByVal idEmpleado As Integer) As EmpleadoRow
+            Return CType(Me.Rows.Find(New Object() {idEmpleado}),EmpleadoRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1663,6 +1743,7 @@ Partial Public Class LMBADataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Friend Sub InitVars()
+            Me.columnidEmpleado = MyBase.Columns("idEmpleado")
             Me.columnnumCedula = MyBase.Columns("numCedula")
             Me.columnestado = MyBase.Columns("estado")
             Me.columnprimerNombre = MyBase.Columns("primerNombre")
@@ -1680,11 +1761,15 @@ Partial Public Class LMBADataSet
             Me.columnemailCorporativo = MyBase.Columns("emailCorporativo")
             Me.columnidCargo = MyBase.Columns("idCargo")
             Me.columnidHorario = MyBase.Columns("idHorario")
+            Me.columnid_user = MyBase.Columns("id_user")
+            Me.columnPIN = MyBase.Columns("PIN")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitClass()
+            Me.columnidEmpleado = New Global.System.Data.DataColumn("idEmpleado", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnidEmpleado)
             Me.columnnumCedula = New Global.System.Data.DataColumn("numCedula", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnnumCedula)
             Me.columnestado = New Global.System.Data.DataColumn("estado", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
@@ -1719,9 +1804,18 @@ Partial Public Class LMBADataSet
             MyBase.Columns.Add(Me.columnidCargo)
             Me.columnidHorario = New Global.System.Data.DataColumn("idHorario", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnidHorario)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnnumCedula}, true))
+            Me.columnid_user = New Global.System.Data.DataColumn("id_user", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnid_user)
+            Me.columnPIN = New Global.System.Data.DataColumn("PIN", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPIN)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnidEmpleado}, true))
+            Me.columnidEmpleado.AutoIncrement = true
+            Me.columnidEmpleado.AutoIncrementSeed = -1
+            Me.columnidEmpleado.AutoIncrementStep = -1
+            Me.columnidEmpleado.AllowDBNull = false
+            Me.columnidEmpleado.ReadOnly = true
+            Me.columnidEmpleado.Unique = true
             Me.columnnumCedula.AllowDBNull = false
-            Me.columnnumCedula.Unique = true
             Me.columnnumCedula.MaxLength = 16
             Me.columnestado.AllowDBNull = false
             Me.columnprimerNombre.AllowDBNull = false
@@ -1740,6 +1834,8 @@ Partial Public Class LMBADataSet
             Me.columnemailCorporativo.MaxLength = 100
             Me.columnidCargo.AllowDBNull = false
             Me.columnidHorario.AllowDBNull = false
+            Me.columnPIN.AllowDBNull = false
+            Me.columnPIN.MaxLength = 4
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1881,7 +1977,7 @@ Partial Public Class LMBADataSet
         
         Private columnidRegistro As Global.System.Data.DataColumn
         
-        Private columnnumCedula As Global.System.Data.DataColumn
+        Private columnidEmpleado As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -1936,9 +2032,9 @@ Partial Public Class LMBADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property numCedulaColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property idEmpleadoColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnnumCedula
+                Return Me.columnidEmpleado
             End Get
         End Property
         
@@ -2018,7 +2114,7 @@ Partial Public Class LMBADataSet
         Friend Sub InitVars()
             Me.columnidEmpleadoRegistro = MyBase.Columns("idEmpleadoRegistro")
             Me.columnidRegistro = MyBase.Columns("idRegistro")
-            Me.columnnumCedula = MyBase.Columns("numCedula")
+            Me.columnidEmpleado = MyBase.Columns("idEmpleado")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2028,8 +2124,8 @@ Partial Public Class LMBADataSet
             MyBase.Columns.Add(Me.columnidEmpleadoRegistro)
             Me.columnidRegistro = New Global.System.Data.DataColumn("idRegistro", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnidRegistro)
-            Me.columnnumCedula = New Global.System.Data.DataColumn("numCedula", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnnumCedula)
+            Me.columnidEmpleado = New Global.System.Data.DataColumn("idEmpleado", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnidEmpleado)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnidEmpleadoRegistro}, true))
             Me.columnidEmpleadoRegistro.AutoIncrement = true
             Me.columnidEmpleadoRegistro.AutoIncrementSeed = -1
@@ -2038,8 +2134,7 @@ Partial Public Class LMBADataSet
             Me.columnidEmpleadoRegistro.ReadOnly = true
             Me.columnidEmpleadoRegistro.Unique = true
             Me.columnidRegistro.AllowDBNull = false
-            Me.columnnumCedula.AllowDBNull = false
-            Me.columnnumCedula.MaxLength = 16
+            Me.columnidEmpleado.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4714,6 +4809,391 @@ Partial Public Class LMBADataSet
     End Class
     
     '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class EmpleadosDgvDataTable
+        Inherits Global.System.Data.TypedTableBase(Of EmpleadosDgvRow)
+        
+        Private columnID As Global.System.Data.DataColumn
+        
+        Private columnCedula As Global.System.Data.DataColumn
+        
+        Private columnNombres As Global.System.Data.DataColumn
+        
+        Private columnApellidos As Global.System.Data.DataColumn
+        
+        Private columnCargo As Global.System.Data.DataColumn
+        
+        Private columnDepartamento As Global.System.Data.DataColumn
+        
+        Private columnTelefono As Global.System.Data.DataColumn
+        
+        Private columnEmail As Global.System.Data.DataColumn
+        
+        Private columnidDepartamento As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "EmpleadosDgv"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property IDColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnID
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property CedulaColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCedula
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property NombresColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNombres
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property ApellidosColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnApellidos
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property CargoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCargo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property DepartamentoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDepartamento
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property TelefonoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTelefono
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property EmailColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnEmail
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property idDepartamentoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnidDepartamento
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As EmpleadosDgvRow
+            Get
+                Return CType(Me.Rows(index),EmpleadosDgvRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event EmpleadosDgvRowChanging As EmpleadosDgvRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event EmpleadosDgvRowChanged As EmpleadosDgvRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event EmpleadosDgvRowDeleting As EmpleadosDgvRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Event EmpleadosDgvRowDeleted As EmpleadosDgvRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Sub AddEmpleadosDgvRow(ByVal row As EmpleadosDgvRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overloads Function AddEmpleadosDgvRow(ByVal Cedula As String, ByVal Nombres As String, ByVal Apellidos As String, ByVal Cargo As String, ByVal Departamento As String, ByVal Telefono As String, ByVal Email As String, ByVal parentDepartamentoRowByRefDepartamento11 As DepartamentoRow) As EmpleadosDgvRow
+            Dim rowEmpleadosDgvRow As EmpleadosDgvRow = CType(Me.NewRow,EmpleadosDgvRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, Cedula, Nombres, Apellidos, Cargo, Departamento, Telefono, Email, Nothing}
+            If (Not (parentDepartamentoRowByRefDepartamento11) Is Nothing) Then
+                columnValuesArray(8) = parentDepartamentoRowByRefDepartamento11(0)
+            End If
+            rowEmpleadosDgvRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowEmpleadosDgvRow)
+            Return rowEmpleadosDgvRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function FindByID(ByVal ID As Integer) As EmpleadosDgvRow
+            Return CType(Me.Rows.Find(New Object() {ID}),EmpleadosDgvRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As EmpleadosDgvDataTable = CType(MyBase.Clone,EmpleadosDgvDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New EmpleadosDgvDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnID = MyBase.Columns("ID")
+            Me.columnCedula = MyBase.Columns("Cedula")
+            Me.columnNombres = MyBase.Columns("Nombres")
+            Me.columnApellidos = MyBase.Columns("Apellidos")
+            Me.columnCargo = MyBase.Columns("Cargo")
+            Me.columnDepartamento = MyBase.Columns("Departamento")
+            Me.columnTelefono = MyBase.Columns("Telefono")
+            Me.columnEmail = MyBase.Columns("Email")
+            Me.columnidDepartamento = MyBase.Columns("idDepartamento")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnID = New Global.System.Data.DataColumn("ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnID)
+            Me.columnCedula = New Global.System.Data.DataColumn("Cedula", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCedula)
+            Me.columnNombres = New Global.System.Data.DataColumn("Nombres", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNombres)
+            Me.columnApellidos = New Global.System.Data.DataColumn("Apellidos", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnApellidos)
+            Me.columnCargo = New Global.System.Data.DataColumn("Cargo", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCargo)
+            Me.columnDepartamento = New Global.System.Data.DataColumn("Departamento", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDepartamento)
+            Me.columnTelefono = New Global.System.Data.DataColumn("Telefono", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTelefono)
+            Me.columnEmail = New Global.System.Data.DataColumn("Email", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnEmail)
+            Me.columnidDepartamento = New Global.System.Data.DataColumn("idDepartamento", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnidDepartamento)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
+            Me.columnID.AutoIncrement = true
+            Me.columnID.AutoIncrementSeed = -1
+            Me.columnID.AutoIncrementStep = -1
+            Me.columnID.AllowDBNull = false
+            Me.columnID.ReadOnly = true
+            Me.columnID.Unique = true
+            Me.columnCedula.AllowDBNull = false
+            Me.columnCedula.MaxLength = 16
+            Me.columnNombres.ReadOnly = true
+            Me.columnNombres.MaxLength = 41
+            Me.columnApellidos.ReadOnly = true
+            Me.columnApellidos.MaxLength = 61
+            Me.columnCargo.AllowDBNull = false
+            Me.columnCargo.MaxLength = 30
+            Me.columnDepartamento.AllowDBNull = false
+            Me.columnDepartamento.MaxLength = 30
+            Me.columnTelefono.MaxLength = 10
+            Me.columnEmail.MaxLength = 100
+            Me.columnidDepartamento.AllowDBNull = false
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function NewEmpleadosDgvRow() As EmpleadosDgvRow
+            Return CType(Me.NewRow,EmpleadosDgvRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New EmpleadosDgvRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(EmpleadosDgvRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.EmpleadosDgvRowChangedEvent) Is Nothing) Then
+                RaiseEvent EmpleadosDgvRowChanged(Me, New EmpleadosDgvRowChangeEvent(CType(e.Row,EmpleadosDgvRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.EmpleadosDgvRowChangingEvent) Is Nothing) Then
+                RaiseEvent EmpleadosDgvRowChanging(Me, New EmpleadosDgvRowChangeEvent(CType(e.Row,EmpleadosDgvRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.EmpleadosDgvRowDeletedEvent) Is Nothing) Then
+                RaiseEvent EmpleadosDgvRowDeleted(Me, New EmpleadosDgvRowChangeEvent(CType(e.Row,EmpleadosDgvRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.EmpleadosDgvRowDeletingEvent) Is Nothing) Then
+                RaiseEvent EmpleadosDgvRowDeleting(Me, New EmpleadosDgvRowChangeEvent(CType(e.Row,EmpleadosDgvRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub RemoveEmpleadosDgvRow(ByVal row As EmpleadosDgvRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As LMBADataSet = New LMBADataSet()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "EmpleadosDgvDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
     Partial Public Class CargoRow
@@ -4900,6 +5380,16 @@ Partial Public Class LMBADataSet
                 Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("RefDepartamento1")),CargoRow())
             End If
         End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function GetEmpleadosDgvRows() As EmpleadosDgvRow()
+            If (Me.Table.ChildRelations("RefDepartamento11") Is Nothing) Then
+                Return New EmpleadosDgvRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("RefDepartamento11")),EmpleadosDgvRow())
+            End If
+        End Function
     End Class
     
     '''<summary>
@@ -4916,6 +5406,17 @@ Partial Public Class LMBADataSet
             MyBase.New(rb)
             Me.tableEmpleado = CType(Me.Table,EmpleadoDataTable)
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property idEmpleado() As Integer
+            Get
+                Return CType(Me(Me.tableEmpleado.idEmpleadoColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableEmpleado.idEmpleadoColumn) = value
+            End Set
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -5138,6 +5639,32 @@ Partial Public Class LMBADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property id_user() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableEmpleado.id_userColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'id_user' in table 'Empleado' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableEmpleado.id_userColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property PIN() As String
+            Get
+                Return CType(Me(Me.tableEmpleado.PINColumn),String)
+            End Get
+            Set
+                Me(Me.tableEmpleado.PINColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Property CargoRow() As CargoRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("RefCargo16")),CargoRow)
@@ -5155,6 +5682,17 @@ Partial Public Class LMBADataSet
             End Get
             Set
                 Me.SetParentRow(value, Me.Table.ParentRelations("RefHorario17"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property tbl_userRow() As tbl_userRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("Reftbl_user18")),tbl_userRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("Reftbl_user18"))
             End Set
         End Property
         
@@ -5256,6 +5794,18 @@ Partial Public Class LMBADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function Isid_userNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleado.id_userColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub Setid_userNull()
+            Me(Me.tableEmpleado.id_userColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function GetempleadoRegistroRows() As empleadoRegistroRow()
             If (Me.Table.ChildRelations("RefEmpleado13") Is Nothing) Then
                 Return New empleadoRegistroRow(-1) {}
@@ -5304,12 +5854,12 @@ Partial Public Class LMBADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property numCedula() As String
+        Public Property idEmpleado() As Integer
             Get
-                Return CType(Me(Me.tableempleadoRegistro.numCedulaColumn),String)
+                Return CType(Me(Me.tableempleadoRegistro.idEmpleadoColumn),Integer)
             End Get
             Set
-                Me(Me.tableempleadoRegistro.numCedulaColumn) = value
+                Me(Me.tableempleadoRegistro.idEmpleadoColumn) = value
             End Set
         End Property
         
@@ -6044,6 +6594,16 @@ Partial Public Class LMBADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function GetEmpleadoRows() As EmpleadoRow()
+            If (Me.Table.ChildRelations("Reftbl_user18") Is Nothing) Then
+                Return New EmpleadoRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("Reftbl_user18")),EmpleadoRow())
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Function Gettbl_userRolRows() As tbl_userRolRow()
             If (Me.Table.ChildRelations("Reftbl_user11") Is Nothing) Then
                 Return New tbl_userRolRow(-1) {}
@@ -6122,6 +6682,196 @@ Partial Public Class LMBADataSet
                 Me.SetParentRow(value, Me.Table.ParentRelations("Reftbl_user11"))
             End Set
         End Property
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class EmpleadosDgvRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableEmpleadosDgv As EmpleadosDgvDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableEmpleadosDgv = CType(Me.Table,EmpleadosDgvDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property ID() As Integer
+            Get
+                Return CType(Me(Me.tableEmpleadosDgv.IDColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableEmpleadosDgv.IDColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Cedula() As String
+            Get
+                Return CType(Me(Me.tableEmpleadosDgv.CedulaColumn),String)
+            End Get
+            Set
+                Me(Me.tableEmpleadosDgv.CedulaColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Nombres() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableEmpleadosDgv.NombresColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Nombres' in table 'EmpleadosDgv' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableEmpleadosDgv.NombresColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Apellidos() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableEmpleadosDgv.ApellidosColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Apellidos' in table 'EmpleadosDgv' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableEmpleadosDgv.ApellidosColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Cargo() As String
+            Get
+                Return CType(Me(Me.tableEmpleadosDgv.CargoColumn),String)
+            End Get
+            Set
+                Me(Me.tableEmpleadosDgv.CargoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Departamento() As String
+            Get
+                Return CType(Me(Me.tableEmpleadosDgv.DepartamentoColumn),String)
+            End Get
+            Set
+                Me(Me.tableEmpleadosDgv.DepartamentoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Telefono() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableEmpleadosDgv.TelefonoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Telefono' in table 'EmpleadosDgv' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableEmpleadosDgv.TelefonoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property Email() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableEmpleadosDgv.EmailColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Email' in table 'EmpleadosDgv' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableEmpleadosDgv.EmailColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property idDepartamento() As Integer
+            Get
+                Return CType(Me(Me.tableEmpleadosDgv.idDepartamentoColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableEmpleadosDgv.idDepartamentoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property DepartamentoRow() As DepartamentoRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("RefDepartamento11")),DepartamentoRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("RefDepartamento11"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsNombresNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleadosDgv.NombresColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetNombresNull()
+            Me(Me.tableEmpleadosDgv.NombresColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsApellidosNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleadosDgv.ApellidosColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetApellidosNull()
+            Me(Me.tableEmpleadosDgv.ApellidosColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsTelefonoNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleadosDgv.TelefonoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetTelefonoNull()
+            Me(Me.tableEmpleadosDgv.TelefonoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsEmailNull() As Boolean
+            Return Me.IsNull(Me.tableEmpleadosDgv.EmailColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetEmailNull()
+            Me(Me.tableEmpleadosDgv.EmailColumn) = Global.System.Convert.DBNull
+        End Sub
     End Class
     
     '''<summary>
@@ -6542,6 +7292,42 @@ Partial Public Class LMBADataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public ReadOnly Property Row() As tbl_userRolRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+    Public Class EmpleadosDgvRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As EmpleadosDgvRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New(ByVal row As EmpleadosDgvRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property Row() As EmpleadosDgvRow
             Get
                 Return Me.eventRow
             End Get
@@ -7441,6 +8227,7 @@ Namespace LMBADataSetTableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Empleado"
+            tableMapping.ColumnMappings.Add("idEmpleado", "idEmpleado")
             tableMapping.ColumnMappings.Add("numCedula", "numCedula")
             tableMapping.ColumnMappings.Add("estado", "estado")
             tableMapping.ColumnMappings.Add("primerNombre", "primerNombre")
@@ -7458,25 +8245,30 @@ Namespace LMBADataSetTableAdapters
             tableMapping.ColumnMappings.Add("emailCorporativo", "emailCorporativo")
             tableMapping.ColumnMappings.Add("idCargo", "idCargo")
             tableMapping.ColumnMappings.Add("idHorario", "idHorario")
+            tableMapping.ColumnMappings.Add("id_user", "id_user")
+            tableMapping.ColumnMappings.Add("PIN", "PIN")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Empleado] WHERE (([numCedula] = @Original_numCedula) AND ([est"& _ 
-                "ado] = @Original_estado) AND ([primerNombre] = @Original_primerNombre) AND ((@Is"& _ 
-                "Null_segundoNombre = 1 AND [segundoNombre] IS NULL) OR ([segundoNombre] = @Origi"& _ 
-                "nal_segundoNombre)) AND ([primerApellido] = @Original_primerApellido) AND ((@IsN"& _ 
-                "ull_segundoApellido = 1 AND [segundoApellido] IS NULL) OR ([segundoApellido] = @"& _ 
-                "Original_segundoApellido)) AND ([fechaNacimiento] = @Original_fechaNacimiento) A"& _ 
-                "ND ([sexo] = @Original_sexo) AND ((@IsNull_fechaIngreso = 1 AND [fechaIngreso] I"& _ 
-                "S NULL) OR ([fechaIngreso] = @Original_fechaIngreso)) AND ([direccion] = @Origin"& _ 
-                "al_direccion) AND ((@IsNull_observacion = 1 AND [observacion] IS NULL) OR ([obse"& _ 
-                "rvacion] = @Original_observacion)) AND ((@IsNull_telefono = 1 AND [telefono] IS "& _ 
-                "NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_emailPersonal = 1 AND "& _ 
-                "[emailPersonal] IS NULL) OR ([emailPersonal] = @Original_emailPersonal)) AND ((@"& _ 
-                "IsNull_emailCorporativo = 1 AND [emailCorporativo] IS NULL) OR ([emailCorporativ"& _ 
-                "o] = @Original_emailCorporativo)) AND ([idCargo] = @Original_idCargo) AND ([idHo"& _ 
-                "rario] = @Original_idHorario))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Empleado] WHERE (([idEmpleado] = @Original_idEmpleado) AND ([n"& _ 
+                "umCedula] = @Original_numCedula) AND ([estado] = @Original_estado) AND ([primerN"& _ 
+                "ombre] = @Original_primerNombre) AND ((@IsNull_segundoNombre = 1 AND [segundoNom"& _ 
+                "bre] IS NULL) OR ([segundoNombre] = @Original_segundoNombre)) AND ([primerApelli"& _ 
+                "do] = @Original_primerApellido) AND ((@IsNull_segundoApellido = 1 AND [segundoAp"& _ 
+                "ellido] IS NULL) OR ([segundoApellido] = @Original_segundoApellido)) AND ([fecha"& _ 
+                "Nacimiento] = @Original_fechaNacimiento) AND ([sexo] = @Original_sexo) AND ((@Is"& _ 
+                "Null_fechaIngreso = 1 AND [fechaIngreso] IS NULL) OR ([fechaIngreso] = @Original"& _ 
+                "_fechaIngreso)) AND ([direccion] = @Original_direccion) AND ((@IsNull_observacio"& _ 
+                "n = 1 AND [observacion] IS NULL) OR ([observacion] = @Original_observacion)) AND"& _ 
+                " ((@IsNull_telefono = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telef"& _ 
+                "ono)) AND ((@IsNull_emailPersonal = 1 AND [emailPersonal] IS NULL) OR ([emailPer"& _ 
+                "sonal] = @Original_emailPersonal)) AND ((@IsNull_emailCorporativo = 1 AND [email"& _ 
+                "Corporativo] IS NULL) OR ([emailCorporativo] = @Original_emailCorporativo)) AND "& _ 
+                "([idCargo] = @Original_idCargo) AND ([idHorario] = @Original_idHorario) AND ((@I"& _ 
+                "sNull_id_user = 1 AND [id_user] IS NULL) OR ([id_user] = @Original_id_user)) AND"& _ 
+                " ([PIN] = @Original_PIN))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEmpleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_numCedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "numCedula", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_primerNombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "primerNombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -7500,18 +8292,22 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_emailCorporativo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "emailCorporativo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idCargo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idHorario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idHorario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_id_user", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_user", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_user", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_user", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PIN", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PIN", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Empleado] ([numCedula], [estado], [primerNombre], [segundoNomb"& _ 
                 "re], [primerApellido], [segundoApellido], [fechaNacimiento], [sexo], [fechaIngre"& _ 
                 "so], [direccion], [observacion], [fotoEmpleado], [telefono], [emailPersonal], [e"& _ 
-                "mailCorporativo], [idCargo], [idHorario]) VALUES (@numCedula, @estado, @primerNo"& _ 
-                "mbre, @segundoNombre, @primerApellido, @segundoApellido, @fechaNacimiento, @sexo"& _ 
-                ", @fechaIngreso, @direccion, @observacion, @fotoEmpleado, @telefono, @emailPerso"& _ 
-                "nal, @emailCorporativo, @idCargo, @idHorario);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT numCedula, estado, primer"& _ 
-                "Nombre, segundoNombre, primerApellido, segundoApellido, fechaNacimiento, sexo, f"& _ 
-                "echaIngreso, direccion, observacion, fotoEmpleado, telefono, emailPersonal, emai"& _ 
-                "lCorporativo, idCargo, idHorario FROM Empleado WHERE (numCedula = @numCedula)"
+                "mailCorporativo], [idCargo], [idHorario], [id_user], [PIN]) VALUES (@numCedula, "& _ 
+                "@estado, @primerNombre, @segundoNombre, @primerApellido, @segundoApellido, @fech"& _ 
+                "aNacimiento, @sexo, @fechaIngreso, @direccion, @observacion, @fotoEmpleado, @tel"& _ 
+                "efono, @emailPersonal, @emailCorporativo, @idCargo, @idHorario, @id_user, @PIN);"& _ 
+                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleado, numCedula, estado, primerNombre, segundoNombre, primerApell"& _ 
+                "ido, segundoApellido, fechaNacimiento, sexo, fechaIngreso, direccion, observacio"& _ 
+                "n, fotoEmpleado, telefono, emailPersonal, emailCorporativo, idCargo, idHorario, "& _ 
+                "id_user, PIN FROM Empleado WHERE (idEmpleado = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numCedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "numCedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7530,6 +8326,8 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@emailCorporativo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "emailCorporativo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCargo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idHorario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idHorario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_user", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_user", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PIN", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PIN", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Empleado] SET [numCedula] = @numCedula, [estado] = @estado, [primer"& _ 
@@ -7538,25 +8336,27 @@ Namespace LMBADataSetTableAdapters
                 "acimiento, [sexo] = @sexo, [fechaIngreso] = @fechaIngreso, [direccion] = @direcc"& _ 
                 "ion, [observacion] = @observacion, [fotoEmpleado] = @fotoEmpleado, [telefono] = "& _ 
                 "@telefono, [emailPersonal] = @emailPersonal, [emailCorporativo] = @emailCorporat"& _ 
-                "ivo, [idCargo] = @idCargo, [idHorario] = @idHorario WHERE (([numCedula] = @Origi"& _ 
-                "nal_numCedula) AND ([estado] = @Original_estado) AND ([primerNombre] = @Original"& _ 
-                "_primerNombre) AND ((@IsNull_segundoNombre = 1 AND [segundoNombre] IS NULL) OR ("& _ 
-                "[segundoNombre] = @Original_segundoNombre)) AND ([primerApellido] = @Original_pr"& _ 
-                "imerApellido) AND ((@IsNull_segundoApellido = 1 AND [segundoApellido] IS NULL) O"& _ 
-                "R ([segundoApellido] = @Original_segundoApellido)) AND ([fechaNacimiento] = @Ori"& _ 
-                "ginal_fechaNacimiento) AND ([sexo] = @Original_sexo) AND ((@IsNull_fechaIngreso "& _ 
-                "= 1 AND [fechaIngreso] IS NULL) OR ([fechaIngreso] = @Original_fechaIngreso)) AN"& _ 
-                "D ([direccion] = @Original_direccion) AND ((@IsNull_observacion = 1 AND [observa"& _ 
-                "cion] IS NULL) OR ([observacion] = @Original_observacion)) AND ((@IsNull_telefon"& _ 
-                "o = 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNul"& _ 
-                "l_emailPersonal = 1 AND [emailPersonal] IS NULL) OR ([emailPersonal] = @Original"& _ 
-                "_emailPersonal)) AND ((@IsNull_emailCorporativo = 1 AND [emailCorporativo] IS NU"& _ 
-                "LL) OR ([emailCorporativo] = @Original_emailCorporativo)) AND ([idCargo] = @Orig"& _ 
-                "inal_idCargo) AND ([idHorario] = @Original_idHorario));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT numCedula, estad"& _ 
-                "o, primerNombre, segundoNombre, primerApellido, segundoApellido, fechaNacimiento"& _ 
-                ", sexo, fechaIngreso, direccion, observacion, fotoEmpleado, telefono, emailPerso"& _ 
-                "nal, emailCorporativo, idCargo, idHorario FROM Empleado WHERE (numCedula = @numC"& _ 
-                "edula)"
+                "ivo, [idCargo] = @idCargo, [idHorario] = @idHorario, [id_user] = @id_user, [PIN]"& _ 
+                " = @PIN WHERE (([idEmpleado] = @Original_idEmpleado) AND ([numCedula] = @Origina"& _ 
+                "l_numCedula) AND ([estado] = @Original_estado) AND ([primerNombre] = @Original_p"& _ 
+                "rimerNombre) AND ((@IsNull_segundoNombre = 1 AND [segundoNombre] IS NULL) OR ([s"& _ 
+                "egundoNombre] = @Original_segundoNombre)) AND ([primerApellido] = @Original_prim"& _ 
+                "erApellido) AND ((@IsNull_segundoApellido = 1 AND [segundoApellido] IS NULL) OR "& _ 
+                "([segundoApellido] = @Original_segundoApellido)) AND ([fechaNacimiento] = @Origi"& _ 
+                "nal_fechaNacimiento) AND ([sexo] = @Original_sexo) AND ((@IsNull_fechaIngreso = "& _ 
+                "1 AND [fechaIngreso] IS NULL) OR ([fechaIngreso] = @Original_fechaIngreso)) AND "& _ 
+                "([direccion] = @Original_direccion) AND ((@IsNull_observacion = 1 AND [observaci"& _ 
+                "on] IS NULL) OR ([observacion] = @Original_observacion)) AND ((@IsNull_telefono "& _ 
+                "= 1 AND [telefono] IS NULL) OR ([telefono] = @Original_telefono)) AND ((@IsNull_"& _ 
+                "emailPersonal = 1 AND [emailPersonal] IS NULL) OR ([emailPersonal] = @Original_e"& _ 
+                "mailPersonal)) AND ((@IsNull_emailCorporativo = 1 AND [emailCorporativo] IS NULL"& _ 
+                ") OR ([emailCorporativo] = @Original_emailCorporativo)) AND ([idCargo] = @Origin"& _ 
+                "al_idCargo) AND ([idHorario] = @Original_idHorario) AND ((@IsNull_id_user = 1 AN"& _ 
+                "D [id_user] IS NULL) OR ([id_user] = @Original_id_user)) AND ([PIN] = @Original_"& _ 
+                "PIN));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleado, numCedula, estado, primerNombre, segundoNombre, prime"& _ 
+                "rApellido, segundoApellido, fechaNacimiento, sexo, fechaIngreso, direccion, obse"& _ 
+                "rvacion, fotoEmpleado, telefono, emailPersonal, emailCorporativo, idCargo, idHor"& _ 
+                "ario, id_user, PIN FROM Empleado WHERE (idEmpleado = @idEmpleado)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numCedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "numCedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7575,6 +8375,9 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@emailCorporativo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "emailCorporativo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idCargo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idHorario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idHorario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_user", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_user", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PIN", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PIN", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEmpleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_numCedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "numCedula", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_primerNombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "primerNombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -7598,6 +8401,10 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_emailCorporativo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "emailCorporativo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idCargo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idCargo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idHorario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idHorario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_id_user", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_user", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_user", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_user", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_PIN", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "PIN", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmpleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7610,14 +8417,38 @@ Namespace LMBADataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(2) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT numCedula, estado, primerNombre, segundoNombre, primerApellido, segundoApe"& _ 
-                "llido, fechaNacimiento, sexo, fechaIngreso, direccion, observacion, fotoEmpleado"& _ 
-                ", telefono, emailPersonal, emailCorporativo, idCargo, idHorario FROM dbo.Emplead"& _ 
-                "o"
+            Me._commandCollection(0).CommandText = "SELECT idEmpleado, numCedula, estado, primerNombre, segundoNombre, primerApellido"& _ 
+                ", segundoApellido, fechaNacimiento, sexo, fechaIngreso, direccion, observacion, "& _ 
+                "fotoEmpleado, telefono, emailPersonal, emailCorporativo, idCargo, idHorario, id_"& _ 
+                "user, PIN FROM dbo.Empleado"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        Empleado.idEmpleado, Empleado.numCedula, { fn CONCAT(Empleado.prime"& _ 
+                "rNombre, (CASE WHEN (segundoNombre IS NULL) THEN '' ELSE CONCAT(' ', segundoNomb"& _ 
+                "re) END)) } AS Nombres, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         { fn CONCAT(Empleado.primerAp"& _ 
+                "ellido, (CASE WHEN (segundoApellido IS NULL) THEN '' ELSE CONCAT(' ', segundoApe"& _ 
+                "llido) END)) } AS Apellidos, Empleado.estado, Empleado.primerNombre, Empleado.se"& _ 
+                "gundoNombre, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Empleado.primerApellido, Empleado.segund"& _ 
+                "oApellido, Empleado.fechaNacimiento, Empleado.sexo, Empleado.fechaIngreso, Emple"& _ 
+                "ado.direccion, Empleado.observacion, Empleado.fotoEmpleado, Empleado.telefono, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Empleado.emailPersonal, Empleado.emailCorporativo, Emp"& _ 
+                "leado.idCargo, Empleado.idHorario, Empleado.id_user, Cargo.nombreCargo AS Cargo,"& _ 
+                " Departamento.nombreDepartamento AS Departamento, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Car"& _ 
+                "go.idDepartamento"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            Empleado INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                        "& _ 
+                " Cargo ON Empleado.idCargo = Cargo.idCargo INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         "& _ 
+                "Departamento ON Cargo.idDepartamento = Departamento.idDepartamento"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "SELECT PIN, direccion, emailCorporativo, emailPersonal, estado, fechaIngreso, fec"& _ 
+                "haNacimiento, fotoEmpleado, idCargo, idEmpleado, idHorario, id_user, numCedula, "& _ 
+                "observacion, primerApellido, primerNombre, segundoApellido, segundoNombre, sexo,"& _ 
+                " telefono FROM Empleado WHERE (idEmpleado = @idEmpleado)"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmpleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -7639,6 +8470,56 @@ Namespace LMBADataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As LMBADataSet.EmpleadoDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As LMBADataSet.EmpleadoDataTable = New LMBADataSet.EmpleadoDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillDgv(ByVal dataTable As LMBADataSet.EmpleadoDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDgvData() As LMBADataSet.EmpleadoDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Dim dataTable As LMBADataSet.EmpleadoDataTable = New LMBADataSet.EmpleadoDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillEmpleado(ByVal dataTable As LMBADataSet.EmpleadoDataTable, ByVal idEmpleado As Integer) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(idEmpleado,Integer)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetEmpleado(ByVal idEmpleado As Integer) As LMBADataSet.EmpleadoDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(idEmpleado,Integer)
             Dim dataTable As LMBADataSet.EmpleadoDataTable = New LMBADataSet.EmpleadoDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -7677,6 +8558,7 @@ Namespace LMBADataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
         Public Overloads Overridable Function Delete( _
+                    ByVal Original_idEmpleado As Integer,  _
                     ByVal Original_numCedula As String,  _
                     ByVal Original_estado As Integer,  _
                     ByVal Original_primerNombre As String,  _
@@ -7692,81 +8574,96 @@ Namespace LMBADataSetTableAdapters
                     ByVal Original_emailPersonal As String,  _
                     ByVal Original_emailCorporativo As String,  _
                     ByVal Original_idCargo As Integer,  _
-                    ByVal Original_idHorario As Integer) As Integer
+                    ByVal Original_idHorario As Integer,  _
+                    ByVal Original_id_user As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PIN As String) As Integer
+            Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_idEmpleado,Integer)
             If (Original_numCedula Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_numCedula")
             Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_numCedula,String)
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_numCedula,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_estado,Integer)
+            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_estado,Integer)
             If (Original_primerNombre Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_primerNombre")
             Else
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_primerNombre,String)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_primerNombre,String)
             End If
             If (Original_segundoNombre Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_segundoNombre,String)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_segundoNombre,String)
             End If
             If (Original_primerApellido Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_primerApellido")
             Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_primerApellido,String)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_primerApellido,String)
             End If
             If (Original_segundoApellido Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_segundoApellido,String)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_segundoApellido,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_fechaNacimiento,Date)
-            Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_sexo,Boolean)
+            Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_fechaNacimiento,Date)
+            Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_sexo,Boolean)
             If (Original_fechaIngreso.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(Original_fechaIngreso.Value,Date)
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_fechaIngreso.Value,Date)
             Else
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
             End If
             If (Original_direccion Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_direccion")
             Else
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_direccion,String)
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(Original_direccion,String)
             End If
             If (Original_observacion Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_observacion,String)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(Original_observacion,String)
             End If
             If (Original_telefono Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(17).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_telefono,String)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(Original_telefono,String)
             End If
             If (Original_emailPersonal Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(19).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_emailPersonal,String)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(Original_emailPersonal,String)
             End If
             If (Original_emailCorporativo Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_emailCorporativo,String)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(21).Value = CType(Original_emailCorporativo,String)
             End If
-            Me.Adapter.DeleteCommand.Parameters(21).Value = CType(Original_idCargo,Integer)
-            Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_idHorario,Integer)
+            Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_idCargo,Integer)
+            Me.Adapter.DeleteCommand.Parameters(23).Value = CType(Original_idHorario,Integer)
+            If (Original_id_user.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(25).Value = CType(Original_id_user.Value,Integer)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(25).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PIN Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_PIN")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_PIN,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -7803,7 +8700,9 @@ Namespace LMBADataSetTableAdapters
                     ByVal emailPersonal As String,  _
                     ByVal emailCorporativo As String,  _
                     ByVal idCargo As Integer,  _
-                    ByVal idHorario As Integer) As Integer
+                    ByVal idHorario As Integer,  _
+                    ByVal id_user As Global.System.Nullable(Of Integer),  _
+                    ByVal PIN As String) As Integer
             If (numCedula Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("numCedula")
             Else
@@ -7869,6 +8768,16 @@ Namespace LMBADataSetTableAdapters
             End If
             Me.Adapter.InsertCommand.Parameters(15).Value = CType(idCargo,Integer)
             Me.Adapter.InsertCommand.Parameters(16).Value = CType(idHorario,Integer)
+            If (id_user.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(17).Value = CType(id_user.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(17).Value = Global.System.DBNull.Value
+            End If
+            If (PIN Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("PIN")
+            Else
+                Me.Adapter.InsertCommand.Parameters(18).Value = CType(PIN,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -7906,6 +8815,9 @@ Namespace LMBADataSetTableAdapters
                     ByVal emailCorporativo As String,  _
                     ByVal idCargo As Integer,  _
                     ByVal idHorario As Integer,  _
+                    ByVal id_user As Global.System.Nullable(Of Integer),  _
+                    ByVal PIN As String,  _
+                    ByVal Original_idEmpleado As Integer,  _
                     ByVal Original_numCedula As String,  _
                     ByVal Original_estado As Integer,  _
                     ByVal Original_primerNombre As String,  _
@@ -7921,7 +8833,10 @@ Namespace LMBADataSetTableAdapters
                     ByVal Original_emailPersonal As String,  _
                     ByVal Original_emailCorporativo As String,  _
                     ByVal Original_idCargo As Integer,  _
-                    ByVal Original_idHorario As Integer) As Integer
+                    ByVal Original_idHorario As Integer,  _
+                    ByVal Original_id_user As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PIN As String,  _
+                    ByVal idEmpleado As Integer) As Integer
             If (numCedula Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("numCedula")
             Else
@@ -7987,80 +8902,104 @@ Namespace LMBADataSetTableAdapters
             End If
             Me.Adapter.UpdateCommand.Parameters(15).Value = CType(idCargo,Integer)
             Me.Adapter.UpdateCommand.Parameters(16).Value = CType(idHorario,Integer)
+            If (id_user.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(id_user.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
+            End If
+            If (PIN Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("PIN")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(PIN,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_idEmpleado,Integer)
             If (Original_numCedula Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_numCedula")
             Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_numCedula,String)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_numCedula,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_estado,Integer)
+            Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_estado,Integer)
             If (Original_primerNombre Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_primerNombre")
             Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_primerNombre,String)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_primerNombre,String)
             End If
             If (Original_segundoNombre Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_segundoNombre,String)
-            End If
-            If (Original_primerApellido Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_primerApellido")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_primerApellido,String)
-            End If
-            If (Original_segundoApellido Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_segundoApellido,String)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_segundoNombre,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_fechaNacimiento,Date)
-            Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_sexo,Boolean)
-            If (Original_fechaIngreso.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_fechaIngreso.Value,Date)
+            If (Original_primerApellido Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_primerApellido")
             Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_primerApellido,String)
+            End If
+            If (Original_segundoApellido Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_segundoApellido,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_fechaNacimiento,Date)
+            Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_sexo,Boolean)
+            If (Original_fechaIngreso.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_fechaIngreso.Value,Date)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
             End If
             If (Original_direccion Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_direccion")
             Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_direccion,String)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_direccion,String)
             End If
             If (Original_observacion Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_observacion,String)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_observacion,String)
             End If
             If (Original_telefono Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_telefono,String)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_telefono,String)
             End If
             If (Original_emailPersonal Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_emailPersonal,String)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_emailPersonal,String)
             End If
             If (Original_emailCorporativo Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_emailCorporativo,String)
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_emailCorporativo,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_idCargo,Integer)
-            Me.Adapter.UpdateCommand.Parameters(39).Value = CType(Original_idHorario,Integer)
+            Me.Adapter.UpdateCommand.Parameters(41).Value = CType(Original_idCargo,Integer)
+            Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_idHorario,Integer)
+            If (Original_id_user.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_id_user.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(44).Value = Global.System.DBNull.Value
+            End If
+            If (Original_PIN Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_PIN")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(Original_PIN,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(46).Value = CType(idEmpleado,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8081,6 +9020,7 @@ Namespace LMBADataSetTableAdapters
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
+                    ByVal numCedula As String,  _
                     ByVal estado As Integer,  _
                     ByVal primerNombre As String,  _
                     ByVal segundoNombre As String,  _
@@ -8097,6 +9037,9 @@ Namespace LMBADataSetTableAdapters
                     ByVal emailCorporativo As String,  _
                     ByVal idCargo As Integer,  _
                     ByVal idHorario As Integer,  _
+                    ByVal id_user As Global.System.Nullable(Of Integer),  _
+                    ByVal PIN As String,  _
+                    ByVal Original_idEmpleado As Integer,  _
                     ByVal Original_numCedula As String,  _
                     ByVal Original_estado As Integer,  _
                     ByVal Original_primerNombre As String,  _
@@ -8112,8 +9055,10 @@ Namespace LMBADataSetTableAdapters
                     ByVal Original_emailPersonal As String,  _
                     ByVal Original_emailCorporativo As String,  _
                     ByVal Original_idCargo As Integer,  _
-                    ByVal Original_idHorario As Integer) As Integer
-            Return Me.Update(Original_numCedula, estado, primerNombre, segundoNombre, primerApellido, segundoApellido, fechaNacimiento, sexo, fechaIngreso, direccion, observacion, fotoEmpleado, telefono, emailPersonal, emailCorporativo, idCargo, idHorario, Original_numCedula, Original_estado, Original_primerNombre, Original_segundoNombre, Original_primerApellido, Original_segundoApellido, Original_fechaNacimiento, Original_sexo, Original_fechaIngreso, Original_direccion, Original_observacion, Original_telefono, Original_emailPersonal, Original_emailCorporativo, Original_idCargo, Original_idHorario)
+                    ByVal Original_idHorario As Integer,  _
+                    ByVal Original_id_user As Global.System.Nullable(Of Integer),  _
+                    ByVal Original_PIN As String) As Integer
+            Return Me.Update(numCedula, estado, primerNombre, segundoNombre, primerApellido, segundoApellido, fechaNacimiento, sexo, fechaIngreso, direccion, observacion, fotoEmpleado, telefono, emailPersonal, emailCorporativo, idCargo, idHorario, id_user, PIN, Original_idEmpleado, Original_numCedula, Original_estado, Original_primerNombre, Original_segundoNombre, Original_primerApellido, Original_segundoApellido, Original_fechaNacimiento, Original_sexo, Original_fechaIngreso, Original_direccion, Original_observacion, Original_telefono, Original_emailPersonal, Original_emailCorporativo, Original_idCargo, Original_idHorario, Original_id_user, Original_PIN, Original_idEmpleado)
         End Function
     End Class
     
@@ -8246,38 +9191,38 @@ Namespace LMBADataSetTableAdapters
             tableMapping.DataSetTable = "empleadoRegistro"
             tableMapping.ColumnMappings.Add("idEmpleadoRegistro", "idEmpleadoRegistro")
             tableMapping.ColumnMappings.Add("idRegistro", "idRegistro")
-            tableMapping.ColumnMappings.Add("numCedula", "numCedula")
+            tableMapping.ColumnMappings.Add("idEmpleado", "idEmpleado")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[empleadoRegistro] WHERE (([idEmpleadoRegistro] = @Original_idE"& _ 
-                "mpleadoRegistro) AND ([idRegistro] = @Original_idRegistro) AND ([numCedula] = @O"& _ 
-                "riginal_numCedula))"
+                "mpleadoRegistro) AND ([idRegistro] = @Original_idRegistro) AND ([idEmpleado] = @"& _ 
+                "Original_idEmpleado))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEmpleadoRegistro", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleadoRegistro", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idRegistro", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idRegistro", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_numCedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "numCedula", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEmpleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[empleadoRegistro] ([idRegistro], [numCedula]) VALUES (@idRegis"& _ 
-                "tro, @numCedula);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleadoRegistro, idRegistro, numCedula FROM emplead"& _ 
-                "oRegistro WHERE (idEmpleadoRegistro = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[empleadoRegistro] ([idRegistro], [idEmpleado]) VALUES (@idRegi"& _ 
+                "stro, @idEmpleado);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleadoRegistro, idRegistro, idEmpleado FROM empl"& _ 
+                "eadoRegistro WHERE (idEmpleadoRegistro = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idRegistro", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idRegistro", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numCedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "numCedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmpleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[empleadoRegistro] SET [idRegistro] = @idRegistro, [numCedula] = @nu"& _ 
-                "mCedula WHERE (([idEmpleadoRegistro] = @Original_idEmpleadoRegistro) AND ([idReg"& _ 
-                "istro] = @Original_idRegistro) AND ([numCedula] = @Original_numCedula));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT"& _ 
-                " idEmpleadoRegistro, idRegistro, numCedula FROM empleadoRegistro WHERE (idEmplea"& _ 
-                "doRegistro = @idEmpleadoRegistro)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[empleadoRegistro] SET [idRegistro] = @idRegistro, [idEmpleado] = @i"& _ 
+                "dEmpleado WHERE (([idEmpleadoRegistro] = @Original_idEmpleadoRegistro) AND ([idR"& _ 
+                "egistro] = @Original_idRegistro) AND ([idEmpleado] = @Original_idEmpleado));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SE"& _ 
+                "LECT idEmpleadoRegistro, idRegistro, idEmpleado FROM empleadoRegistro WHERE (idE"& _ 
+                "mpleadoRegistro = @idEmpleadoRegistro)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idRegistro", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idRegistro", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numCedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "numCedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmpleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEmpleadoRegistro", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleadoRegistro", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idRegistro", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idRegistro", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_numCedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "numCedula", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idEmpleado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmpleadoRegistro", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleadoRegistro", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
@@ -8294,7 +9239,7 @@ Namespace LMBADataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT idEmpleadoRegistro, idRegistro, numCedula FROM dbo.empleadoRegistro"
+            Me._commandCollection(0).CommandText = "SELECT idEmpleadoRegistro, idRegistro, idEmpleado FROM dbo.empleadoRegistro"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -8354,14 +9299,10 @@ Namespace LMBADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_idEmpleadoRegistro As Integer, ByVal Original_idRegistro As Integer, ByVal Original_numCedula As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_idEmpleadoRegistro As Integer, ByVal Original_idRegistro As Integer, ByVal Original_idEmpleado As Integer) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_idEmpleadoRegistro,Integer)
             Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_idRegistro,Integer)
-            If (Original_numCedula Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_numCedula")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_numCedula,String)
-            End If
+            Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_idEmpleado,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8381,13 +9322,9 @@ Namespace LMBADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal idRegistro As Integer, ByVal numCedula As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal idRegistro As Integer, ByVal idEmpleado As Integer) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(idRegistro,Integer)
-            If (numCedula Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("numCedula")
-            Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(numCedula,String)
-            End If
+            Me.Adapter.InsertCommand.Parameters(1).Value = CType(idEmpleado,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8407,20 +9344,12 @@ Namespace LMBADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal idRegistro As Integer, ByVal numCedula As String, ByVal Original_idEmpleadoRegistro As Integer, ByVal Original_idRegistro As Integer, ByVal Original_numCedula As String, ByVal idEmpleadoRegistro As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal idRegistro As Integer, ByVal idEmpleado As Integer, ByVal Original_idEmpleadoRegistro As Integer, ByVal Original_idRegistro As Integer, ByVal Original_idEmpleado As Integer, ByVal idEmpleadoRegistro As Integer) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(idRegistro,Integer)
-            If (numCedula Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("numCedula")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(numCedula,String)
-            End If
+            Me.Adapter.UpdateCommand.Parameters(1).Value = CType(idEmpleado,Integer)
             Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Original_idEmpleadoRegistro,Integer)
             Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_idRegistro,Integer)
-            If (Original_numCedula Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_numCedula")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_numCedula,String)
-            End If
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_idEmpleado,Integer)
             Me.Adapter.UpdateCommand.Parameters(5).Value = CType(idEmpleadoRegistro,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -8441,8 +9370,8 @@ Namespace LMBADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal idRegistro As Integer, ByVal numCedula As String, ByVal Original_idEmpleadoRegistro As Integer, ByVal Original_idRegistro As Integer, ByVal Original_numCedula As String) As Integer
-            Return Me.Update(idRegistro, numCedula, Original_idEmpleadoRegistro, Original_idRegistro, Original_numCedula, Original_idEmpleadoRegistro)
+        Public Overloads Overridable Function Update(ByVal idRegistro As Integer, ByVal idEmpleado As Integer, ByVal Original_idEmpleadoRegistro As Integer, ByVal Original_idRegistro As Integer, ByVal Original_idEmpleado As Integer) As Integer
+            Return Me.Update(idRegistro, idEmpleado, Original_idEmpleadoRegistro, Original_idRegistro, Original_idEmpleado, Original_idEmpleadoRegistro)
         End Function
     End Class
     
@@ -11424,6 +12353,192 @@ Namespace LMBADataSetTableAdapters
     End Class
     
     '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class EmpleadosDgvTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "EmpleadosDgv"
+            tableMapping.ColumnMappings.Add("ID", "ID")
+            tableMapping.ColumnMappings.Add("Cedula", "Cedula")
+            tableMapping.ColumnMappings.Add("Nombres", "Nombres")
+            tableMapping.ColumnMappings.Add("Apellidos", "Apellidos")
+            tableMapping.ColumnMappings.Add("Cargo", "Cargo")
+            tableMapping.ColumnMappings.Add("Departamento", "Departamento")
+            tableMapping.ColumnMappings.Add("Telefono", "Telefono")
+            tableMapping.ColumnMappings.Add("Email", "Email")
+            tableMapping.ColumnMappings.Add("idDepartamento", "idDepartamento")
+            Me._adapter.TableMappings.Add(tableMapping)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.SCAP_LMBA_Tech.My.MySettings.Default.LMBAConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&"idEmpleado AS ID,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&"numCedula AS Cedula,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&"CONCAT(primerNombre, (CASE W"& _ 
+                "HEN (segundoNombre IS NULL) THEN '' ELSE CONCAT(' ', segundoNombre) END)) AS Nom"& _ 
+                "bres,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&"CONCAT(primerApellido, (CASE WHEN (segundoApellido IS NULL) THEN '' ELSE"& _ 
+                " CONCAT(' ', segundoApellido) END)) AS Apellidos,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&"Cargo.nombreCargo AS Cargo,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&"Departamento.nombreDepartamento as Departamento,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&"telefono AS Telefono,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&"ema"& _ 
+                "ilCorporativo AS Email,"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(9)&"Cargo.idDepartamento AS idDepartamento"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM Empleado"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"JOIN Cargo ON Empleado.idCargo = Cargo.idCargo"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"JOIN Departamento ON Cargo.idDe"& _ 
+                "partamento = Departamento.idDepartamento;"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As LMBADataSet.EmpleadosDgvDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As LMBADataSet.EmpleadosDgvDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As LMBADataSet.EmpleadosDgvDataTable = New LMBADataSet.EmpleadosDgvDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+    End Class
+    
+    '''<summary>
     '''TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     '''</summary>
     <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
@@ -11806,6 +12921,15 @@ Namespace LMBADataSetTableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
+            If (Not (Me._tbl_userTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.tbl_user.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
+                If ((Not (updatedRows) Is Nothing)  _
+                            AndAlso (0 < updatedRows.Length)) Then
+                    result = (result + Me._tbl_userTableAdapter.Update(updatedRows))
+                    allChangedRows.AddRange(updatedRows)
+                End If
+            End If
             If (Not (Me._empleadoTableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.Empleado.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
@@ -11839,15 +12963,6 @@ Namespace LMBADataSetTableAdapters
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
                     result = (result + Me._tbl_rolTableAdapter.Update(updatedRows))
-                    allChangedRows.AddRange(updatedRows)
-                End If
-            End If
-            If (Not (Me._tbl_userTableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.tbl_user.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
-                updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
-                If ((Not (updatedRows) Is Nothing)  _
-                            AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._tbl_userTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -11920,6 +13035,14 @@ Namespace LMBADataSetTableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
+            If (Not (Me._tbl_userTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.tbl_user.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+                If ((Not (addedRows) Is Nothing)  _
+                            AndAlso (0 < addedRows.Length)) Then
+                    result = (result + Me._tbl_userTableAdapter.Update(addedRows))
+                    allAddedRows.AddRange(addedRows)
+                End If
+            End If
             If (Not (Me._empleadoTableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.Empleado.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
@@ -11949,14 +13072,6 @@ Namespace LMBADataSetTableAdapters
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
                     result = (result + Me._tbl_rolTableAdapter.Update(addedRows))
-                    allAddedRows.AddRange(addedRows)
-                End If
-            End If
-            If (Not (Me._tbl_userTableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.tbl_user.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
-                If ((Not (addedRows) Is Nothing)  _
-                            AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._tbl_userTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -12018,14 +13133,6 @@ Namespace LMBADataSetTableAdapters
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
-            If (Not (Me._tbl_userTableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.tbl_user.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
-                If ((Not (deletedRows) Is Nothing)  _
-                            AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._tbl_userTableAdapter.Update(deletedRows))
-                    allChangedRows.AddRange(deletedRows)
-                End If
-            End If
             If (Not (Me._tbl_rolTableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.tbl_rol.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
@@ -12055,6 +13162,14 @@ Namespace LMBADataSetTableAdapters
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
                     result = (result + Me._empleadoTableAdapter.Update(deletedRows))
+                    allChangedRows.AddRange(deletedRows)
+                End If
+            End If
+            If (Not (Me._tbl_userTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.tbl_user.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+                If ((Not (deletedRows) Is Nothing)  _
+                            AndAlso (0 < deletedRows.Length)) Then
+                    result = (result + Me._tbl_userTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
