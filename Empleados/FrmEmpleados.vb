@@ -30,6 +30,18 @@
     End Sub
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
+        FrmAddEmp.caller = Me
         FrmAddEmp.Show()
+    End Sub
+
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        Try
+            Dim texto As String = TxtBuscar.Text & "%"
+            DgvEmpleados.DataSource = empleados.Search(texto)
+            DgvEmpleados.Refresh()
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

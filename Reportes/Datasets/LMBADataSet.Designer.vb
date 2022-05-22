@@ -12160,7 +12160,7 @@ Namespace LMBADataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        Empleado.idEmpleado AS ID, Empleado.numCedula AS Cedula, { fn CONCA"& _ 
@@ -12174,6 +12174,22 @@ Namespace LMBADataSetTableAdapters
                 "Cargo = Cargo.idCargo INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Departamento ON Cargo"& _ 
                 ".idDepartamento = Departamento.idDepartamento"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        Empleado.idEmpleado AS ID, Empleado.numCedula AS Cedula, { fn CONCA"& _ 
+                "T(Empleado.primerNombre, (CASE WHEN (segundoNombre IS NULL) THEN '' ELSE CONCAT("& _ 
+                "' ', segundoNombre) END)) } AS Nombres, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         { fn CONCAT(E"& _ 
+                "mpleado.primerApellido, (CASE WHEN (segundoApellido IS NULL) THEN '' ELSE CONCAT"& _ 
+                "(' ', segundoApellido) END)) } AS Apellidos, Cargo.nombreCargo AS Cargo, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"     "& _ 
+                "                    Departamento.nombreDepartamento AS Departamento, Empleado.te"& _ 
+                "lefono AS Telefono, Empleado.emailCorporativo AS Email, Cargo.idDepartamento"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FR"& _ 
+                "OM            Empleado INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Cargo ON Empleado.id"& _ 
+                "Cargo = Cargo.idCargo INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Departamento ON Cargo"& _ 
+                ".idDepartamento = Departamento.idDepartamento"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ({ fn CONCAT(Emplead"& _ 
+                "o.primerNombre, (CASE WHEN (segundoNombre IS NULL) THEN '' ELSE CONCAT(' ', segu"& _ 
+                "ndoNombre) END)) } LIKE @nombres)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombres", Global.System.Data.SqlDbType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, 0, 0, "", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -12195,6 +12211,40 @@ Namespace LMBADataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As LMBADataSet.EmpleadosDgvDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As LMBADataSet.EmpleadosDgvDataTable = New LMBADataSet.EmpleadosDgvDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy(ByVal dataTable As LMBADataSet.EmpleadosDgvDataTable, ByVal nombres As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (nombres Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("nombres")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(nombres,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function Search(ByVal nombres As String) As LMBADataSet.EmpleadosDgvDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (nombres Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("nombres")
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(nombres,String)
+            End If
             Dim dataTable As LMBADataSet.EmpleadosDgvDataTable = New LMBADataSet.EmpleadosDgvDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
