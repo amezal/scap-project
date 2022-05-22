@@ -13,7 +13,7 @@
             Dim idDpto As Integer = CInt(cbDto.SelectedValue)
             Dim newCargo As String = txtCargo.Text.Trim
             Dim desc As String = txtDesc.Text.Trim
-            car.InsertQuery(newCargo, desc, idDpto)
+            car.InsertarCargo(newCargo, desc, idDpto)
             FrmCargo.llenarGrid()
 
         Catch ex As Exception
@@ -25,5 +25,8 @@
         llenarDpto()
     End Sub
 
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Me.Close()
+    End Sub
 
 End Class
