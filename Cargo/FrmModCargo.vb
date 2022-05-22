@@ -1,5 +1,5 @@
 ﻿Public Class FrmModCargo
-
+  
     Public idCar As Integer
     Public nombreDpto As String
     Public nombreCar As String
@@ -12,16 +12,16 @@
         txtCargo.Text = nombreCar
         txtDesc.Text = desc
         llenarDpto()
-
     End Sub
+  
     Sub llenarDpto()
         cbDto.DataSource = dpto.GetData
         cbDto.DisplayMember = "nombreDepartamento"
         cbDto.ValueMember = "idDepartamento"
         cbDto.SelectedValue = dpto.GetData().Select("nombreDepartamento='" & nombreDpto & "'")(0)("idDepartamento")
         cbDto.Refresh()
-
     End Sub
+    
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
