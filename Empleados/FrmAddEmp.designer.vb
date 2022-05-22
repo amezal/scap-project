@@ -23,7 +23,7 @@ Partial Class FrmAddEmp
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.DtpNac = New System.Windows.Forms.DateTimePicker()
@@ -73,21 +73,21 @@ Partial Class FrmAddEmp
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator1, Me.ToolStripButton2})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar, Me.ToolStripSeparator1, Me.ToolStripButton2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(631, 25)
         Me.ToolStrip1.TabIndex = 10
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'BtnGuardar
         '
-        Me.ToolStripButton1.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(69, 22)
-        Me.ToolStripButton1.Text = "Guardar"
-        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnGuardar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
+        Me.BtnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(69, 22)
+        Me.BtnGuardar.Text = "Guardar"
+        Me.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator1
         '
@@ -172,6 +172,7 @@ Partial Class FrmAddEmp
         'TxtPIN2
         '
         Me.TxtPIN2.Location = New System.Drawing.Point(437, 278)
+        Me.TxtPIN2.MaxLength = 4
         Me.TxtPIN2.Name = "TxtPIN2"
         Me.TxtPIN2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtPIN2.Size = New System.Drawing.Size(93, 20)
@@ -180,6 +181,7 @@ Partial Class FrmAddEmp
         'TxtPIN
         '
         Me.TxtPIN.Location = New System.Drawing.Point(437, 242)
+        Me.TxtPIN.MaxLength = 4
         Me.TxtPIN.Name = "TxtPIN"
         Me.TxtPIN.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtPIN.Size = New System.Drawing.Size(93, 20)
@@ -252,6 +254,7 @@ Partial Class FrmAddEmp
         '
         'CbxDpto
         '
+        Me.CbxDpto.Enabled = False
         Me.CbxDpto.FormattingEnabled = True
         Me.CbxDpto.Location = New System.Drawing.Point(437, 132)
         Me.CbxDpto.Name = "CbxDpto"
@@ -524,7 +527,7 @@ Partial Class FrmAddEmp
     End Sub
 
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents BtnGuardar As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents ToolStripButton2 As ToolStripButton
     Friend WithEvents DtpNac As DateTimePicker
