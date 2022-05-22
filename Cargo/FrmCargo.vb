@@ -35,7 +35,16 @@
     End Sub
 
     Private Sub BtnDeleteCar_Click(sender As Object, e As EventArgs) Handles BtnDeleteCar.Click
+        Try
+            Dim resp As VariantType
+            resp = (MsgBox("Desea eliminar el registro?", vbQuestion + vbYesNo, "Eliminar"))
+            If (resp = vbYes) Then
+                regCar.EliminarRegistro(idCar)
+                llenarGrid()
+            End If
+        Catch ex As Exception
 
+        End Try
     End Sub
 
     Private Sub DgvCargo_DoubleClick(sender As Object, e As EventArgs) Handles DgvCargo.DoubleClick
