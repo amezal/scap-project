@@ -107,7 +107,7 @@
 
         MsgBox("Empleado añadido", MsgBoxStyle.Information, "Éxito")
         Me.Close()
-        Me.caller.llenarGrid()
+        FrmEmpleados.llenarGrid()
     End Sub
 
     Private Sub CbxCargo_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles CbxCargo.SelectionChangeCommitted
