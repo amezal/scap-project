@@ -24,7 +24,7 @@ Partial Class FrmModCargo
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmModCargo))
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.btnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnCancel = New System.Windows.Forms.ToolStripButton()
         Me.txtDesc = New System.Windows.Forms.TextBox()
@@ -38,21 +38,21 @@ Partial Class FrmModCargo
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator1, Me.btnCancel})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnGuardar, Me.ToolStripSeparator1, Me.btnCancel})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(600, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(800, 25)
         Me.ToolStrip1.TabIndex = 12
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'btnGuardar
         '
-        Me.ToolStripButton1.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(69, 22)
-        Me.ToolStripButton1.Text = "Guardar"
-        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnGuardar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
+        Me.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(69, 22)
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator1
         '
@@ -70,18 +70,17 @@ Partial Class FrmModCargo
         '
         'txtDesc
         '
-        Me.txtDesc.Location = New System.Drawing.Point(279, 230)
-        Me.txtDesc.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtDesc.Location = New System.Drawing.Point(372, 283)
+        Me.txtDesc.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtDesc.Name = "txtDesc"
-        Me.txtDesc.Size = New System.Drawing.Size(146, 20)
+        Me.txtDesc.Size = New System.Drawing.Size(193, 22)
         Me.txtDesc.TabIndex = 18
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(157, 233)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(204, 288)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(86, 17)
         Me.Label3.TabIndex = 17
@@ -89,18 +88,17 @@ Partial Class FrmModCargo
         '
         'txtCargo
         '
-        Me.txtCargo.Location = New System.Drawing.Point(279, 168)
-        Me.txtCargo.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtCargo.Location = New System.Drawing.Point(372, 207)
+        Me.txtCargo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtCargo.Name = "txtCargo"
-        Me.txtCargo.Size = New System.Drawing.Size(146, 20)
+        Me.txtCargo.Size = New System.Drawing.Size(193, 22)
         Me.txtCargo.TabIndex = 16
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(193, 168)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(240, 209)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(50, 17)
         Me.Label2.TabIndex = 15
@@ -109,18 +107,17 @@ Partial Class FrmModCargo
         'cbDto
         '
         Me.cbDto.FormattingEnabled = True
-        Me.cbDto.Location = New System.Drawing.Point(279, 105)
-        Me.cbDto.Margin = New System.Windows.Forms.Padding(2)
+        Me.cbDto.Location = New System.Drawing.Point(372, 129)
+        Me.cbDto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbDto.Name = "cbDto"
-        Me.cbDto.Size = New System.Drawing.Size(146, 21)
+        Me.cbDto.Size = New System.Drawing.Size(193, 24)
         Me.cbDto.TabIndex = 14
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(141, 109)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(188, 134)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(102, 17)
         Me.Label1.TabIndex = 13
@@ -128,9 +125,9 @@ Partial Class FrmModCargo
         '
         'FrmModCargo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.txtDesc)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtCargo)
@@ -139,7 +136,7 @@ Partial Class FrmModCargo
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FrmModCargo"
         Me.Text = "Modificar Cargo"
         Me.ToolStrip1.ResumeLayout(False)
@@ -149,7 +146,7 @@ Partial Class FrmModCargo
 
     End Sub
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents btnGuardar As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents btnCancel As ToolStripButton
     Friend WithEvents txtDesc As TextBox
