@@ -31,7 +31,6 @@
     End Sub
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
-        FrmAddEmp.caller = Me
         FrmAddEmp.Show()
     End Sub
 
