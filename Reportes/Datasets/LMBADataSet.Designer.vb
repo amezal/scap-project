@@ -71,8 +71,6 @@ Partial Public Class LMBADataSet
     
     Private relationRefDepartamento1 As Global.System.Data.DataRelation
     
-    Private relationRefDepartamento11 As Global.System.Data.DataRelation
-    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -514,7 +512,6 @@ Partial Public Class LMBADataSet
         Me.relationReftbl_rol10 = Me.Relations("Reftbl_rol10")
         Me.relationReftbl_user11 = Me.Relations("Reftbl_user11")
         Me.relationRefDepartamento1 = Me.Relations("RefDepartamento1")
-        Me.relationRefDepartamento11 = Me.Relations("RefDepartamento11")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -571,8 +568,6 @@ Partial Public Class LMBADataSet
         Me.Relations.Add(Me.relationReftbl_user11)
         Me.relationRefDepartamento1 = New Global.System.Data.DataRelation("RefDepartamento1", New Global.System.Data.DataColumn() {Me.tableDepartamento.idDepartamentoColumn}, New Global.System.Data.DataColumn() {Me.tableCargo.idDepartamentoColumn}, false)
         Me.Relations.Add(Me.relationRefDepartamento1)
-        Me.relationRefDepartamento11 = New Global.System.Data.DataRelation("RefDepartamento11", New Global.System.Data.DataColumn() {Me.tableDepartamento.idDepartamentoColumn}, New Global.System.Data.DataColumn() {Me.tableEmpleadosDgv.idDepartamentoColumn}, false)
-        Me.Relations.Add(Me.relationRefDepartamento11)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4828,7 +4823,7 @@ Partial Public Class LMBADataSet
         
         Private columnEmail As Global.System.Data.DataColumn
         
-        Private columnidDepartamento As Global.System.Data.DataColumn
+        Private columnidHorario As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -4931,9 +4926,9 @@ Partial Public Class LMBADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public ReadOnly Property idDepartamentoColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property idHorarioColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnidDepartamento
+                Return Me.columnidHorario
             End Get
         End Property
         
@@ -4974,12 +4969,9 @@ Partial Public Class LMBADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddEmpleadosDgvRow(ByVal Cedula As String, ByVal Nombres As String, ByVal Apellidos As String, ByVal Cargo As String, ByVal Departamento As String, ByVal Telefono As String, ByVal Email As String, ByVal parentDepartamentoRowByRefDepartamento11 As DepartamentoRow) As EmpleadosDgvRow
+        Public Overloads Function AddEmpleadosDgvRow(ByVal Cedula As String, ByVal Nombres As String, ByVal Apellidos As String, ByVal Cargo As String, ByVal Departamento As String, ByVal Telefono As String, ByVal Email As String, ByVal idHorario As Integer) As EmpleadosDgvRow
             Dim rowEmpleadosDgvRow As EmpleadosDgvRow = CType(Me.NewRow,EmpleadosDgvRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Cedula, Nombres, Apellidos, Cargo, Departamento, Telefono, Email, Nothing}
-            If (Not (parentDepartamentoRowByRefDepartamento11) Is Nothing) Then
-                columnValuesArray(8) = parentDepartamentoRowByRefDepartamento11(0)
-            End If
+            Dim columnValuesArray() As Object = New Object() {Nothing, Cedula, Nombres, Apellidos, Cargo, Departamento, Telefono, Email, idHorario}
             rowEmpleadosDgvRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowEmpleadosDgvRow)
             Return rowEmpleadosDgvRow
@@ -5016,7 +5008,7 @@ Partial Public Class LMBADataSet
             Me.columnDepartamento = MyBase.Columns("Departamento")
             Me.columnTelefono = MyBase.Columns("Telefono")
             Me.columnEmail = MyBase.Columns("Email")
-            Me.columnidDepartamento = MyBase.Columns("idDepartamento")
+            Me.columnidHorario = MyBase.Columns("idHorario")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5038,8 +5030,8 @@ Partial Public Class LMBADataSet
             MyBase.Columns.Add(Me.columnTelefono)
             Me.columnEmail = New Global.System.Data.DataColumn("Email", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnEmail)
-            Me.columnidDepartamento = New Global.System.Data.DataColumn("idDepartamento", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnidDepartamento)
+            Me.columnidHorario = New Global.System.Data.DataColumn("idHorario", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnidHorario)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrement = true
             Me.columnID.AutoIncrementSeed = -1
@@ -5059,7 +5051,7 @@ Partial Public Class LMBADataSet
             Me.columnDepartamento.MaxLength = 30
             Me.columnTelefono.MaxLength = 10
             Me.columnEmail.MaxLength = 100
-            Me.columnidDepartamento.AllowDBNull = false
+            Me.columnidHorario.AllowDBNull = false
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5401,16 +5393,6 @@ Partial Public Class LMBADataSet
                 Return New CargoRow(-1) {}
             Else
                 Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("RefDepartamento1")),CargoRow())
-            End If
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Function GetEmpleadosDgvRows() As EmpleadosDgvRow()
-            If (Me.Table.ChildRelations("RefDepartamento11") Is Nothing) Then
-                Return New EmpleadosDgvRow(-1) {}
-            Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("RefDepartamento11")),EmpleadosDgvRow())
             End If
         End Function
     End Class
@@ -6780,23 +6762,12 @@ Partial Public Class LMBADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property idDepartamento() As Integer
+        Public Property idHorario() As Integer
             Get
-                Return CType(Me(Me.tableEmpleadosDgv.idDepartamentoColumn),Integer)
+                Return CType(Me(Me.tableEmpleadosDgv.idHorarioColumn),Integer)
             End Get
             Set
-                Me(Me.tableEmpleadosDgv.idDepartamentoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Property DepartamentoRow() As DepartamentoRow
-            Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("RefDepartamento11")),DepartamentoRow)
-            End Get
-            Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("RefDepartamento11"))
+                Me(Me.tableEmpleadosDgv.idHorarioColumn) = value
             End Set
         End Property
         
@@ -10290,12 +10261,19 @@ Namespace LMBADataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT idRegistro, estado, fecha, horaEntrada, horaSalida, idJustificacion FROM d"& _ 
                 "bo.registroES"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT registroES.* FROM registroES"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"INNER JOIN empleadoRegistro ON registroES.id"& _ 
+                "Registro = empleadoRegistro.idRegistro"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE empleadoRegistro.idEmpleado = @idE"& _ 
+                "mpleado;"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmpleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -10317,6 +10295,32 @@ Namespace LMBADataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As LMBADataSet.registroESDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As LMBADataSet.registroESDataTable = New LMBADataSet.registroESDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillDgv(ByVal dataTable As LMBADataSet.registroESDataTable, ByVal idEmpleado As Integer) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(idEmpleado,Integer)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataDgv(ByVal idEmpleado As Integer) As LMBADataSet.registroESDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Me.Adapter.SelectCommand.Parameters(0).Value = CType(idEmpleado,Integer)
             Dim dataTable As LMBADataSet.registroESDataTable = New LMBADataSet.registroESDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
@@ -12429,7 +12433,7 @@ Namespace LMBADataSetTableAdapters
             tableMapping.ColumnMappings.Add("Departamento", "Departamento")
             tableMapping.ColumnMappings.Add("Telefono", "Telefono")
             tableMapping.ColumnMappings.Add("Email", "Email")
-            tableMapping.ColumnMappings.Add("idDepartamento", "idDepartamento")
+            tableMapping.ColumnMappings.Add("idHorario", "idHorario")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -12452,10 +12456,10 @@ Namespace LMBADataSetTableAdapters
                 "mpleado.primerApellido, (CASE WHEN (segundoApellido IS NULL) THEN '' ELSE CONCAT"& _ 
                 "(' ', segundoApellido) END)) } AS Apellidos, Cargo.nombreCargo AS Cargo, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"     "& _ 
                 "                    Departamento.nombreDepartamento AS Departamento, Empleado.te"& _ 
-                "lefono AS Telefono, Empleado.emailCorporativo AS Email, Cargo.idDepartamento"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FR"& _ 
-                "OM            Empleado INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Cargo ON Empleado.id"& _ 
-                "Cargo = Cargo.idCargo INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Departamento ON Cargo"& _ 
-                ".idDepartamento = Departamento.idDepartamento"
+                "lefono AS Telefono, Empleado.emailCorporativo AS Email, Empleado.idHorario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM"& _ 
+                "            Empleado INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Cargo ON Empleado.idCa"& _ 
+                "rgo = Cargo.idCargo INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Departamento ON Cargo.i"& _ 
+                "dDepartamento = Departamento.idDepartamento"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
