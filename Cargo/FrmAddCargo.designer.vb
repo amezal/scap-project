@@ -49,8 +49,7 @@ Partial Class FrmAddCargo
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(142, 112)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(189, 138)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(102, 17)
         Me.Label1.TabIndex = 2
@@ -59,18 +58,17 @@ Partial Class FrmAddCargo
         'cbDto
         '
         Me.cbDto.FormattingEnabled = True
-        Me.cbDto.Location = New System.Drawing.Point(280, 108)
-        Me.cbDto.Margin = New System.Windows.Forms.Padding(2)
+        Me.cbDto.Location = New System.Drawing.Point(373, 133)
+        Me.cbDto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cbDto.Name = "cbDto"
-        Me.cbDto.Size = New System.Drawing.Size(146, 21)
+        Me.cbDto.Size = New System.Drawing.Size(193, 24)
         Me.cbDto.TabIndex = 3
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(194, 171)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(259, 210)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(50, 17)
         Me.Label2.TabIndex = 4
@@ -78,10 +76,10 @@ Partial Class FrmAddCargo
         '
         'txtCargo
         '
-        Me.txtCargo.Location = New System.Drawing.Point(280, 171)
-        Me.txtCargo.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtCargo.Location = New System.Drawing.Point(373, 210)
+        Me.txtCargo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtCargo.Name = "txtCargo"
-        Me.txtCargo.Size = New System.Drawing.Size(146, 20)
+        Me.txtCargo.Size = New System.Drawing.Size(193, 22)
         Me.txtCargo.TabIndex = 5
         '
         'ToolStrip1
@@ -89,7 +87,7 @@ Partial Class FrmAddCargo
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnGuardar, Me.ToolStripSeparator1, Me.btnCancelar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(600, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(800, 25)
         Me.ToolStrip1.TabIndex = 7
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -141,18 +139,17 @@ Partial Class FrmAddCargo
         '
         'txtDesc
         '
-        Me.txtDesc.Location = New System.Drawing.Point(280, 233)
-        Me.txtDesc.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtDesc.Location = New System.Drawing.Point(373, 287)
+        Me.txtDesc.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtDesc.Name = "txtDesc"
-        Me.txtDesc.Size = New System.Drawing.Size(146, 20)
+        Me.txtDesc.Size = New System.Drawing.Size(193, 22)
         Me.txtDesc.TabIndex = 9
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(158, 236)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(211, 290)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(86, 17)
         Me.Label3.TabIndex = 8
@@ -160,9 +157,9 @@ Partial Class FrmAddCargo
         '
         'FrmAddCargo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.txtDesc)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ToolStrip1)
@@ -171,7 +168,7 @@ Partial Class FrmAddCargo
         Me.Controls.Add(Me.cbDto)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FrmAddCargo"
         Me.Text = "+"
         Me.ToolStrip1.ResumeLayout(False)
