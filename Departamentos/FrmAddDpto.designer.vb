@@ -24,80 +24,109 @@ Partial Class FrmAddDpto
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAddDpto))
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.btnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.tbCargo1 = New System.Windows.Forms.TextBox()
-        Me.BtnBack1 = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.ToolStripButton()
+        Me.tbDepto = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.tbEmail = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.tbExt = New System.Windows.Forms.TextBox()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator1, Me.ToolStripButton2})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnGuardar, Me.ToolStripSeparator1, Me.btnCancel})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(433, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(495, 25)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'btnGuardar
         '
-        Me.ToolStripButton1.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(69, 22)
-        Me.ToolStripButton1.Text = "Guardar"
-        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnGuardar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
+        Me.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(69, 22)
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
-        'tbCargo1
+        'btnCancel
         '
-        Me.tbCargo1.Location = New System.Drawing.Point(145, 111)
-        Me.tbCargo1.Name = "tbCargo1"
-        Me.tbCargo1.Size = New System.Drawing.Size(189, 23)
-        Me.tbCargo1.TabIndex = 5
+        Me.btnCancel.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_cancel_50
+        Me.btnCancel.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(73, 22)
+        Me.btnCancel.Text = "Cancelar"
+        Me.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
-        'BtnBack1
+        'tbDepto
         '
-        Me.BtnBack1.Location = New System.Drawing.Point(12, 262)
-        Me.BtnBack1.Name = "BtnBack1"
-        Me.BtnBack1.Size = New System.Drawing.Size(75, 23)
-        Me.BtnBack1.TabIndex = 6
-        Me.BtnBack1.Text = "Regresar"
-        Me.BtnBack1.UseVisualStyleBackColor = True
+        Me.tbDepto.Location = New System.Drawing.Point(182, 101)
+        Me.tbDepto.Name = "tbDepto"
+        Me.tbDepto.Size = New System.Drawing.Size(215, 22)
+        Me.tbDepto.TabIndex = 5
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(70, 114)
+        Me.Label3.Location = New System.Drawing.Point(64, 104)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 15)
+        Me.Label3.Size = New System.Drawing.Size(96, 16)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Nombre:"
+        Me.Label3.Text = "Departamento:"
         '
-        'ToolStripButton2
+        'Label2
         '
-        Me.ToolStripButton2.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_cancel_50
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(73, 22)
-        Me.ToolStripButton2.Text = "Cancelar"
-        Me.ToolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(116, 218)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(44, 16)
+        Me.Label2.TabIndex = 13
+        Me.Label2.Text = "Email:"
+        '
+        'tbEmail
+        '
+        Me.tbEmail.Location = New System.Drawing.Point(182, 215)
+        Me.tbEmail.Name = "tbEmail"
+        Me.tbEmail.Size = New System.Drawing.Size(215, 22)
+        Me.tbEmail.TabIndex = 12
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(53, 162)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(107, 16)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "Extensión de tel.:"
+        '
+        'tbExt
+        '
+        Me.tbExt.Location = New System.Drawing.Point(182, 156)
+        Me.tbExt.Name = "tbExt"
+        Me.tbExt.Size = New System.Drawing.Size(215, 22)
+        Me.tbExt.TabIndex = 10
         '
         'FrmAddDpto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(433, 297)
+        Me.ClientSize = New System.Drawing.Size(495, 317)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.tbEmail)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.tbExt)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.BtnBack1)
-        Me.Controls.Add(Me.tbCargo1)
+        Me.Controls.Add(Me.tbDepto)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmAddDpto"
@@ -111,10 +140,13 @@ Partial Class FrmAddDpto
     End Sub
 
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents btnGuardar As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents tbCargo1 As TextBox
-    Friend WithEvents BtnBack1 As Button
+    Friend WithEvents tbDepto As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents ToolStripButton2 As ToolStripButton
+    Friend WithEvents btnCancel As ToolStripButton
+    Friend WithEvents Label2 As Label
+    Friend WithEvents tbEmail As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents tbExt As TextBox
 End Class

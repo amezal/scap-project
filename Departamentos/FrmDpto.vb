@@ -1,21 +1,5 @@
 ﻿Public Class FrmDpto
-    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) 
-
-    End Sub
-
-    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub TableLayoutPanel1_Paint(sender As Object, e As PaintEventArgs) 
-
-    End Sub
-
-    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) 
-
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        FrmAddDpto.Show()
     End Sub
 End Class
