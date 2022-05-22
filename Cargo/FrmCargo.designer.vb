@@ -35,15 +35,16 @@ Partial Class FrmCargo
         Me.txtSearch = New System.Windows.Forms.ToolStripTextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DgvCargo = New System.Windows.Forms.DataGridView()
-        Me.NombreCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Departamento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LMBADataSet = New SCAP_LMBA_Tech.LMBADataSet()
         Me.CargoTableAdapter = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.CargoTableAdapter()
         Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DepartamentoTableAdapter = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.DepartamentoTableAdapter()
         Me.GbCargo = New System.Windows.Forms.GroupBox()
+        Me.idCargo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreCargoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescripcionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Departamento = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.DgvCargo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,7 +59,7 @@ Partial Class FrmCargo
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnAddCar, Me.ToolStripSeparator1, Me.BtnDeleteCar, Me.ToolStripSeparator2, Me.BtnModCar, Me.ToolStripSeparator3, Me.BtnSearchCar, Me.txtSearch})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(600, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(800, 25)
         Me.ToolStrip1.TabIndex = 13
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -118,49 +119,30 @@ Partial Class FrmCargo
         Me.txtSearch.AutoSize = False
         Me.txtSearch.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(200, 25)
+        Me.txtSearch.Size = New System.Drawing.Size(265, 23)
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.DgvCargo)
-        Me.Panel1.Location = New System.Drawing.Point(4, 16)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Location = New System.Drawing.Point(5, 20)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(563, 284)
+        Me.Panel1.Size = New System.Drawing.Size(751, 350)
         Me.Panel1.TabIndex = 14
         '
         'DgvCargo
         '
         Me.DgvCargo.AutoGenerateColumns = False
         Me.DgvCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvCargo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NombreCargoDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.Departamento})
+        Me.DgvCargo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idCargo, Me.NombreCargoDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.Departamento})
         Me.DgvCargo.DataSource = Me.CargoBindingSource
         Me.DgvCargo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvCargo.Location = New System.Drawing.Point(0, 0)
-        Me.DgvCargo.Margin = New System.Windows.Forms.Padding(2)
+        Me.DgvCargo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DgvCargo.Name = "DgvCargo"
         Me.DgvCargo.RowTemplate.Height = 24
-        Me.DgvCargo.Size = New System.Drawing.Size(563, 284)
+        Me.DgvCargo.Size = New System.Drawing.Size(751, 350)
         Me.DgvCargo.TabIndex = 0
-        '
-        'NombreCargoDataGridViewTextBoxColumn
-        '
-        Me.NombreCargoDataGridViewTextBoxColumn.DataPropertyName = "nombreCargo"
-        Me.NombreCargoDataGridViewTextBoxColumn.HeaderText = "nombreCargo"
-        Me.NombreCargoDataGridViewTextBoxColumn.Name = "NombreCargoDataGridViewTextBoxColumn"
-        '
-        'DescripcionDataGridViewTextBoxColumn
-        '
-        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
-        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
-        '
-        'Departamento
-        '
-        Me.Departamento.DataPropertyName = "Departamento"
-        Me.Departamento.HeaderText = "Departamento"
-        Me.Departamento.Name = "Departamento"
-        Me.Departamento.ReadOnly = True
         '
         'CargoBindingSource
         '
@@ -188,24 +170,50 @@ Partial Class FrmCargo
         'GbCargo
         '
         Me.GbCargo.Controls.Add(Me.Panel1)
-        Me.GbCargo.Location = New System.Drawing.Point(9, 34)
-        Me.GbCargo.Margin = New System.Windows.Forms.Padding(2)
+        Me.GbCargo.Location = New System.Drawing.Point(12, 42)
+        Me.GbCargo.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GbCargo.Name = "GbCargo"
-        Me.GbCargo.Padding = New System.Windows.Forms.Padding(2)
-        Me.GbCargo.Size = New System.Drawing.Size(572, 304)
+        Me.GbCargo.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GbCargo.Size = New System.Drawing.Size(763, 374)
         Me.GbCargo.TabIndex = 15
         Me.GbCargo.TabStop = False
         Me.GbCargo.Text = "Cargos de Empleados"
         '
+        'idCargo
+        '
+        Me.idCargo.DataPropertyName = "idCargo"
+        Me.idCargo.HeaderText = "ID"
+        Me.idCargo.Name = "idCargo"
+        Me.idCargo.ReadOnly = True
+        '
+        'NombreCargoDataGridViewTextBoxColumn
+        '
+        Me.NombreCargoDataGridViewTextBoxColumn.DataPropertyName = "nombreCargo"
+        Me.NombreCargoDataGridViewTextBoxColumn.HeaderText = "Cargo"
+        Me.NombreCargoDataGridViewTextBoxColumn.Name = "NombreCargoDataGridViewTextBoxColumn"
+        '
+        'DescripcionDataGridViewTextBoxColumn
+        '
+        Me.DescripcionDataGridViewTextBoxColumn.DataPropertyName = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
+        Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
+        '
+        'Departamento
+        '
+        Me.Departamento.DataPropertyName = "Departamento"
+        Me.Departamento.HeaderText = "Departamento"
+        Me.Departamento.Name = "Departamento"
+        Me.Departamento.ReadOnly = True
+        '
         'FrmCargo
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 348)
+        Me.ClientSize = New System.Drawing.Size(800, 428)
         Me.Controls.Add(Me.GbCargo)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FrmCargo"
         Me.Text = "Cargo"
         Me.ToolStrip1.ResumeLayout(False)
@@ -238,6 +246,7 @@ Partial Class FrmCargo
     Friend WithEvents DepartamentoTableAdapter As LMBADataSetTableAdapters.DepartamentoTableAdapter
     Friend WithEvents GbCargo As GroupBox
     Friend WithEvents IdDepartamentoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents idCargo As DataGridViewTextBoxColumn
     Friend WithEvents NombreCargoDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents DescripcionDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents Departamento As DataGridViewTextBoxColumn

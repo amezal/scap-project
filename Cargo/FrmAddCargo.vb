@@ -6,7 +6,7 @@
         cbDto.DataSource = dpto.GetData
         cbDto.DisplayMember = "nombreDepartamento"
         cbDto.ValueMember = "idDepartamento"
-        cbDto.Refresh()
+
     End Sub
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
@@ -24,5 +24,6 @@
     Private Sub FrmAddCargo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarDpto()
     End Sub
+
 
 End Class
