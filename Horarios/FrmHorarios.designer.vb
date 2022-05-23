@@ -35,14 +35,15 @@ Partial Class FrmHorarios
         Me.gbHorario = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dgvHorario = New System.Windows.Forms.DataGridView()
-        Me.IdHorarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HoraEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.HoraSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HorarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LMBADataSet = New SCAP_LMBA_Tech.LMBADataSet()
         Me.LMBADataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.HorarioTableAdapter = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.HorarioTableAdapter()
+        Me.IdHorarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HoraEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HoraSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.almuerzo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         Me.gbHorario.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -142,7 +143,7 @@ Partial Class FrmHorarios
         '
         Me.dgvHorario.AutoGenerateColumns = False
         Me.dgvHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvHorario.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdHorarioDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.HoraEntradaDataGridViewTextBoxColumn, Me.HoraSalidaDataGridViewTextBoxColumn})
+        Me.dgvHorario.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdHorarioDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.HoraEntradaDataGridViewTextBoxColumn, Me.HoraSalidaDataGridViewTextBoxColumn, Me.almuerzo})
         Me.dgvHorario.DataSource = Me.HorarioBindingSource
         Me.dgvHorario.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvHorario.Location = New System.Drawing.Point(0, 0)
@@ -152,6 +153,25 @@ Partial Class FrmHorarios
         Me.dgvHorario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvHorario.Size = New System.Drawing.Size(749, 348)
         Me.dgvHorario.TabIndex = 0
+        '
+        'HorarioBindingSource
+        '
+        Me.HorarioBindingSource.DataMember = "Horario"
+        Me.HorarioBindingSource.DataSource = Me.LMBADataSet
+        '
+        'LMBADataSet
+        '
+        Me.LMBADataSet.DataSetName = "LMBADataSet"
+        Me.LMBADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'LMBADataSetBindingSource
+        '
+        Me.LMBADataSetBindingSource.DataSource = Me.LMBADataSet
+        Me.LMBADataSetBindingSource.Position = 0
+        '
+        'HorarioTableAdapter
+        '
+        Me.HorarioTableAdapter.ClearBeforeFill = True
         '
         'IdHorarioDataGridViewTextBoxColumn
         '
@@ -186,24 +206,13 @@ Partial Class FrmHorarios
         Me.HoraSalidaDataGridViewTextBoxColumn.Name = "HoraSalidaDataGridViewTextBoxColumn"
         Me.HoraSalidaDataGridViewTextBoxColumn.Width = 125
         '
-        'HorarioBindingSource
+        'almuerzo
         '
-        Me.HorarioBindingSource.DataMember = "Horario"
-        Me.HorarioBindingSource.DataSource = Me.LMBADataSet
-        '
-        'LMBADataSet
-        '
-        Me.LMBADataSet.DataSetName = "LMBADataSet"
-        Me.LMBADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'LMBADataSetBindingSource
-        '
-        Me.LMBADataSetBindingSource.DataSource = Me.LMBADataSet
-        Me.LMBADataSetBindingSource.Position = 0
-        '
-        'HorarioTableAdapter
-        '
-        Me.HorarioTableAdapter.ClearBeforeFill = True
+        Me.almuerzo.DataPropertyName = "almuerzo"
+        Me.almuerzo.HeaderText = "Almuerzo"
+        Me.almuerzo.MinimumWidth = 6
+        Me.almuerzo.Name = "almuerzo"
+        Me.almuerzo.Width = 125
         '
         'FrmHorarios
         '
@@ -247,4 +256,5 @@ Partial Class FrmHorarios
     Friend WithEvents NombreDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents HoraEntradaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents HoraSalidaDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents almuerzo As DataGridViewTextBoxColumn
 End Class

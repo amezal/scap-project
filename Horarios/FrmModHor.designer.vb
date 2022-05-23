@@ -33,13 +33,15 @@ Partial Class FrmModHor
         Me.btnSaveModHor = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.cancelModHor = New System.Windows.Forms.ToolStripButton()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtAlmuerzo = New System.Windows.Forms.TextBox()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(70, 81)
+        Me.Label1.Location = New System.Drawing.Point(122, 79)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(62, 17)
         Me.Label1.TabIndex = 2
@@ -48,7 +50,7 @@ Partial Class FrmModHor
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(35, 135)
+        Me.Label2.Location = New System.Drawing.Point(87, 133)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(99, 17)
         Me.Label2.TabIndex = 3
@@ -57,7 +59,7 @@ Partial Class FrmModHor
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(53, 188)
+        Me.Label3.Location = New System.Drawing.Point(105, 186)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(82, 17)
         Me.Label3.TabIndex = 4
@@ -65,21 +67,21 @@ Partial Class FrmModHor
         '
         'txtName
         '
-        Me.txtName.Location = New System.Drawing.Point(149, 73)
+        Me.txtName.Location = New System.Drawing.Point(212, 76)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(247, 22)
         Me.txtName.TabIndex = 5
         '
         'txtHorIn
         '
-        Me.txtHorIn.Location = New System.Drawing.Point(149, 127)
+        Me.txtHorIn.Location = New System.Drawing.Point(212, 130)
         Me.txtHorIn.Name = "txtHorIn"
         Me.txtHorIn.Size = New System.Drawing.Size(247, 22)
         Me.txtHorIn.TabIndex = 6
         '
         'txtHorFin
         '
-        Me.txtHorFin.Location = New System.Drawing.Point(149, 179)
+        Me.txtHorFin.Location = New System.Drawing.Point(212, 182)
         Me.txtHorFin.Name = "txtHorFin"
         Me.txtHorFin.Size = New System.Drawing.Size(247, 22)
         Me.txtHorFin.TabIndex = 7
@@ -117,11 +119,29 @@ Partial Class FrmModHor
         Me.cancelModHor.Text = "Cancelar"
         Me.cancelModHor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(35, 229)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(151, 17)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "Duración de almuerzo:"
+        '
+        'txtAlmuerzo
+        '
+        Me.txtAlmuerzo.Location = New System.Drawing.Point(212, 224)
+        Me.txtAlmuerzo.Name = "txtAlmuerzo"
+        Me.txtAlmuerzo.Size = New System.Drawing.Size(247, 22)
+        Me.txtAlmuerzo.TabIndex = 16
+        '
         'FrmModHor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(495, 317)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.txtAlmuerzo)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.txtHorFin)
         Me.Controls.Add(Me.txtHorIn)
@@ -149,4 +169,6 @@ Partial Class FrmModHor
     Friend WithEvents btnSaveModHor As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents cancelModHor As ToolStripButton
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtAlmuerzo As TextBox
 End Class

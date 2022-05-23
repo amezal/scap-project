@@ -4,6 +4,7 @@
     Public nombreHor As String
     Public horIn As TimeSpan
     Public horFin As TimeSpan
+    Public horAl As TimeSpan
 
     Dim horario As New LMBADataSetTableAdapters.HorarioTableAdapter
 
@@ -19,6 +20,7 @@
         txtName.Text = nombreHor
         txtHorIn.Text = horIn.ToString
         txtHorFin.Text = horFin.ToString
+        txtAlmuerzo.Text = horAl.ToString
     End Sub
 
     Private Sub cancelModHor_Click(sender As Object, e As EventArgs) Handles cancelModHor.Click
@@ -41,11 +43,17 @@
             txtHorFin.Focus()
             Exit Sub
         End If
+        If (String.IsNullOrEmpty(txtAlmuerzo.Text)) Then
+            MsgBox("El tiempo de almuerzo no puede quedar vacío", MsgBoxStyle.Critical, "ERROR")
+            txtAlmuerzo.Focus()
+            Exit Sub
+        End If
         Dim nombreHor As String = txtName.Text.Trim
-        Dim horIn As String = txtHorIn.Text.Trim
-        Dim horFin As String = txtHorIn.Text.Trim
-        horario.UpdateHorario(nombreHor, horIn, horFin, idHor)
-        'car.ActualizarRegistro(nombreCarg, des, estado, idDepto, idCar)
+        Dim horIn = TimeSpan.Parse(txtHorIn.Text.Trim).ToString
+        Dim horFin = TimeSpan.Parse(txtHorIn.Text.Trim).ToString
+        Dim horAl = TimeSpan.Parse(txtAlmuerzo.Text.Trim).ToString
+        horario.UpdateHorario(nombreHor, horIn, horFin, horAl, idHor)
+
         FrmHorarios.llenarGrid()
     End Sub
 End Class

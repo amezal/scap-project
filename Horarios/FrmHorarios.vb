@@ -5,6 +5,7 @@
     Dim nombreHor As String
     Dim horIn As TimeSpan
     Dim horFin As TimeSpan
+    Dim horAl As TimeSpan
 
 
 
@@ -49,6 +50,7 @@
         nombreHor = hor.Cells(1).Value
         horIn = hor.Cells(2).Value
         horFin = hor.Cells(3).Value
+        horAl = hor.Cells(4).Value
 
     End Sub
 
@@ -57,6 +59,7 @@
         FrmModHor.nombreHor = nombreHor
         FrmModHor.horIn = horIn
         FrmModHor.horFin = horFin
+        FrmModHor.horAl = horAl
         FrmModHor.Show()
     End Sub
 
