@@ -4,12 +4,14 @@
     Dim registros As New LMBADataSetTableAdapters.registroESTableAdapter
     Dim horarios As New LMBADataSetTableAdapters.HorarioTableAdapter
 
+
     Private Sub FrmRegistros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         llenarCbx()
     End Sub
 
     Private Sub llenarCbx()
         Dim emp = empleados.GetData()
+
         emp.Columns.Add("display", GetType(String), " Nombres + ' ' + Apellidos + ' - ' + ID")
         CbxBuscar.DataSource = emp
         CbxBuscar.DisplayMember = "display"
@@ -18,6 +20,7 @@
 
     Private Sub llenarTxt()
         Dim emp = empleados.GetData().Item(CbxBuscar.SelectedIndex)
+    
         TxtID.Text = "ID: " & emp.ID
         TxtEmpleado.Text = "Nombres: " & emp.Nombres & " " & emp.Apellidos
         TxtCargo.Text = "Cargo: " & emp.Cargo
@@ -69,7 +72,6 @@
             row.Cells("horasExtra").Value = extras
         Next
     End Sub
-
     Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
         llenarTxt()
         llenarDgv()

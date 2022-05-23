@@ -126,13 +126,17 @@ Partial Class FrmRegistros
         '
         'DgvRegistros
         '
+
         Me.DgvRegistros.AllowUserToAddRows = False
         Me.DgvRegistros.AllowUserToDeleteRows = False
+
         Me.DgvRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvRegistros.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvRegistros.Location = New System.Drawing.Point(0, 0)
         Me.DgvRegistros.Name = "DgvRegistros"
+
         Me.DgvRegistros.ReadOnly = True
+
         Me.DgvRegistros.Size = New System.Drawing.Size(686, 405)
         Me.DgvRegistros.TabIndex = 0
         '
