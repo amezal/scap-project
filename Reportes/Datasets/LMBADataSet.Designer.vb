@@ -2271,6 +2271,8 @@ Partial Public Class LMBADataSet
         
         Private columnhoraSalida As Global.System.Data.DataColumn
         
+        Private columnalmuerzo As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
         Public Sub New()
@@ -2339,6 +2341,14 @@ Partial Public Class LMBADataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public ReadOnly Property almuerzoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnalmuerzo
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -2375,9 +2385,9 @@ Partial Public Class LMBADataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
-        Public Overloads Function AddHorarioRow(ByVal nombre As String, ByVal horaEntrada As System.TimeSpan, ByVal horaSalida As System.TimeSpan) As HorarioRow
+        Public Overloads Function AddHorarioRow(ByVal nombre As String, ByVal horaEntrada As System.TimeSpan, ByVal horaSalida As System.TimeSpan, ByVal almuerzo As System.TimeSpan) As HorarioRow
             Dim rowHorarioRow As HorarioRow = CType(Me.NewRow,HorarioRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, nombre, horaEntrada, horaSalida}
+            Dim columnValuesArray() As Object = New Object() {Nothing, nombre, horaEntrada, horaSalida, almuerzo}
             rowHorarioRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowHorarioRow)
             Return rowHorarioRow
@@ -2410,6 +2420,7 @@ Partial Public Class LMBADataSet
             Me.columnnombre = MyBase.Columns("nombre")
             Me.columnhoraEntrada = MyBase.Columns("horaEntrada")
             Me.columnhoraSalida = MyBase.Columns("horaSalida")
+            Me.columnalmuerzo = MyBase.Columns("almuerzo")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2423,6 +2434,8 @@ Partial Public Class LMBADataSet
             MyBase.Columns.Add(Me.columnhoraEntrada)
             Me.columnhoraSalida = New Global.System.Data.DataColumn("horaSalida", GetType(Global.System.TimeSpan), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnhoraSalida)
+            Me.columnalmuerzo = New Global.System.Data.DataColumn("almuerzo", GetType(Global.System.TimeSpan), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnalmuerzo)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnidHorario}, true))
             Me.columnidHorario.AutoIncrement = true
             Me.columnidHorario.AutoIncrementSeed = -1
@@ -5911,6 +5924,33 @@ Partial Public Class LMBADataSet
                 Me(Me.tableHorario.horaSalidaColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Property almuerzo() As System.TimeSpan
+            Get
+                Try 
+                    Return CType(Me(Me.tableHorario.almuerzoColumn),Global.System.TimeSpan)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'almuerzo' in table 'Horario' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableHorario.almuerzoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Function IsalmuerzoNull() As Boolean
+            Return Me.IsNull(Me.tableHorario.almuerzoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+        Public Sub SetalmuerzoNull()
+            Me(Me.tableHorario.almuerzoColumn) = Global.System.Convert.DBNull
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
@@ -9419,41 +9459,52 @@ Namespace LMBADataSetTableAdapters
             tableMapping.ColumnMappings.Add("nombre", "nombre")
             tableMapping.ColumnMappings.Add("horaEntrada", "horaEntrada")
             tableMapping.ColumnMappings.Add("horaSalida", "horaSalida")
+            tableMapping.ColumnMappings.Add("almuerzo", "almuerzo")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Horario] WHERE (([idHorario] = @Original_idHorario) AND ([nomb"& _ 
                 "re] = @Original_nombre) AND ([horaEntrada] = @Original_horaEntrada) AND ([horaSa"& _ 
-                "lida] = @Original_horaSalida))"
+                "lida] = @Original_horaSalida) AND ((@IsNull_almuerzo = 1 AND [almuerzo] IS NULL)"& _ 
+                " OR ([almuerzo] = @Original_almuerzo)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idHorario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idHorario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_nombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_horaEntrada", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horaEntrada", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_horaSalida", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horaSalida", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_almuerzo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "almuerzo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_almuerzo", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "almuerzo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Horario] ([nombre], [horaEntrada], [horaSalida]) VALUES (@nomb"& _ 
-                "re, @horaEntrada, @horaSalida);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idHorario, nombre, horaEntrada, horaSali"& _ 
-                "da FROM Horario WHERE (idHorario = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Horario] ([nombre], [horaEntrada], [horaSalida], [almuerzo]) V"& _ 
+                "ALUES (@nombre, @horaEntrada, @horaSalida, @almuerzo);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idHorario, nombre"& _ 
+                ", horaEntrada, horaSalida, almuerzo FROM Horario WHERE (idHorario = SCOPE_IDENTI"& _ 
+                "TY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horaEntrada", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horaEntrada", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horaSalida", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horaSalida", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@almuerzo", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "almuerzo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Horario] SET [nombre] = @nombre, [horaEntrada] = @horaEntrada, [hor"& _ 
-                "aSalida] = @horaSalida WHERE (([idHorario] = @Original_idHorario) AND ([nombre] "& _ 
-                "= @Original_nombre) AND ([horaEntrada] = @Original_horaEntrada) AND ([horaSalida"& _ 
-                "] = @Original_horaSalida));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idHorario, nombre, horaEntrada, horaSalida F"& _ 
-                "ROM Horario WHERE (idHorario = @idHorario)"
+                "aSalida] = @horaSalida, [almuerzo] = @almuerzo WHERE (([idHorario] = @Original_i"& _ 
+                "dHorario) AND ([nombre] = @Original_nombre) AND ([horaEntrada] = @Original_horaE"& _ 
+                "ntrada) AND ([horaSalida] = @Original_horaSalida) AND ((@IsNull_almuerzo = 1 AND"& _ 
+                " [almuerzo] IS NULL) OR ([almuerzo] = @Original_almuerzo)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idHorario, "& _ 
+                "nombre, horaEntrada, horaSalida, almuerzo FROM Horario WHERE (idHorario = @idHor"& _ 
+                "ario)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horaEntrada", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horaEntrada", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horaSalida", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horaSalida", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@almuerzo", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "almuerzo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_idHorario", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idHorario", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_nombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_horaEntrada", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horaEntrada", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_horaSalida", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horaSalida", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_almuerzo", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "almuerzo", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_almuerzo", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "almuerzo", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idHorario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idHorario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
@@ -9470,7 +9521,7 @@ Namespace LMBADataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT idHorario, nombre, horaEntrada, horaSalida FROM dbo.Horario"
+            Me._commandCollection(0).CommandText = "SELECT idHorario, nombre, horaEntrada, horaSalida, almuerzo FROM dbo.Horario"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -9530,7 +9581,7 @@ Namespace LMBADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_idHorario As Integer, ByVal Original_nombre As String, ByVal Original_horaEntrada As System.TimeSpan, ByVal Original_horaSalida As System.TimeSpan) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_idHorario As Integer, ByVal Original_nombre As String, ByVal Original_horaEntrada As System.TimeSpan, ByVal Original_horaSalida As System.TimeSpan, ByVal Original_almuerzo As Global.System.Nullable(Of Global.System.TimeSpan)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_idHorario,Integer)
             If (Original_nombre Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_nombre")
@@ -9539,6 +9590,13 @@ Namespace LMBADataSetTableAdapters
             End If
             Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_horaEntrada,System.TimeSpan)
             Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_horaSalida,System.TimeSpan)
+            If (Original_almuerzo.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_almuerzo.Value,System.TimeSpan)
+            Else
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -9558,7 +9616,7 @@ Namespace LMBADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal nombre As String, ByVal horaEntrada As System.TimeSpan, ByVal horaSalida As System.TimeSpan) As Integer
+        Public Overloads Overridable Function Insert(ByVal nombre As String, ByVal horaEntrada As System.TimeSpan, ByVal horaSalida As System.TimeSpan, ByVal almuerzo As Global.System.Nullable(Of Global.System.TimeSpan)) As Integer
             If (nombre Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("nombre")
             Else
@@ -9566,6 +9624,11 @@ Namespace LMBADataSetTableAdapters
             End If
             Me.Adapter.InsertCommand.Parameters(1).Value = CType(horaEntrada,System.TimeSpan)
             Me.Adapter.InsertCommand.Parameters(2).Value = CType(horaSalida,System.TimeSpan)
+            If (almuerzo.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(almuerzo.Value,System.TimeSpan)
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -9585,7 +9648,7 @@ Namespace LMBADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal nombre As String, ByVal horaEntrada As System.TimeSpan, ByVal horaSalida As System.TimeSpan, ByVal Original_idHorario As Integer, ByVal Original_nombre As String, ByVal Original_horaEntrada As System.TimeSpan, ByVal Original_horaSalida As System.TimeSpan, ByVal idHorario As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal nombre As String, ByVal horaEntrada As System.TimeSpan, ByVal horaSalida As System.TimeSpan, ByVal almuerzo As Global.System.Nullable(Of Global.System.TimeSpan), ByVal Original_idHorario As Integer, ByVal Original_nombre As String, ByVal Original_horaEntrada As System.TimeSpan, ByVal Original_horaSalida As System.TimeSpan, ByVal Original_almuerzo As Global.System.Nullable(Of Global.System.TimeSpan), ByVal idHorario As Integer) As Integer
             If (nombre Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("nombre")
             Else
@@ -9593,15 +9656,27 @@ Namespace LMBADataSetTableAdapters
             End If
             Me.Adapter.UpdateCommand.Parameters(1).Value = CType(horaEntrada,System.TimeSpan)
             Me.Adapter.UpdateCommand.Parameters(2).Value = CType(horaSalida,System.TimeSpan)
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_idHorario,Integer)
+            If (almuerzo.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(almuerzo.Value,System.TimeSpan)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_idHorario,Integer)
             If (Original_nombre Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_nombre")
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_nombre,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_nombre,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_horaEntrada,System.TimeSpan)
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_horaSalida,System.TimeSpan)
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(idHorario,Integer)
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_horaEntrada,System.TimeSpan)
+            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_horaSalida,System.TimeSpan)
+            If (Original_almuerzo.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_almuerzo.Value,System.TimeSpan)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(idHorario,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -9621,8 +9696,8 @@ Namespace LMBADataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal nombre As String, ByVal horaEntrada As System.TimeSpan, ByVal horaSalida As System.TimeSpan, ByVal Original_idHorario As Integer, ByVal Original_nombre As String, ByVal Original_horaEntrada As System.TimeSpan, ByVal Original_horaSalida As System.TimeSpan) As Integer
-            Return Me.Update(nombre, horaEntrada, horaSalida, Original_idHorario, Original_nombre, Original_horaEntrada, Original_horaSalida, Original_idHorario)
+        Public Overloads Overridable Function Update(ByVal nombre As String, ByVal horaEntrada As System.TimeSpan, ByVal horaSalida As System.TimeSpan, ByVal almuerzo As Global.System.Nullable(Of Global.System.TimeSpan), ByVal Original_idHorario As Integer, ByVal Original_nombre As String, ByVal Original_horaEntrada As System.TimeSpan, ByVal Original_horaSalida As System.TimeSpan, ByVal Original_almuerzo As Global.System.Nullable(Of Global.System.TimeSpan)) As Integer
+            Return Me.Update(nombre, horaEntrada, horaSalida, almuerzo, Original_idHorario, Original_nombre, Original_horaEntrada, Original_horaSalida, Original_almuerzo, Original_idHorario)
         End Function
     End Class
     
