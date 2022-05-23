@@ -76,4 +76,9 @@
         llenarTxt()
         llenarDgv()
     End Sub
+
+    Private Sub BtnJustificar_Click(sender As Object, e As EventArgs) Handles BtnJustificar.Click
+        FrmJustificaciones.idEmp = CbxBuscar.SelectedValue
+        FrmJustificaciones.Show()
+    End Sub
 End Class
