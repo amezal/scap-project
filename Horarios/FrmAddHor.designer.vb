@@ -24,120 +24,110 @@ Partial Class FrmAddHor
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmAddHor))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtHorIn = New System.Windows.Forms.TextBox()
+        Me.txtHorFin = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.BtnBack1 = New System.Windows.Forms.Button()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.saveAdd = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.btnCancel = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(57, 85)
+        Me.Label1.Location = New System.Drawing.Point(65, 91)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(54, 15)
+        Me.Label1.Size = New System.Drawing.Size(62, 17)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Nombre:"
         '
-        'TextBox1
+        'txtNombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(117, 77)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(217, 23)
-        Me.TextBox1.TabIndex = 6
+        Me.txtNombre.Location = New System.Drawing.Point(134, 82)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(247, 22)
+        Me.txtNombre.TabIndex = 6
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(27, 139)
+        Me.Label2.Location = New System.Drawing.Point(31, 148)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(84, 15)
+        Me.Label2.Size = New System.Drawing.Size(99, 17)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Hora de inicio:"
         '
-        'TextBox2
+        'txtHorIn
         '
-        Me.TextBox2.Location = New System.Drawing.Point(117, 131)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(217, 23)
-        Me.TextBox2.TabIndex = 8
+        Me.txtHorIn.Location = New System.Drawing.Point(134, 140)
+        Me.txtHorIn.Name = "txtHorIn"
+        Me.txtHorIn.Size = New System.Drawing.Size(247, 22)
+        Me.txtHorIn.TabIndex = 8
         '
-        'TextBox3
+        'txtHorFin
         '
-        Me.TextBox3.Location = New System.Drawing.Point(117, 185)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(217, 23)
-        Me.TextBox3.TabIndex = 9
+        Me.txtHorFin.Location = New System.Drawing.Point(136, 203)
+        Me.txtHorFin.Name = "txtHorFin"
+        Me.txtHorFin.Size = New System.Drawing.Size(247, 22)
+        Me.txtHorFin.TabIndex = 9
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(42, 193)
+        Me.Label3.Location = New System.Drawing.Point(48, 206)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 15)
+        Me.Label3.Size = New System.Drawing.Size(82, 17)
         Me.Label3.TabIndex = 10
         Me.Label3.Text = "Hora de fin:"
         '
-        'BtnBack1
-        '
-        Me.BtnBack1.Location = New System.Drawing.Point(12, 262)
-        Me.BtnBack1.Name = "BtnBack1"
-        Me.BtnBack1.Size = New System.Drawing.Size(75, 23)
-        Me.BtnBack1.TabIndex = 11
-        Me.BtnBack1.Text = "Regresar"
-        Me.BtnBack1.UseVisualStyleBackColor = True
-        '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator1, Me.ToolStripButton2})
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.saveAdd, Me.ToolStripSeparator1, Me.btnCancel})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(433, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(495, 27)
         Me.ToolStrip1.TabIndex = 12
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'saveAdd
         '
-        Me.ToolStripButton1.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(69, 22)
-        Me.ToolStripButton1.Text = "Guardar"
-        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.saveAdd.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
+        Me.saveAdd.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.saveAdd.Name = "saveAdd"
+        Me.saveAdd.Size = New System.Drawing.Size(86, 24)
+        Me.saveAdd.Text = "Guardar"
+        Me.saveAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
         '
-        'ToolStripButton2
+        'btnCancel
         '
-        Me.ToolStripButton2.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_cancel_50
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(73, 22)
-        Me.ToolStripButton2.Text = "Cancelar"
-        Me.ToolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnCancel.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_cancel_50
+        Me.btnCancel.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(90, 24)
+        Me.btnCancel.Text = "Cancelar"
+        Me.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'FrmAddHor
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(433, 297)
+        Me.ClientSize = New System.Drawing.Size(495, 317)
         Me.Controls.Add(Me.ToolStrip1)
-        Me.Controls.Add(Me.BtnBack1)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtHorFin)
+        Me.Controls.Add(Me.txtHorIn)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmAddHor"
@@ -150,14 +140,13 @@ Partial Class FrmAddHor
 
     End Sub
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtHorIn As TextBox
+    Friend WithEvents txtHorFin As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents BtnBack1 As Button
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents saveAdd As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents ToolStripButton2 As ToolStripButton
+    Friend WithEvents btnCancel As ToolStripButton
 End Class
