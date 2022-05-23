@@ -22,198 +22,274 @@ Partial Class FrmPwd
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPwd))
-        Me.btnRegresar = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.btnAdd = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.btnDelete = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.btnMod = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
+        Me.btnSearch = New System.Windows.Forms.ToolStripButton()
+        Me.txtSearch = New System.Windows.Forms.ToolStripTextBox()
+        Me.gbUser = New System.Windows.Forms.GroupBox()
+        Me.dgvUser = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PwdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PwdtempDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TbluserBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LMBADataSet1 = New SCAP_LMBA_Tech.LMBADataSet()
+        Me.TbluserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LMBADataSet = New SCAP_LMBA_Tech.LMBADataSet()
+        Me.Tbl_userTableAdapter = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.tbl_userTableAdapter()
+        Me.DepartamentoTableAdapter1 = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.DepartamentoTableAdapter()
         Me.ToolStrip1.SuspendLayout()
+        Me.gbUser.SuspendLayout()
+        CType(Me.dgvUser, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.TbluserBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LMBADataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TbluserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btnRegresar
-        '
-        Me.btnRegresar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnRegresar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnRegresar.Location = New System.Drawing.Point(46, 306)
-        Me.btnRegresar.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnRegresar.Name = "btnRegresar"
-        Me.btnRegresar.Size = New System.Drawing.Size(90, 41)
-        Me.btnRegresar.TabIndex = 3
-        Me.btnRegresar.Text = "REGRESAR"
-        Me.btnRegresar.UseVisualStyleBackColor = False
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.ColumnCount = 4
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.11321!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.88679!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105.0!))
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(80, 98)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 6
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.88235!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.11765!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(441, 161)
-        Me.TableLayoutPanel1.TabIndex = 4
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(62, 148)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox1.TabIndex = 5
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(62, 176)
-        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox2.TabIndex = 6
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(62, 202)
-        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox3.TabIndex = 7
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(62, 228)
-        Me.CheckBox4.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox4.TabIndex = 8
-        Me.CheckBox4.UseVisualStyleBackColor = True
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator1, Me.ToolStripButton2, Me.ToolStripSeparator2, Me.ToolStripButton3, Me.ToolStripSeparator3, Me.ToolStripButton4, Me.ToolStripTextBox1})
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnAdd, Me.ToolStripSeparator1, Me.btnDelete, Me.ToolStripSeparator2, Me.btnMod, Me.ToolStripSeparator3, Me.btnSearch, Me.txtSearch})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(600, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1035, 27)
         Me.ToolStrip1.TabIndex = 9
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'btnAdd
         '
-        Me.ToolStripButton1.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_new_window_30
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(69, 22)
-        Me.ToolStripButton1.Text = "Agregar"
-        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnAdd.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_new_window_30
+        Me.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(87, 24)
+        Me.btnAdd.Text = "Agregar"
+        Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
         '
-        'ToolStripButton2
+        'btnDelete
         '
-        Me.ToolStripButton2.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_delete_24
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(70, 22)
-        Me.ToolStripButton2.Text = "Eliminar"
-        Me.ToolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnDelete.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_delete_24
+        Me.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(87, 24)
+        Me.btnDelete.Text = "Eliminar"
+        Me.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
         '
-        'ToolStripButton3
+        'btnMod
         '
-        Me.ToolStripButton3.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_edit_production_order_32
-        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(78, 22)
-        Me.ToolStripButton3.Text = "Modificar"
-        Me.ToolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnMod.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_edit_production_order_32
+        Me.btnMod.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnMod.Name = "btnMod"
+        Me.btnMod.Size = New System.Drawing.Size(97, 24)
+        Me.btnMod.Text = "Modificar"
+        Me.btnMod.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
         '
-        'ToolStripButton4
+        'btnSearch
         '
-        Me.ToolStripButton4.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_search_24
-        Me.ToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton4.Name = "ToolStripButton4"
-        Me.ToolStripButton4.Size = New System.Drawing.Size(62, 22)
-        Me.ToolStripButton4.Text = "Buscar"
-        Me.ToolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.btnSearch.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_search_24
+        Me.btnSearch.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(76, 24)
+        Me.btnSearch.Text = "Buscar"
+        Me.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
-        'ToolStripTextBox1
+        'txtSearch
         '
-        Me.ToolStripTextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
-        Me.ToolStripTextBox1.Size = New System.Drawing.Size(86, 25)
+        Me.txtSearch.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(200, 27)
+        '
+        'gbUser
+        '
+        Me.gbUser.Controls.Add(Me.dgvUser)
+        Me.gbUser.Location = New System.Drawing.Point(0, 3)
+        Me.gbUser.Name = "gbUser"
+        Me.gbUser.Size = New System.Drawing.Size(1020, 445)
+        Me.gbUser.TabIndex = 10
+        Me.gbUser.TabStop = False
+        Me.gbUser.Text = "Usuarios"
+        '
+        'dgvUser
+        '
+        Me.dgvUser.AutoGenerateColumns = False
+        Me.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvUser.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.UsernameDataGridViewTextBoxColumn, Me.PwdDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.PwdtempDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn})
+        Me.dgvUser.DataSource = Me.TbluserBindingSource1
+        Me.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvUser.Location = New System.Drawing.Point(3, 18)
+        Me.dgvUser.Name = "dgvUser"
+        Me.dgvUser.RowHeadersWidth = 51
+        Me.dgvUser.RowTemplate.Height = 24
+        Me.dgvUser.Size = New System.Drawing.Size(1014, 424)
+        Me.dgvUser.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "id_user"
+        Me.Column1.HeaderText = "ID"
+        Me.Column1.MinimumWidth = 4
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 125
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.gbUser)
+        Me.Panel1.Location = New System.Drawing.Point(0, 30)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1023, 451)
+        Me.Panel1.TabIndex = 11
+        '
+        'UsernameDataGridViewTextBoxColumn
+        '
+        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "username"
+        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "Username"
+        Me.UsernameDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
+        Me.UsernameDataGridViewTextBoxColumn.Width = 125
+        '
+        'PwdDataGridViewTextBoxColumn
+        '
+        Me.PwdDataGridViewTextBoxColumn.DataPropertyName = "pwd"
+        Me.PwdDataGridViewTextBoxColumn.HeaderText = "Contraseña"
+        Me.PwdDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.PwdDataGridViewTextBoxColumn.Name = "PwdDataGridViewTextBoxColumn"
+        Me.PwdDataGridViewTextBoxColumn.Width = 125
+        '
+        'NombresDataGridViewTextBoxColumn
+        '
+        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
+        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombres"
+        Me.NombresDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
+        Me.NombresDataGridViewTextBoxColumn.Width = 125
+        '
+        'ApellidosDataGridViewTextBoxColumn
+        '
+        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
+        Me.ApellidosDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
+        Me.ApellidosDataGridViewTextBoxColumn.Width = 125
+        '
+        'PwdtempDataGridViewTextBoxColumn
+        '
+        Me.PwdtempDataGridViewTextBoxColumn.DataPropertyName = "pwd_temp"
+        Me.PwdtempDataGridViewTextBoxColumn.HeaderText = "pwd_temp"
+        Me.PwdtempDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.PwdtempDataGridViewTextBoxColumn.Name = "PwdtempDataGridViewTextBoxColumn"
+        Me.PwdtempDataGridViewTextBoxColumn.Width = 125
+        '
+        'EmailDataGridViewTextBoxColumn
+        '
+        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "email"
+        Me.EmailDataGridViewTextBoxColumn.HeaderText = "email"
+        Me.EmailDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
+        Me.EmailDataGridViewTextBoxColumn.Width = 125
+        '
+        'TbluserBindingSource1
+        '
+        Me.TbluserBindingSource1.DataMember = "tbl_user"
+        Me.TbluserBindingSource1.DataSource = Me.LMBADataSet1
+        '
+        'LMBADataSet1
+        '
+        Me.LMBADataSet1.DataSetName = "LMBADataSet"
+        Me.LMBADataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TbluserBindingSource
+        '
+        Me.TbluserBindingSource.DataMember = "tbl_user"
+        Me.TbluserBindingSource.DataSource = Me.LMBADataSet
+        '
+        'LMBADataSet
+        '
+        Me.LMBADataSet.DataSetName = "LMBADataSet"
+        Me.LMBADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tbl_userTableAdapter
+        '
+        Me.Tbl_userTableAdapter.ClearBeforeFill = True
+        '
+        'DepartamentoTableAdapter1
+        '
+        Me.DepartamentoTableAdapter1.ClearBeforeFill = True
         '
         'FrmPwd
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.ClientSize = New System.Drawing.Size(1035, 506)
         Me.Controls.Add(Me.ToolStrip1)
-        Me.Controls.Add(Me.CheckBox4)
-        Me.Controls.Add(Me.CheckBox3)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.TableLayoutPanel1)
-        Me.Controls.Add(Me.btnRegresar)
+        Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FrmPwd"
         Me.Text = "Administar Contraseñas"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        Me.gbUser.ResumeLayout(False)
+        CType(Me.dgvUser, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.TbluserBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LMBADataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbluserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents btnRegresar As Button
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents CheckBox4 As CheckBox
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents btnAdd As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents ToolStripButton2 As ToolStripButton
+    Friend WithEvents btnDelete As ToolStripButton
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
-    Friend WithEvents ToolStripButton3 As ToolStripButton
+    Friend WithEvents btnMod As ToolStripButton
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents ToolStripButton4 As ToolStripButton
-    Friend WithEvents ToolStripTextBox1 As ToolStripTextBox
+    Friend WithEvents btnSearch As ToolStripButton
+    Friend WithEvents txtSearch As ToolStripTextBox
+    Friend WithEvents gbUser As GroupBox
+    Friend WithEvents dgvUser As DataGridView
+    Friend WithEvents LMBADataSet As LMBADataSet
+    Friend WithEvents TbluserBindingSource As BindingSource
+    Friend WithEvents Tbl_userTableAdapter As LMBADataSetTableAdapters.tbl_userTableAdapter
+    Friend WithEvents DepartamentoTableAdapter1 As LMBADataSetTableAdapters.DepartamentoTableAdapter
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents LMBADataSet1 As LMBADataSet
+    Friend WithEvents TbluserBindingSource1 As BindingSource
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PwdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents NombresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents ApellidosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PwdtempDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class
