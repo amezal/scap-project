@@ -23,54 +23,53 @@ Partial Class FrmJustificaciones
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.BtnCancelar = New System.Windows.Forms.ToolStripButton()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DtpInicio = New System.Windows.Forms.DateTimePicker()
+        Me.DtpFin = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.BtnBack1 = New System.Windows.Forms.Button()
+        Me.TxtDesc = New System.Windows.Forms.TextBox()
+        Me.TxtInicio = New System.Windows.Forms.TextBox()
+        Me.TxtFin = New System.Windows.Forms.TextBox()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripSeparator1, Me.ToolStripButton2})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar, Me.ToolStripSeparator1, Me.BtnCancelar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(774, 25)
         Me.ToolStrip1.TabIndex = 13
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'BtnGuardar
         '
-        Me.ToolStripButton1.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(69, 22)
-        Me.ToolStripButton1.Text = "Guardar"
-        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnGuardar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
+        Me.BtnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(69, 22)
+        Me.BtnGuardar.Text = "Guardar"
+        Me.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
-        'ToolStripButton2
+        'BtnCancelar
         '
-        Me.ToolStripButton2.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_cancel_50
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(73, 22)
-        Me.ToolStripButton2.Text = "Cancelar"
-        Me.ToolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.BtnCancelar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_cancel_50
+        Me.BtnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BtnCancelar.Name = "BtnCancelar"
+        Me.BtnCancelar.Size = New System.Drawing.Size(73, 22)
+        Me.BtnCancelar.Text = "Cancelar"
+        Me.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'Label1
         '
@@ -81,19 +80,19 @@ Partial Class FrmJustificaciones
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "Fecha Inicio:"
         '
-        'DateTimePicker1
+        'DtpInicio
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(141, 80)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 15
+        Me.DtpInicio.Location = New System.Drawing.Point(141, 80)
+        Me.DtpInicio.Name = "DtpInicio"
+        Me.DtpInicio.Size = New System.Drawing.Size(200, 20)
+        Me.DtpInicio.TabIndex = 15
         '
-        'DateTimePicker2
+        'DtpFin
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(494, 83)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker2.TabIndex = 17
+        Me.DtpFin.Location = New System.Drawing.Point(494, 83)
+        Me.DtpFin.Name = "DtpFin"
+        Me.DtpFin.Size = New System.Drawing.Size(200, 20)
+        Me.DtpFin.TabIndex = 17
         '
         'Label2
         '
@@ -104,33 +103,19 @@ Partial Class FrmJustificaciones
         Me.Label2.TabIndex = 16
         Me.Label2.Text = "Fecha Fin:"
         '
-        'DateTimePicker3
-        '
-        Me.DateTimePicker3.Location = New System.Drawing.Point(141, 135)
-        Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker3.TabIndex = 19
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(61, 139)
+        Me.Label3.Location = New System.Drawing.Point(58, 138)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(61, 13)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Hora Inicio:"
         '
-        'DateTimePicker4
-        '
-        Me.DateTimePicker4.Location = New System.Drawing.Point(494, 135)
-        Me.DateTimePicker4.Name = "DateTimePicker4"
-        Me.DateTimePicker4.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker4.TabIndex = 21
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(424, 138)
+        Me.Label4.Location = New System.Drawing.Point(425, 138)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(50, 13)
         Me.Label4.TabIndex = 20
@@ -145,38 +130,46 @@ Partial Class FrmJustificaciones
         Me.Label5.TabIndex = 22
         Me.Label5.Text = "Justificación:"
         '
-        'TextBox1
+        'TxtDesc
         '
-        Me.TextBox1.Location = New System.Drawing.Point(141, 206)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(553, 138)
-        Me.TextBox1.TabIndex = 23
+        Me.TxtDesc.Location = New System.Drawing.Point(141, 206)
+        Me.TxtDesc.Multiline = True
+        Me.TxtDesc.Name = "TxtDesc"
+        Me.TxtDesc.Size = New System.Drawing.Size(553, 138)
+        Me.TxtDesc.TabIndex = 23
         '
-        'BtnBack1
+        'TxtInicio
         '
-        Me.BtnBack1.Location = New System.Drawing.Point(37, 401)
-        Me.BtnBack1.Name = "BtnBack1"
-        Me.BtnBack1.Size = New System.Drawing.Size(64, 20)
-        Me.BtnBack1.TabIndex = 24
-        Me.BtnBack1.Text = "Regresar"
-        Me.BtnBack1.UseVisualStyleBackColor = True
+        Me.TxtInicio.ForeColor = System.Drawing.Color.Gray
+        Me.TxtInicio.Location = New System.Drawing.Point(141, 138)
+        Me.TxtInicio.Name = "TxtInicio"
+        Me.TxtInicio.Size = New System.Drawing.Size(200, 20)
+        Me.TxtInicio.TabIndex = 24
+        Me.TxtInicio.Text = "HH:MM:SS"
+        '
+        'TxtFin
+        '
+        Me.TxtFin.ForeColor = System.Drawing.Color.Gray
+        Me.TxtFin.Location = New System.Drawing.Point(494, 137)
+        Me.TxtFin.Name = "TxtFin"
+        Me.TxtFin.Size = New System.Drawing.Size(200, 20)
+        Me.TxtFin.TabIndex = 25
+        Me.TxtFin.Text = "HH:MM:SS"
         '
         'FrmJustificaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(774, 450)
-        Me.Controls.Add(Me.BtnBack1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.ClientSize = New System.Drawing.Size(774, 385)
+        Me.Controls.Add(Me.TxtFin)
+        Me.Controls.Add(Me.TxtInicio)
+        Me.Controls.Add(Me.TxtDesc)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.DateTimePicker4)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.DateTimePicker3)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.DateTimePicker2)
+        Me.Controls.Add(Me.DtpFin)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.DtpInicio)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "FrmJustificaciones"
@@ -189,18 +182,17 @@ Partial Class FrmJustificaciones
     End Sub
 
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents BtnGuardar As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents ToolStripButton2 As ToolStripButton
+    Friend WithEvents BtnCancelar As ToolStripButton
     Friend WithEvents Label1 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DtpInicio As DateTimePicker
+    Friend WithEvents DtpFin As DateTimePicker
     Friend WithEvents Label2 As Label
-    Friend WithEvents DateTimePicker3 As DateTimePicker
     Friend WithEvents Label3 As Label
-    Friend WithEvents DateTimePicker4 As DateTimePicker
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents BtnBack1 As Button
+    Friend WithEvents TxtDesc As TextBox
+    Friend WithEvents TxtInicio As TextBox
+    Friend WithEvents TxtFin As TextBox
 End Class
