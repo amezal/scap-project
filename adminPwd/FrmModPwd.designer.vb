@@ -31,7 +31,7 @@ Partial Class FrmModPwd
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPwd = New System.Windows.Forms.TextBox()
-        Me.cbxUsername = New System.Windows.Forms.ComboBox()
+        Me.txtUser = New System.Windows.Forms.TextBox()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -99,20 +99,19 @@ Partial Class FrmModPwd
         Me.txtPwd.Size = New System.Drawing.Size(176, 22)
         Me.txtPwd.TabIndex = 19
         '
-        'cbxUsername
+        'txtUser
         '
-        Me.cbxUsername.FormattingEnabled = True
-        Me.cbxUsername.Location = New System.Drawing.Point(274, 126)
-        Me.cbxUsername.Name = "cbxUsername"
-        Me.cbxUsername.Size = New System.Drawing.Size(371, 24)
-        Me.cbxUsername.TabIndex = 20
+        Me.txtUser.Location = New System.Drawing.Point(274, 126)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(176, 22)
+        Me.txtUser.TabIndex = 20
         '
         'FrmModPwd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.cbxUsername)
+        Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.txtPwd)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -136,5 +135,5 @@ Partial Class FrmModPwd
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents txtPwd As TextBox
-    Friend WithEvents cbxUsername As ComboBox
+    Friend WithEvents txtUser As TextBox
 End Class

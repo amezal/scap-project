@@ -35,28 +35,28 @@ Partial Class FrmPwd
         Me.txtSearch = New System.Windows.Forms.ToolStripTextBox()
         Me.gbUser = New System.Windows.Forms.GroupBox()
         Me.dgvUser = New System.Windows.Forms.DataGridView()
-        Me.TbluserBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.LMBADataSet1 = New SCAP_LMBA_Tech.LMBADataSet()
-        Me.TbluserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.LMBADataSet = New SCAP_LMBA_Tech.LMBADataSet()
-        Me.Tbl_userTableAdapter = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.tbl_userTableAdapter()
-        Me.DepartamentoTableAdapter1 = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.DepartamentoTableAdapter()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PwdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.PwdtempDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TbluserBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LMBADataSet1 = New SCAP_LMBA_Tech.LMBADataSet()
+        Me.TbluserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LMBADataSet = New SCAP_LMBA_Tech.LMBADataSet()
+        Me.Tbl_userTableAdapter = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.tbl_userTableAdapter()
+        Me.DepartamentoTableAdapter1 = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.DepartamentoTableAdapter()
         Me.ToolStrip1.SuspendLayout()
         Me.gbUser.SuspendLayout()
         CType(Me.dgvUser, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         CType(Me.TbluserBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LMBADataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbluserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -150,42 +150,6 @@ Partial Class FrmPwd
         Me.dgvUser.Size = New System.Drawing.Size(1014, 424)
         Me.dgvUser.TabIndex = 0
         '
-        'TbluserBindingSource1
-        '
-        Me.TbluserBindingSource1.DataMember = "tbl_user"
-        Me.TbluserBindingSource1.DataSource = Me.LMBADataSet1
-        '
-        'LMBADataSet1
-        '
-        Me.LMBADataSet1.DataSetName = "LMBADataSet"
-        Me.LMBADataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TbluserBindingSource
-        '
-        Me.TbluserBindingSource.DataMember = "tbl_user"
-        Me.TbluserBindingSource.DataSource = Me.LMBADataSet
-        '
-        'LMBADataSet
-        '
-        Me.LMBADataSet.DataSetName = "LMBADataSet"
-        Me.LMBADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Tbl_userTableAdapter
-        '
-        Me.Tbl_userTableAdapter.ClearBeforeFill = True
-        '
-        'DepartamentoTableAdapter1
-        '
-        Me.DepartamentoTableAdapter1.ClearBeforeFill = True
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.gbUser)
-        Me.Panel1.Location = New System.Drawing.Point(0, 30)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1023, 451)
-        Me.Panel1.TabIndex = 11
-        '
         'Column1
         '
         Me.Column1.DataPropertyName = "id_user"
@@ -194,6 +158,14 @@ Partial Class FrmPwd
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
         Me.Column1.Width = 125
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.gbUser)
+        Me.Panel1.Location = New System.Drawing.Point(0, 30)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1023, 451)
+        Me.Panel1.TabIndex = 11
         '
         'UsernameDataGridViewTextBoxColumn
         '
@@ -243,6 +215,34 @@ Partial Class FrmPwd
         Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
         Me.EmailDataGridViewTextBoxColumn.Width = 125
         '
+        'TbluserBindingSource1
+        '
+        Me.TbluserBindingSource1.DataMember = "tbl_user"
+        Me.TbluserBindingSource1.DataSource = Me.LMBADataSet1
+        '
+        'LMBADataSet1
+        '
+        Me.LMBADataSet1.DataSetName = "LMBADataSet"
+        Me.LMBADataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TbluserBindingSource
+        '
+        Me.TbluserBindingSource.DataMember = "tbl_user"
+        Me.TbluserBindingSource.DataSource = Me.LMBADataSet
+        '
+        'LMBADataSet
+        '
+        Me.LMBADataSet.DataSetName = "LMBADataSet"
+        Me.LMBADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Tbl_userTableAdapter
+        '
+        Me.Tbl_userTableAdapter.ClearBeforeFill = True
+        '
+        'DepartamentoTableAdapter1
+        '
+        Me.DepartamentoTableAdapter1.ClearBeforeFill = True
+        '
         'FrmPwd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -258,11 +258,11 @@ Partial Class FrmPwd
         Me.ToolStrip1.PerformLayout()
         Me.gbUser.ResumeLayout(False)
         CType(Me.dgvUser, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         CType(Me.TbluserBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LMBADataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TbluserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

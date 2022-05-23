@@ -11,10 +11,8 @@
 
     Private Sub FrmModPwd_Load(sender As Object, e As EventArgs) Handles Me.Load
         txtPwd.Text = pwd
-        cbxUsername.DataSource = regUser.GetData
-        cbxUsername.DisplayMember = "username"
+        txtUser.Text = username
 
-        cbxUsername.Refresh()
     End Sub
 
     Private Sub btnSaveMod_Click(sender As Object, e As EventArgs) Handles btnSaveMod.Click
@@ -25,9 +23,7 @@
         End If
 
         Dim pwd As String = txtPwd.Text.Trim
-
-        Dim idUserName As Integer = CInt(cbxUsername.SelectedValue)
-        regUser.UpdateUser(pwd, idUser, idUserName)
+        regUser.UpdateUser(pwd, idUser)
         FrmPwd.llenarGrid()
     End Sub
 End Class

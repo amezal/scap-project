@@ -45,6 +45,7 @@
         Dim id = user.Cells(0).Value
         username = user.Cells(1).Value
         pwd = user.Cells(2).Value
+        idUser = id
 
     End Sub
 
