@@ -16,11 +16,12 @@
         CbxBuscar.DataSource = emp
         CbxBuscar.DisplayMember = "display"
         CbxBuscar.ValueMember = "ID"
+
     End Sub
 
     Private Sub llenarTxt()
         Dim emp = empleados.GetData().Item(CbxBuscar.SelectedIndex)
-    
+
         TxtID.Text = "ID: " & emp.ID
         TxtEmpleado.Text = "Nombres: " & emp.Nombres & " " & emp.Apellidos
         TxtCargo.Text = "Cargo: " & emp.Cargo
@@ -50,6 +51,7 @@
         DgvRegistros.Columns("fecha").DefaultCellStyle.Format = "dddd dd-MM-yyyy"
         DgvRegistros.Columns("horaEntrada").DefaultCellStyle.Format = "HH:mm:ss"
         DgvRegistros.Columns("horaSalida").DefaultCellStyle.Format = "HH:mm:ss"
+        DgvRegistros.Columns(0).Visible = False
 
 
 

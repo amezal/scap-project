@@ -20,6 +20,7 @@
     Sub llenarGrid()
         DgvCargo.DataSource = regCar.GetData
         DgvCargo.Refresh()
+        DgvCargo.Columns(0).Visible = False
         GbCargo.Text = "Mostrando registros: " & DgvCargo.Rows.Count.ToString
     End Sub
 

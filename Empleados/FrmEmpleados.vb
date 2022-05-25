@@ -13,6 +13,7 @@
     Sub llenarGrid()
         DgvEmpleados.DataSource = empleados.GetData()
         DgvEmpleados.Columns("idHorario").Visible = False
+        DgvEmpleados.Columns(0).Visible = False
         DgvEmpleados.Refresh()
     End Sub
 
