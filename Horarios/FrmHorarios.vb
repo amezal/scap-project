@@ -12,6 +12,7 @@
     Sub llenarGrid()
         dgvHorario.DataSource = horario.GetData
         dgvHorario.Refresh()
+        dgvHorario.Columns(0).Visible = False
         gbHorario.Text = "Mostrando horarios: " & dgvHorario.Rows.Count.ToString
     End Sub
 

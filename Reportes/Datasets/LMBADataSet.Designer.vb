@@ -7479,10 +7479,10 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [Cargo] ([nombreCargo], [descripcion], [estado], [idDepartamento]) VA"& _ 
-                "LUES (@nombreCargo, @descripcion, @estado, @idDepartamento);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idCargo, no"& _ 
-                "mbreCargo, descripcion, estado, idDepartamento, (SELECT nombreDepartamento FROM "& _ 
-                "Departamento WHERE (idDepartamento = Cargo.idDepartamento)) AS Departamento FROM"& _ 
-                " Cargo WHERE (idCargo = SCOPE_IDENTITY())"
+                "LUES (@nombreCargo, @descripcion, @estado, @idDepartamento);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idCargo, nom"& _ 
+                "breCargo, descripcion, estado, idDepartamento, (SELECT nombreDepartamento FROM D"& _ 
+                "epartamento WHERE (idDepartamento = Cargo.idDepartamento)) AS Departamento FROM "& _ 
+                "Cargo WHERE (idCargo = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreCargo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7494,9 +7494,9 @@ Namespace LMBADataSetTableAdapters
                 "stado] = @estado, [idDepartamento] = @idDepartamento WHERE (([idCargo] = @Origin"& _ 
                 "al_idCargo) AND ([nombreCargo] = @Original_nombreCargo) AND ([descripcion] = @Or"& _ 
                 "iginal_descripcion) AND ([estado] = @Original_estado) AND ([idDepartamento] = @O"& _ 
-                "riginal_idDepartamento));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idCargo, nombreCargo, descripcion, estado, idD"& _ 
-                "epartamento, (SELECT nombreDepartamento FROM Departamento WHERE (idDepartamento "& _ 
-                "= Cargo.idDepartamento)) AS Departamento FROM Cargo WHERE (idCargo = @idCargo)"
+                "riginal_idDepartamento));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idCargo, nombreCargo, descripcion, estado, idDe"& _ 
+                "partamento, (SELECT nombreDepartamento FROM Departamento WHERE (idDepartamento ="& _ 
+                " Cargo.idDepartamento)) AS Departamento FROM Cargo WHERE (idCargo = @idCargo)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreCargo", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7531,7 +7531,7 @@ Namespace LMBADataSetTableAdapters
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "UPDATE [Cargo] SET [nombreCargo] = @nombreCargo, [descripcion] = @descripcion, [e"& _ 
                 "stado] = @estado, [idDepartamento] = @idDepartamento WHERE (([idCargo] = @Origin"& _ 
-                "al_idCargo));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+                "al_idCargo));"&Global.Microsoft.VisualBasic.ChrW(10)
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreCargo", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7553,10 +7553,10 @@ Namespace LMBADataSetTableAdapters
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
             Me._commandCollection(4).CommandText = "INSERT INTO [Cargo] ([nombreCargo], [descripcion], [idDepartamento]) VALUES (@nom"& _ 
-                "breCargo, @descripcion, @idDepartamento);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT  nombreCargo, descripcion,  id"& _ 
-                "Departamento, (SELECT nombreDepartamento FROM Departamento WHERE (idDepartamento"& _ 
-                " = Cargo.idDepartamento)) AS Departamento FROM Cargo WHERE (idCargo = SCOPE_IDEN"& _ 
-                "TITY())"
+                "breCargo, @descripcion, @idDepartamento);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT  nombreCargo, descripcion,  idD"& _ 
+                "epartamento, (SELECT nombreDepartamento FROM Departamento WHERE (idDepartamento "& _ 
+                "= Cargo.idDepartamento)) AS Departamento FROM Cargo WHERE (idCargo = SCOPE_IDENT"& _ 
+                "ITY())"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreCargo", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreCargo", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -8009,9 +8009,9 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Departamento] ([nombreDepartamento], [ext], [email], [estado])"& _ 
-                " VALUES (@nombreDepartamento, @ext, @email, @estado);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idDepartamento, no"& _ 
-                "mbreDepartamento, ext, email, estado FROM Departamento WHERE (idDepartamento = S"& _ 
-                "COPE_IDENTITY())"
+                " VALUES (@nombreDepartamento, @ext, @email, @estado);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idDepartamento, nom"& _ 
+                "breDepartamento, ext, email, estado FROM Departamento WHERE (idDepartamento = SC"& _ 
+                "OPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreDepartamento", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreDepartamento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ext", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ext", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -8023,9 +8023,9 @@ Namespace LMBADataSetTableAdapters
                 " = @ext, [email] = @email, [estado] = @estado WHERE (([idDepartamento] = @Origin"& _ 
                 "al_idDepartamento) AND ([nombreDepartamento] = @Original_nombreDepartamento) AND"& _ 
                 " ([ext] = @Original_ext) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email"& _ 
-                "] = @Original_email)) AND ([estado] = @Original_estado));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idDepartamento"& _ 
-                ", nombreDepartamento, ext, email, estado FROM Departamento WHERE (idDepartamento"& _ 
-                " = @idDepartamento)"
+                "] = @Original_email)) AND ([estado] = @Original_estado));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idDepartamento,"& _ 
+                " nombreDepartamento, ext, email, estado FROM Departamento WHERE (idDepartamento "& _ 
+                "= @idDepartamento)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreDepartamento", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreDepartamento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ext", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "ext", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -8059,8 +8059,8 @@ Namespace LMBADataSetTableAdapters
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "INSERT INTO [dbo].[Departamento] ([nombreDepartamento], [ext], [email]) VALUES (@"& _ 
-                "nombreDepartamento, @ext, @email);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idDepartamento, nombreDepartamento, e"& _ 
-                "xt, email, estado FROM Departamento WHERE (idDepartamento = SCOPE_IDENTITY())"
+                "nombreDepartamento, @ext, @email);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idDepartamento, nombreDepartamento, ex"& _ 
+                "t, email, estado FROM Departamento WHERE (idDepartamento = SCOPE_IDENTITY())"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombreDepartamento", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "nombreDepartamento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ext", Global.System.Data.SqlDbType.NVarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, "ext", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -8495,11 +8495,11 @@ Namespace LMBADataSetTableAdapters
                 "al], [emailCorporativo], [idCargo], [idHorario]) VALUES (@numCedula, @estado, @P"& _ 
                 "IN, @primerNombre, @segundoNombre, @primerApellido, @segundoApellido, @fechaNaci"& _ 
                 "miento, @sexo, @fechaIngreso, @direccion, @observacion, @fotoEmpleado, @telefono"& _ 
-                ", @emailPersonal, @emailCorporativo, @idCargo, @idHorario);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleado, "& _ 
-                "numCedula, estado, PIN, primerNombre, segundoNombre, primerApellido, segundoApel"& _ 
-                "lido, fechaNacimiento, sexo, fechaIngreso, direccion, observacion, fotoEmpleado,"& _ 
-                " telefono, emailPersonal, emailCorporativo, idCargo, idHorario FROM Empleado WHE"& _ 
-                "RE (idEmpleado = SCOPE_IDENTITY())"
+                ", @emailPersonal, @emailCorporativo, @idCargo, @idHorario);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleado, n"& _ 
+                "umCedula, estado, PIN, primerNombre, segundoNombre, primerApellido, segundoApell"& _ 
+                "ido, fechaNacimiento, sexo, fechaIngreso, direccion, observacion, fotoEmpleado, "& _ 
+                "telefono, emailPersonal, emailCorporativo, idCargo, idHorario FROM Empleado WHER"& _ 
+                "E (idEmpleado = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numCedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "numCedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -8542,11 +8542,11 @@ Namespace LMBADataSetTableAdapters
                 "sNull_emailPersonal = 1 AND [emailPersonal] IS NULL) OR ([emailPersonal] = @Orig"& _ 
                 "inal_emailPersonal)) AND ((@IsNull_emailCorporativo = 1 AND [emailCorporativo] I"& _ 
                 "S NULL) OR ([emailCorporativo] = @Original_emailCorporativo)) AND ([idCargo] = @"& _ 
-                "Original_idCargo) AND ([idHorario] = @Original_idHorario));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleado, "& _ 
-                "numCedula, estado, PIN, primerNombre, segundoNombre, primerApellido, segundoApel"& _ 
-                "lido, fechaNacimiento, sexo, fechaIngreso, direccion, observacion, fotoEmpleado,"& _ 
-                " telefono, emailPersonal, emailCorporativo, idCargo, idHorario FROM Empleado WHE"& _ 
-                "RE (idEmpleado = @idEmpleado)"
+                "Original_idCargo) AND ([idHorario] = @Original_idHorario));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleado, n"& _ 
+                "umCedula, estado, PIN, primerNombre, segundoNombre, primerApellido, segundoApell"& _ 
+                "ido, fechaNacimiento, sexo, fechaIngreso, direccion, observacion, fotoEmpleado, "& _ 
+                "telefono, emailPersonal, emailCorporativo, idCargo, idHorario FROM Empleado WHER"& _ 
+                "E (idEmpleado = @idEmpleado)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numCedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "numCedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -8633,11 +8633,11 @@ Namespace LMBADataSetTableAdapters
                 "rativo], [idCargo], [idHorario]) VALUES (@numCedula, @estado, @PIN, @primerNombr"& _ 
                 "e, @segundoNombre, @primerApellido, @segundoApellido, @fechaNacimiento, @sexo, @"& _ 
                 "fechaIngreso, @direccion, @observacion, @telefono, @emailPersonal, @emailCorpora"& _ 
-                "tivo, @idCargo, @idHorario);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleado, numCedula, estado, PIN, primerN"& _ 
-                "ombre, segundoNombre, primerApellido, segundoApellido, fechaNacimiento, sexo, fe"& _ 
-                "chaIngreso, direccion, observacion, fotoEmpleado, telefono, emailPersonal, email"& _ 
-                "Corporativo, idCargo, idHorario FROM Empleado WHERE (idEmpleado = SCOPE_IDENTITY"& _ 
-                "())"
+                "tivo, @idCargo, @idHorario);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleado, numCedula, estado, PIN, primerNo"& _ 
+                "mbre, segundoNombre, primerApellido, segundoApellido, fechaNacimiento, sexo, fec"& _ 
+                "haIngreso, direccion, observacion, fotoEmpleado, telefono, emailPersonal, emailC"& _ 
+                "orporativo, idCargo, idHorario FROM Empleado WHERE (idEmpleado = SCOPE_IDENTITY("& _ 
+                "))"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numCedula", Global.System.Data.SqlDbType.NVarChar, 16, Global.System.Data.ParameterDirection.Input, 0, 0, "numCedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -8658,14 +8658,14 @@ Namespace LMBADataSetTableAdapters
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idHorario", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idHorario", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "UPDATE       Empleado"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                numCedula = @numCedula, estado = @estad"& _ 
-                "o, PIN = @PIN, primerNombre = @primerNombre, segundoNombre = @segundoNombre, pri"& _ 
-                "merApellido = @primerApellido, segundoApellido = @segundoApellido, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"           "& _ 
-                "              fechaNacimiento = @fechaNacimiento, sexo = @sexo, fechaIngreso = @"& _ 
-                "fechaIngreso, direccion = @direccion, observacion = @observacion, telefono = @te"& _ 
-                "lefono, emailPersonal = @emailPersonal, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         emailCorporat"& _ 
-                "ivo = @emailCorporativo, idCargo = @idCargo, idHorario = @idHorario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE      "& _ 
-                "  (idEmpleado = @Original_idEmpleado)"
+            Me._commandCollection(4).CommandText = "UPDATE       Empleado"&Global.Microsoft.VisualBasic.ChrW(10)&"SET                numCedula = @numCedula, estado = @estado"& _ 
+                ", PIN = @PIN, primerNombre = @primerNombre, segundoNombre = @segundoNombre, prim"& _ 
+                "erApellido = @primerApellido, segundoApellido = @segundoApellido, "&Global.Microsoft.VisualBasic.ChrW(10)&"             "& _ 
+                "            fechaNacimiento = @fechaNacimiento, sexo = @sexo, fechaIngreso = @fe"& _ 
+                "chaIngreso, direccion = @direccion, observacion = @observacion, telefono = @tele"& _ 
+                "fono, emailPersonal = @emailPersonal, "&Global.Microsoft.VisualBasic.ChrW(10)&"                         emailCorporativo"& _ 
+                " = @emailCorporativo, idCargo = @idCargo, idHorario = @idHorario"&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (i"& _ 
+                "dEmpleado = @Original_idEmpleado)"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numCedula", Global.System.Data.SqlDbType.NVarChar, 16, Global.System.Data.ParameterDirection.Input, 0, 0, "numCedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -9142,8 +9142,8 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[empleadoRegistro] ([idRegistro], [numCedula]) VALUES (@idRegis"& _ 
-                "tro, @numCedula);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleadoRegistro, idRegistro, numCedula FROM emplead"& _ 
-                "oRegistro WHERE (idEmpleadoRegistro = SCOPE_IDENTITY())"
+                "tro, @numCedula);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idEmpleadoRegistro, idRegistro, numCedula FROM empleado"& _ 
+                "Registro WHERE (idEmpleadoRegistro = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idRegistro", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idRegistro", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numCedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "numCedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -9151,9 +9151,9 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[empleadoRegistro] SET [idRegistro] = @idRegistro, [numCedula] = @nu"& _ 
                 "mCedula WHERE (([idEmpleadoRegistro] = @Original_idEmpleadoRegistro) AND ([idReg"& _ 
-                "istro] = @Original_idRegistro) AND ([numCedula] = @Original_numCedula));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT"& _ 
-                " idEmpleadoRegistro, idRegistro, numCedula FROM empleadoRegistro WHERE (idEmplea"& _ 
-                "doRegistro = @idEmpleadoRegistro)"
+                "istro] = @Original_idRegistro) AND ([numCedula] = @Original_numCedula));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT "& _ 
+                "idEmpleadoRegistro, idRegistro, numCedula FROM empleadoRegistro WHERE (idEmplead"& _ 
+                "oRegistro = @idEmpleadoRegistro)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idRegistro", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "idRegistro", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@numCedula", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "numCedula", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -9477,9 +9477,9 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Horario] ([nombre], [horaEntrada], [horaSalida], [almuerzo]) V"& _ 
-                "ALUES (@nombre, @horaEntrada, @horaSalida, @almuerzo);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idHorario, nombre"& _ 
-                ", horaEntrada, horaSalida, almuerzo FROM Horario WHERE (idHorario = SCOPE_IDENTI"& _ 
-                "TY())"
+                "ALUES (@nombre, @horaEntrada, @horaSalida, @almuerzo);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idHorario, nombre,"& _ 
+                " horaEntrada, horaSalida, almuerzo FROM Horario WHERE (idHorario = SCOPE_IDENTIT"& _ 
+                "Y())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horaEntrada", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horaEntrada", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -9491,9 +9491,9 @@ Namespace LMBADataSetTableAdapters
                 "aSalida] = @horaSalida, [almuerzo] = @almuerzo WHERE (([idHorario] = @Original_i"& _ 
                 "dHorario) AND ([nombre] = @Original_nombre) AND ([horaEntrada] = @Original_horaE"& _ 
                 "ntrada) AND ([horaSalida] = @Original_horaSalida) AND ((@IsNull_almuerzo = 1 AND"& _ 
-                " [almuerzo] IS NULL) OR ([almuerzo] = @Original_almuerzo)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idHorario, "& _ 
-                "nombre, horaEntrada, horaSalida, almuerzo FROM Horario WHERE (idHorario = @idHor"& _ 
-                "ario)"
+                " [almuerzo] IS NULL) OR ([almuerzo] = @Original_almuerzo)));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idHorario, n"& _ 
+                "ombre, horaEntrada, horaSalida, almuerzo FROM Horario WHERE (idHorario = @idHora"& _ 
+                "rio)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horaEntrada", Global.System.Data.SqlDbType.Time, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "horaEntrada", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -9537,9 +9537,9 @@ Namespace LMBADataSetTableAdapters
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
             Me._commandCollection(3).CommandText = "INSERT INTO [dbo].[Horario] ([nombre], [horaEntrada], [horaSalida], [almuerzo]) V"& _ 
-                "ALUES (@nombre, @horaEntrada, @horaSalida, @almuerzo);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idHorario, nombre"& _ 
-                ", horaEntrada, horaSalida, almuerzo FROM Horario WHERE (idHorario = SCOPE_IDENTI"& _ 
-                "TY())"
+                "ALUES (@nombre, @horaEntrada, @horaSalida, @almuerzo);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idHorario, nombre,"& _ 
+                " horaEntrada, horaSalida, almuerzo FROM Horario WHERE (idHorario = SCOPE_IDENTIT"& _ 
+                "Y())"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horaEntrada", Global.System.Data.SqlDbType.Time, 5, Global.System.Data.ParameterDirection.Input, 0, 0, "horaEntrada", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -9549,7 +9549,7 @@ Namespace LMBADataSetTableAdapters
             Me._commandCollection(4).Connection = Me.Connection
             Me._commandCollection(4).CommandText = "UPDATE [dbo].[Horario] SET [nombre] = @nombre, [horaEntrada] = @horaEntrada, [hor"& _ 
                 "aSalida] = @horaSalida, [almuerzo] = @almuerzo WHERE (([idHorario] = @Original_i"& _ 
-                "dHorario));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+                "dHorario));"&Global.Microsoft.VisualBasic.ChrW(10)
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombre", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "nombre", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@horaEntrada", Global.System.Data.SqlDbType.Time, 5, Global.System.Data.ParameterDirection.Input, 0, 0, "horaEntrada", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -10035,9 +10035,9 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Justificacion] ([estado], [descripcion], [fechaEntrada], [fech"& _ 
                 "aSalida], [horaEntrada], [horaSalida]) VALUES (@estado, @descripcion, @fechaEntr"& _ 
-                "ada, @fechaSalida, @horaEntrada, @horaSalida);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idJustificacion, estado, "& _ 
-                "descripcion, fechaEntrada, fechaSalida, horaEntrada, horaSalida FROM Justificaci"& _ 
-                "on WHERE (idJustificacion = SCOPE_IDENTITY())"
+                "ada, @fechaSalida, @horaEntrada, @horaSalida);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idJustificacion, estado, d"& _ 
+                "escripcion, fechaEntrada, fechaSalida, horaEntrada, horaSalida FROM Justificacio"& _ 
+                "n WHERE (idJustificacion = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -10055,9 +10055,9 @@ Namespace LMBADataSetTableAdapters
                 "escripcion] = @Original_descripcion)) AND ([fechaEntrada] = @Original_fechaEntra"& _ 
                 "da) AND ([fechaSalida] = @Original_fechaSalida) AND ([horaEntrada] = @Original_h"& _ 
                 "oraEntrada) AND ((@IsNull_horaSalida = 1 AND [horaSalida] IS NULL) OR ([horaSali"& _ 
-                "da] = @Original_horaSalida)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idJustificacion, estado, descripcion, fec"& _ 
-                "haEntrada, fechaSalida, horaEntrada, horaSalida FROM Justificacion WHERE (idJust"& _ 
-                "ificacion = @idJustificacion)"
+                "da] = @Original_horaSalida)));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idJustificacion, estado, descripcion, fech"& _ 
+                "aEntrada, fechaSalida, horaEntrada, horaSalida FROM Justificacion WHERE (idJusti"& _ 
+                "ficacion = @idJustificacion)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -10098,7 +10098,7 @@ Namespace LMBADataSetTableAdapters
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "INSERT INTO [dbo].[Justificacion] ([estado], [descripcion], [fechaEntrada], [fech"& _ 
                 "aSalida], [horaEntrada], [horaSalida]) VALUES (@estado, @descripcion, @fechaEntr"& _ 
-                "ada, @fechaSalida, @horaEntrada, @horaSalida);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+                "ada, @fechaSalida, @horaEntrada, @horaSalida);"&Global.Microsoft.VisualBasic.ChrW(10)
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@descripcion", Global.System.Data.SqlDbType.NVarChar, 100, Global.System.Data.ParameterDirection.Input, 0, 0, "descripcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -10514,8 +10514,8 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[registroES] ([estado], [fecha], [horaEntrada], [horaSalida], ["& _ 
                 "idJustificacion]) VALUES (@estado, @fecha, @horaEntrada, @horaSalida, @idJustifi"& _ 
-                "cacion);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idRegistro, estado, fecha, horaEntrada, horaSalida, idJustifica"& _ 
-                "cion FROM registroES WHERE (idRegistro = SCOPE_IDENTITY())"
+                "cacion);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT idRegistro, estado, fecha, horaEntrada, horaSalida, idJustificac"& _ 
+                "ion FROM registroES WHERE (idRegistro = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fecha", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -10531,9 +10531,9 @@ Namespace LMBADataSetTableAdapters
                 "D ((@IsNull_horaEntrada = 1 AND [horaEntrada] IS NULL) OR ([horaEntrada] = @Orig"& _ 
                 "inal_horaEntrada)) AND ((@IsNull_horaSalida = 1 AND [horaSalida] IS NULL) OR ([h"& _ 
                 "oraSalida] = @Original_horaSalida)) AND ((@IsNull_idJustificacion = 1 AND [idJus"& _ 
-                "tificacion] IS NULL) OR ([idJustificacion] = @Original_idJustificacion)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELE"& _ 
-                "CT idRegistro, estado, fecha, horaEntrada, horaSalida, idJustificacion FROM regi"& _ 
-                "stroES WHERE (idRegistro = @idRegistro)"
+                "tificacion] IS NULL) OR ([idJustificacion] = @Original_idJustificacion)));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELEC"& _ 
+                "T idRegistro, estado, fecha, horaEntrada, horaSalida, idJustificacion FROM regis"& _ 
+                "troES WHERE (idRegistro = @idRegistro)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@fecha", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "fecha", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -10571,9 +10571,9 @@ Namespace LMBADataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT registroES.* FROM registroES"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"INNER JOIN empleadoRegistro ON registroES.id"& _ 
-                "Registro = empleadoRegistro.idRegistro"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE empleadoRegistro.idEmpleado = @idE"& _ 
-                "mpleado;"
+            Me._commandCollection(1).CommandText = "SELECT registroES.* FROM registroES"&Global.Microsoft.VisualBasic.ChrW(10)&"INNER JOIN empleadoRegistro ON registroES.idR"& _ 
+                "egistro = empleadoRegistro.idRegistro"&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE empleadoRegistro.idEmpleado = @idEmp"& _ 
+                "leado;"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@idEmpleado", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "idEmpleado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
@@ -10969,9 +10969,9 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_opcion] ([opcion], [estado]) VALUES (@opcion, @estado);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"S"& _ 
-                "ELECT id_opcion, opcion, estado FROM tbl_opcion WHERE (id_opcion = SCOPE_IDENTIT"& _ 
-                "Y())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_opcion] ([opcion], [estado]) VALUES (@opcion, @estado);"&Global.Microsoft.VisualBasic.ChrW(10)&"SE"& _ 
+                "LECT id_opcion, opcion, estado FROM tbl_opcion WHERE (id_opcion = SCOPE_IDENTITY"& _ 
+                "())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@opcion", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "opcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -10979,8 +10979,8 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbl_opcion] SET [opcion] = @opcion, [estado] = @estado WHERE (([id_"& _ 
                 "opcion] = @Original_id_opcion) AND ([opcion] = @Original_opcion) AND ([estado] ="& _ 
-                " @Original_estado));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_opcion, opcion, estado FROM tbl_opcion WHERE (id"& _ 
-                "_opcion = @id_opcion)"
+                " @Original_estado));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_opcion, opcion, estado FROM tbl_opcion WHERE (id_"& _ 
+                "opcion = @id_opcion)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@opcion", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "opcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -11296,15 +11296,16 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_estado", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_rol] ([rol], [estado]) VALUES (@rol, @estado);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_"& _ 
-                "rol, rol, estado FROM tbl_rol WHERE (id_rol = SCOPE_IDENTITY())"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_rol] ([rol], [estado]) VALUES (@rol, @estado);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_r"& _ 
+                "ol, rol, estado FROM tbl_rol WHERE (id_rol = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@rol", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "rol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbl_rol] SET [rol] = @rol, [estado] = @estado WHERE (([id_rol] = @O"& _ 
-                "riginal_id_rol) AND ([rol] = @Original_rol) AND ([estado] = @Original_estado));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_rol, rol, estado FROM tbl_rol WHERE (id_rol = @id_rol)"
+                "riginal_id_rol) AND ([rol] = @Original_rol) AND ([estado] = @Original_estado));"&Global.Microsoft.VisualBasic.ChrW(10)& _ 
+                "SELECT id_rol, rol, estado FROM tbl_rol WHERE (id_rol = @id_rol)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@rol", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "rol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@estado", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "estado", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -11637,8 +11638,8 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_rolOpcion] ([id_opcion], [id_rol]) VALUES (@id_opcion, @id"& _ 
-                "_rol);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_rolOpcion, id_opcion, id_rol FROM tbl_rolOpcion WHERE (id_rolO"& _ 
-                "pcion = SCOPE_IDENTITY())"
+                "_rol);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_rolOpcion, id_opcion, id_rol FROM tbl_rolOpcion WHERE (id_rolOp"& _ 
+                "cion = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_opcion", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_opcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_rol", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_rol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -11646,8 +11647,8 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbl_rolOpcion] SET [id_opcion] = @id_opcion, [id_rol] = @id_rol WHE"& _ 
                 "RE (([id_rolOpcion] = @Original_id_rolOpcion) AND ([id_opcion] = @Original_id_op"& _ 
-                "cion) AND ([id_rol] = @Original_id_rol));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_rolOpcion, id_opcion, id_ro"& _ 
-                "l FROM tbl_rolOpcion WHERE (id_rolOpcion = @id_rolOpcion)"
+                "cion) AND ([id_rol] = @Original_id_rol));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_rolOpcion, id_opcion, id_rol"& _ 
+                " FROM tbl_rolOpcion WHERE (id_rolOpcion = @id_rolOpcion)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_opcion", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_opcion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_rol", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_rol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -11963,8 +11964,8 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_user] ([username], [pwd], [nombres], [apellidos], [pwd_tem"& _ 
                 "p], [email], [estado]) VALUES (@username, @pwd, @nombres, @apellidos, @pwd_temp,"& _ 
-                " @email, @estado);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_user, username, pwd, nombres, apellidos, pwd_temp,"& _ 
-                " email, estado FROM tbl_user WHERE (id_user = SCOPE_IDENTITY())"
+                " @email, @estado);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_user, username, pwd, nombres, apellidos, pwd_temp, "& _ 
+                "email, estado FROM tbl_user WHERE (id_user = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@username", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@pwd", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "pwd", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -11981,8 +11982,8 @@ Namespace LMBADataSetTableAdapters
                 "_username) AND ([pwd] = @Original_pwd) AND ([nombres] = @Original_nombres) AND ("& _ 
                 "[apellidos] = @Original_apellidos) AND ((@IsNull_pwd_temp = 1 AND [pwd_temp] IS "& _ 
                 "NULL) OR ([pwd_temp] = @Original_pwd_temp)) AND ([email] = @Original_email) AND "& _ 
-                "([estado] = @Original_estado));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_user, username, pwd, nombres, apellid"& _ 
-                "os, pwd_temp, email, estado FROM tbl_user WHERE (id_user = @id_user)"
+                "([estado] = @Original_estado));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_user, username, pwd, nombres, apellido"& _ 
+                "s, pwd_temp, email, estado FROM tbl_user WHERE (id_user = @id_user)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@username", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@pwd", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "pwd", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -12021,7 +12022,7 @@ Namespace LMBADataSetTableAdapters
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "UPDATE tbl_user"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET          estado = 3"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (id_user = @Original_id_user)"
+            Me._commandCollection(1).CommandText = "UPDATE tbl_user"&Global.Microsoft.VisualBasic.ChrW(10)&"SET          estado = 3"&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (id_user = @Original_id_user)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_user", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_user", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
@@ -12032,14 +12033,14 @@ Namespace LMBADataSetTableAdapters
             Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@username", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(3) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "INSERT INTO [dbo].[tbl_user] ( [pwd] ) VALUES ( @pwd);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_user, username,"& _ 
-                " pwd, nombres, apellidos, pwd_temp, email, estado FROM tbl_user WHERE (id_user ="& _ 
-                " SCOPE_IDENTITY())"
+            Me._commandCollection(3).CommandText = "INSERT INTO [dbo].[tbl_user] ( [pwd] ) VALUES ( @pwd);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_user, username, "& _ 
+                "pwd, nombres, apellidos, pwd_temp, email, estado FROM tbl_user WHERE (id_user = "& _ 
+                "SCOPE_IDENTITY())"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(3).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@pwd", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "pwd", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "UPDATE tbl_user"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET          pwd = @pwd"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (id_user = @Original_id_user); "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
+            Me._commandCollection(4).CommandText = "UPDATE tbl_user"&Global.Microsoft.VisualBasic.ChrW(10)&"SET          pwd = @pwd"&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE  (id_user = @Original_id_user); "&Global.Microsoft.VisualBasic.ChrW(10)
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@pwd", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "pwd", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(4).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_id_user", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "id_user", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -12567,8 +12568,8 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tbl_userRol] ([id_rol], [id_user]) VALUES (@id_rol, @id_user);"& _ 
-                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_UserRol, id_rol, id_user FROM tbl_userRol WHERE (id_UserRol = SCOPE_"& _ 
-                "IDENTITY())"
+                ""&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_UserRol, id_rol, id_user FROM tbl_userRol WHERE (id_UserRol = SCOPE_I"& _ 
+                "DENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_rol", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_rol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_user", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_user", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -12576,8 +12577,8 @@ Namespace LMBADataSetTableAdapters
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tbl_userRol] SET [id_rol] = @id_rol, [id_user] = @id_user WHERE ((["& _ 
                 "id_UserRol] = @Original_id_UserRol) AND ([id_rol] = @Original_id_rol) AND ([id_u"& _ 
-                "ser] = @Original_id_user));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_UserRol, id_rol, id_user FROM tbl_userRol"& _ 
-                " WHERE (id_UserRol = @id_UserRol)"
+                "ser] = @Original_id_user));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT id_UserRol, id_rol, id_user FROM tbl_userRol "& _ 
+                "WHERE (id_UserRol = @id_UserRol)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_rol", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_rol", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@id_user", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "id_user", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -12890,14 +12891,14 @@ Namespace LMBADataSetTableAdapters
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        Empleado.idEmpleado AS ID, Empleado.numCedula AS Cedula, { fn CONCA"& _ 
                 "T(Empleado.primerNombre, (CASE WHEN (segundoNombre IS NULL) THEN '' ELSE CONCAT("& _ 
-                "' ', segundoNombre) END)) } AS Nombres, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         { fn CONCAT(E"& _ 
-                "mpleado.primerApellido, (CASE WHEN (segundoApellido IS NULL) THEN '' ELSE CONCAT"& _ 
-                "(' ', segundoApellido) END)) } AS Apellidos, Cargo.nombreCargo AS Cargo, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"     "& _ 
-                "                    Departamento.nombreDepartamento AS Departamento, Empleado.te"& _ 
-                "lefono AS Telefono, Empleado.emailCorporativo AS Email, Empleado.idHorario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM"& _ 
-                "            Empleado INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Cargo ON Empleado.idCa"& _ 
-                "rgo = Cargo.idCargo INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Departamento ON Cargo.i"& _ 
-                "dDepartamento = Departamento.idDepartamento"
+                "' ', segundoNombre) END)) } AS Nombres, "&Global.Microsoft.VisualBasic.ChrW(10)&"                         { fn CONCAT(Em"& _ 
+                "pleado.primerApellido, (CASE WHEN (segundoApellido IS NULL) THEN '' ELSE CONCAT("& _ 
+                "' ', segundoApellido) END)) } AS Apellidos, Cargo.nombreCargo AS Cargo, "&Global.Microsoft.VisualBasic.ChrW(10)&"       "& _ 
+                "                  Departamento.nombreDepartamento AS Departamento, Empleado.tele"& _ 
+                "fono AS Telefono, Empleado.emailCorporativo AS Email, Empleado.idHorario"&Global.Microsoft.VisualBasic.ChrW(10)&"FROM   "& _ 
+                "         Empleado INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(10)&"                         Cargo ON Empleado.idCargo "& _ 
+                "= Cargo.idCargo INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(10)&"                         Departamento ON Cargo.idDepa"& _ 
+                "rtamento = Departamento.idDepartamento"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
@@ -12907,12 +12908,12 @@ Namespace LMBADataSetTableAdapters
                 "mpleado.primerApellido, (CASE WHEN (segundoApellido IS NULL) THEN '' ELSE CONCAT"& _ 
                 "(' ', segundoApellido) END)) } AS Apellidos, Cargo.nombreCargo AS Cargo, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"     "& _ 
                 "                    Departamento.nombreDepartamento AS Departamento, Empleado.te"& _ 
-                "lefono AS Telefono, Empleado.emailCorporativo AS Email, Cargo.idDepartamento"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FR"& _ 
-                "OM            Empleado INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Cargo ON Empleado.id"& _ 
-                "Cargo = Cargo.idCargo INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Departamento ON Cargo"& _ 
-                ".idDepartamento = Departamento.idDepartamento"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ({ fn CONCAT(Emplead"& _ 
-                "o.primerNombre, (CASE WHEN (segundoNombre IS NULL) THEN '' ELSE CONCAT(' ', segu"& _ 
-                "ndoNombre) END)) } LIKE @nombres)"
+                "lefono AS Telefono, Empleado.emailCorporativo AS Email, Empleado.idHorario"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM"& _ 
+                "            Empleado INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Cargo ON Empleado.idCa"& _ 
+                "rgo = Cargo.idCargo INNER JOIN"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                         Departamento ON Cargo.i"& _ 
+                "dDepartamento = Departamento.idDepartamento"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ({ fn CONCAT(Empleado."& _ 
+                "primerNombre, (CASE WHEN (segundoNombre IS NULL) THEN '' ELSE CONCAT(' ', segund"& _ 
+                "oNombre) END)) } LIKE @nombres)"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@nombres", Global.System.Data.SqlDbType.VarChar, 1024, Global.System.Data.ParameterDirection.Input, 0, 0, "", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub

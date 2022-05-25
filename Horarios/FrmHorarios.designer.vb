@@ -35,15 +35,15 @@ Partial Class FrmHorarios
         Me.gbHorario = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dgvHorario = New System.Windows.Forms.DataGridView()
-        Me.HorarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.LMBADataSet = New SCAP_LMBA_Tech.LMBADataSet()
-        Me.LMBADataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.HorarioTableAdapter = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.HorarioTableAdapter()
         Me.IdHorarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HoraEntradaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.HoraSalidaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.almuerzo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.HorarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LMBADataSet = New SCAP_LMBA_Tech.LMBADataSet()
+        Me.LMBADataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HorarioTableAdapter = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.HorarioTableAdapter()
         Me.ToolStrip1.SuspendLayout()
         Me.gbHorario.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -59,7 +59,7 @@ Partial Class FrmHorarios
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.addHor, Me.ToolStripSeparator1, Me.btnEliminarHor, Me.ToolStripSeparator2, Me.modHor, Me.ToolStripSeparator3, Me.searchHor, Me.tbBuscar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(773, 30)
+        Me.ToolStrip1.Size = New System.Drawing.Size(580, 27)
         Me.ToolStrip1.TabIndex = 7
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -68,49 +68,49 @@ Partial Class FrmHorarios
         Me.addHor.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_new_window_30
         Me.addHor.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.addHor.Name = "addHor"
-        Me.addHor.Size = New System.Drawing.Size(87, 27)
+        Me.addHor.Size = New System.Drawing.Size(73, 24)
         Me.addHor.Text = "Agregar"
         Me.addHor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 30)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'btnEliminarHor
         '
         Me.btnEliminarHor.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_delete_24
         Me.btnEliminarHor.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnEliminarHor.Name = "btnEliminarHor"
-        Me.btnEliminarHor.Size = New System.Drawing.Size(87, 27)
+        Me.btnEliminarHor.Size = New System.Drawing.Size(74, 24)
         Me.btnEliminarHor.Text = "Eliminar"
         Me.btnEliminarHor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 30)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
         '
         'modHor
         '
         Me.modHor.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_edit_production_order_32
         Me.modHor.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.modHor.Name = "modHor"
-        Me.modHor.Size = New System.Drawing.Size(97, 27)
+        Me.modHor.Size = New System.Drawing.Size(82, 24)
         Me.modHor.Text = "Modificar"
         Me.modHor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 30)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
         '
         'searchHor
         '
         Me.searchHor.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_search_24
         Me.searchHor.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.searchHor.Name = "searchHor"
-        Me.searchHor.Size = New System.Drawing.Size(76, 27)
+        Me.searchHor.Size = New System.Drawing.Size(66, 24)
         Me.searchHor.Text = "Buscar"
         Me.searchHor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
@@ -119,14 +119,16 @@ Partial Class FrmHorarios
         Me.tbBuscar.AutoSize = False
         Me.tbBuscar.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.tbBuscar.Name = "tbBuscar"
-        Me.tbBuscar.Size = New System.Drawing.Size(200, 30)
+        Me.tbBuscar.Size = New System.Drawing.Size(151, 25)
         '
         'gbHorario
         '
         Me.gbHorario.Controls.Add(Me.Panel1)
-        Me.gbHorario.Location = New System.Drawing.Point(21, 52)
+        Me.gbHorario.Location = New System.Drawing.Point(16, 42)
+        Me.gbHorario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.gbHorario.Name = "gbHorario"
-        Me.gbHorario.Size = New System.Drawing.Size(722, 305)
+        Me.gbHorario.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbHorario.Size = New System.Drawing.Size(542, 248)
         Me.gbHorario.TabIndex = 8
         Me.gbHorario.TabStop = False
         Me.gbHorario.Text = "Horarios"
@@ -134,25 +136,75 @@ Partial Class FrmHorarios
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.dgvHorario)
-        Me.Panel1.Location = New System.Drawing.Point(0, 21)
+        Me.Panel1.Location = New System.Drawing.Point(0, 17)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(749, 348)
+        Me.Panel1.Size = New System.Drawing.Size(562, 283)
         Me.Panel1.TabIndex = 0
         '
         'dgvHorario
         '
+        Me.dgvHorario.AllowUserToAddRows = False
+        Me.dgvHorario.AllowUserToDeleteRows = False
         Me.dgvHorario.AutoGenerateColumns = False
         Me.dgvHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvHorario.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdHorarioDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.HoraEntradaDataGridViewTextBoxColumn, Me.HoraSalidaDataGridViewTextBoxColumn, Me.almuerzo})
         Me.dgvHorario.DataSource = Me.HorarioBindingSource
         Me.dgvHorario.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvHorario.Location = New System.Drawing.Point(0, 0)
+        Me.dgvHorario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.dgvHorario.Name = "dgvHorario"
+        Me.dgvHorario.ReadOnly = True
         Me.dgvHorario.RowHeadersWidth = 51
         Me.dgvHorario.RowTemplate.Height = 24
         Me.dgvHorario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvHorario.Size = New System.Drawing.Size(749, 348)
+        Me.dgvHorario.Size = New System.Drawing.Size(562, 283)
         Me.dgvHorario.TabIndex = 0
+        '
+        'IdHorarioDataGridViewTextBoxColumn
+        '
+        Me.IdHorarioDataGridViewTextBoxColumn.DataPropertyName = "idHorario"
+        Me.IdHorarioDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IdHorarioDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdHorarioDataGridViewTextBoxColumn.Name = "IdHorarioDataGridViewTextBoxColumn"
+        Me.IdHorarioDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdHorarioDataGridViewTextBoxColumn.Width = 125
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
+        Me.NombreDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombreDataGridViewTextBoxColumn.Width = 125
+        '
+        'HoraEntradaDataGridViewTextBoxColumn
+        '
+        Me.HoraEntradaDataGridViewTextBoxColumn.DataPropertyName = "horaEntrada"
+        Me.HoraEntradaDataGridViewTextBoxColumn.HeaderText = "Hora de entrada"
+        Me.HoraEntradaDataGridViewTextBoxColumn.MinimumWidth = 8
+        Me.HoraEntradaDataGridViewTextBoxColumn.Name = "HoraEntradaDataGridViewTextBoxColumn"
+        Me.HoraEntradaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.HoraEntradaDataGridViewTextBoxColumn.Width = 125
+        '
+        'HoraSalidaDataGridViewTextBoxColumn
+        '
+        Me.HoraSalidaDataGridViewTextBoxColumn.DataPropertyName = "horaSalida"
+        Me.HoraSalidaDataGridViewTextBoxColumn.HeaderText = "Hora de salida"
+        Me.HoraSalidaDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.HoraSalidaDataGridViewTextBoxColumn.Name = "HoraSalidaDataGridViewTextBoxColumn"
+        Me.HoraSalidaDataGridViewTextBoxColumn.ReadOnly = True
+        Me.HoraSalidaDataGridViewTextBoxColumn.Width = 125
+        '
+        'almuerzo
+        '
+        Me.almuerzo.DataPropertyName = "almuerzo"
+        Me.almuerzo.HeaderText = "Almuerzo"
+        Me.almuerzo.MinimumWidth = 6
+        Me.almuerzo.Name = "almuerzo"
+        Me.almuerzo.ReadOnly = True
+        Me.almuerzo.Width = 125
         '
         'HorarioBindingSource
         '
@@ -173,54 +225,14 @@ Partial Class FrmHorarios
         '
         Me.HorarioTableAdapter.ClearBeforeFill = True
         '
-        'IdHorarioDataGridViewTextBoxColumn
-        '
-        Me.IdHorarioDataGridViewTextBoxColumn.DataPropertyName = "idHorario"
-        Me.IdHorarioDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IdHorarioDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdHorarioDataGridViewTextBoxColumn.Name = "IdHorarioDataGridViewTextBoxColumn"
-        Me.IdHorarioDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdHorarioDataGridViewTextBoxColumn.Width = 125
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "Nombre"
-        Me.NombreDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        Me.NombreDataGridViewTextBoxColumn.Width = 125
-        '
-        'HoraEntradaDataGridViewTextBoxColumn
-        '
-        Me.HoraEntradaDataGridViewTextBoxColumn.DataPropertyName = "horaEntrada"
-        Me.HoraEntradaDataGridViewTextBoxColumn.HeaderText = "Hora de entrada"
-        Me.HoraEntradaDataGridViewTextBoxColumn.MinimumWidth = 8
-        Me.HoraEntradaDataGridViewTextBoxColumn.Name = "HoraEntradaDataGridViewTextBoxColumn"
-        Me.HoraEntradaDataGridViewTextBoxColumn.Width = 125
-        '
-        'HoraSalidaDataGridViewTextBoxColumn
-        '
-        Me.HoraSalidaDataGridViewTextBoxColumn.DataPropertyName = "horaSalida"
-        Me.HoraSalidaDataGridViewTextBoxColumn.HeaderText = "Hora de salida"
-        Me.HoraSalidaDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.HoraSalidaDataGridViewTextBoxColumn.Name = "HoraSalidaDataGridViewTextBoxColumn"
-        Me.HoraSalidaDataGridViewTextBoxColumn.Width = 125
-        '
-        'almuerzo
-        '
-        Me.almuerzo.DataPropertyName = "almuerzo"
-        Me.almuerzo.HeaderText = "Almuerzo"
-        Me.almuerzo.MinimumWidth = 6
-        Me.almuerzo.Name = "almuerzo"
-        Me.almuerzo.Width = 125
-        '
         'FrmHorarios
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(773, 411)
+        Me.ClientSize = New System.Drawing.Size(580, 334)
         Me.Controls.Add(Me.gbHorario)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmHorarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Horarios de empleados"

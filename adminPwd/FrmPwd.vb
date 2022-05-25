@@ -8,6 +8,7 @@
 
         dgvUser.DataSource = regUser.GetData
         dgvUser.Refresh()
+        dgvUser.Columns(0).Visible = False
         gbUser.Text = "Mostrando usuarios: " & dgvUser.Rows.Count.ToString
 
     End Sub

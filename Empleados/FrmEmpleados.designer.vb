@@ -111,6 +111,7 @@ Partial Class FrmEmpleados
         Me.DgvEmpleados.Location = New System.Drawing.Point(0, 25)
         Me.DgvEmpleados.Name = "DgvEmpleados"
         Me.DgvEmpleados.ReadOnly = True
+        Me.DgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvEmpleados.Size = New System.Drawing.Size(844, 439)
         Me.DgvEmpleados.TabIndex = 1
         '
