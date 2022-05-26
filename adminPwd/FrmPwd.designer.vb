@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmPwd
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmPwd
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPwd))
@@ -35,16 +35,9 @@ Partial Class FrmPwd
         Me.txtSearch = New System.Windows.Forms.ToolStripTextBox()
         Me.gbUser = New System.Windows.Forms.GroupBox()
         Me.dgvUser = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UsernameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PwdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombresDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidosDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PwdtempDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmailDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TbluserBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.LMBADataSet1 = New SCAP_LMBA_Tech.LMBADataSet()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TbluserBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LMBADataSet = New SCAP_LMBA_Tech.LMBADataSet()
         Me.Tbl_userTableAdapter = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.tbl_userTableAdapter()
@@ -52,9 +45,9 @@ Partial Class FrmPwd
         Me.ToolStrip1.SuspendLayout()
         Me.gbUser.SuspendLayout()
         CType(Me.dgvUser, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         CType(Me.TbluserBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LMBADataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         CType(Me.TbluserBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -65,7 +58,7 @@ Partial Class FrmPwd
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnAdd, Me.ToolStripSeparator1, Me.btnDelete, Me.ToolStripSeparator2, Me.btnMod, Me.ToolStripSeparator3, Me.btnSearch, Me.txtSearch})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(776, 27)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1035, 27)
         Me.ToolStrip1.TabIndex = 9
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -74,7 +67,7 @@ Partial Class FrmPwd
         Me.btnAdd.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_new_window_30
         Me.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(73, 24)
+        Me.btnAdd.Size = New System.Drawing.Size(87, 24)
         Me.btnAdd.Text = "Agregar"
         Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
@@ -88,7 +81,7 @@ Partial Class FrmPwd
         Me.btnDelete.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_delete_24
         Me.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(74, 24)
+        Me.btnDelete.Size = New System.Drawing.Size(87, 24)
         Me.btnDelete.Text = "Eliminar"
         Me.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
@@ -102,7 +95,7 @@ Partial Class FrmPwd
         Me.btnMod.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_edit_production_order_32
         Me.btnMod.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnMod.Name = "btnMod"
-        Me.btnMod.Size = New System.Drawing.Size(82, 24)
+        Me.btnMod.Size = New System.Drawing.Size(97, 24)
         Me.btnMod.Text = "Modificar"
         Me.btnMod.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
@@ -116,23 +109,24 @@ Partial Class FrmPwd
         Me.btnSearch.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_search_24
         Me.btnSearch.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(66, 24)
+        Me.btnSearch.Size = New System.Drawing.Size(76, 24)
         Me.btnSearch.Text = "Buscar"
         Me.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'txtSearch
         '
+        Me.txtSearch.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(151, 27)
+        Me.txtSearch.Size = New System.Drawing.Size(200, 27)
         '
         'gbUser
         '
         Me.gbUser.Controls.Add(Me.dgvUser)
         Me.gbUser.Location = New System.Drawing.Point(0, 2)
-        Me.gbUser.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbUser.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gbUser.Name = "gbUser"
-        Me.gbUser.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.gbUser.Size = New System.Drawing.Size(765, 362)
+        Me.gbUser.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.gbUser.Size = New System.Drawing.Size(1020, 446)
         Me.gbUser.TabIndex = 10
         Me.gbUser.TabStop = False
         Me.gbUser.Text = "Usuarios"
@@ -141,83 +135,26 @@ Partial Class FrmPwd
         '
         Me.dgvUser.AllowUserToAddRows = False
         Me.dgvUser.AllowUserToDeleteRows = False
-        Me.dgvUser.AutoGenerateColumns = False
         Me.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvUser.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.UsernameDataGridViewTextBoxColumn, Me.PwdDataGridViewTextBoxColumn, Me.NombresDataGridViewTextBoxColumn, Me.ApellidosDataGridViewTextBoxColumn, Me.PwdtempDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn})
-        Me.dgvUser.DataSource = Me.TbluserBindingSource1
         Me.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvUser.Location = New System.Drawing.Point(2, 15)
-        Me.dgvUser.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvUser.Location = New System.Drawing.Point(3, 17)
+        Me.dgvUser.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvUser.Name = "dgvUser"
         Me.dgvUser.ReadOnly = True
         Me.dgvUser.RowHeadersWidth = 51
         Me.dgvUser.RowTemplate.Height = 24
         Me.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvUser.Size = New System.Drawing.Size(761, 345)
+        Me.dgvUser.Size = New System.Drawing.Size(1014, 427)
         Me.dgvUser.TabIndex = 0
         '
-        'Column1
+        'Panel1
         '
-        Me.Column1.DataPropertyName = "id_user"
-        Me.Column1.HeaderText = "ID"
-        Me.Column1.MinimumWidth = 4
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Width = 125
-        '
-        'UsernameDataGridViewTextBoxColumn
-        '
-        Me.UsernameDataGridViewTextBoxColumn.DataPropertyName = "username"
-        Me.UsernameDataGridViewTextBoxColumn.HeaderText = "Username"
-        Me.UsernameDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.UsernameDataGridViewTextBoxColumn.Name = "UsernameDataGridViewTextBoxColumn"
-        Me.UsernameDataGridViewTextBoxColumn.ReadOnly = True
-        Me.UsernameDataGridViewTextBoxColumn.Width = 125
-        '
-        'PwdDataGridViewTextBoxColumn
-        '
-        Me.PwdDataGridViewTextBoxColumn.DataPropertyName = "pwd"
-        Me.PwdDataGridViewTextBoxColumn.HeaderText = "Contraseña"
-        Me.PwdDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.PwdDataGridViewTextBoxColumn.Name = "PwdDataGridViewTextBoxColumn"
-        Me.PwdDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PwdDataGridViewTextBoxColumn.Width = 125
-        '
-        'NombresDataGridViewTextBoxColumn
-        '
-        Me.NombresDataGridViewTextBoxColumn.DataPropertyName = "nombres"
-        Me.NombresDataGridViewTextBoxColumn.HeaderText = "Nombres"
-        Me.NombresDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.NombresDataGridViewTextBoxColumn.Name = "NombresDataGridViewTextBoxColumn"
-        Me.NombresDataGridViewTextBoxColumn.ReadOnly = True
-        Me.NombresDataGridViewTextBoxColumn.Width = 125
-        '
-        'ApellidosDataGridViewTextBoxColumn
-        '
-        Me.ApellidosDataGridViewTextBoxColumn.DataPropertyName = "apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.HeaderText = "Apellidos"
-        Me.ApellidosDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.ApellidosDataGridViewTextBoxColumn.Name = "ApellidosDataGridViewTextBoxColumn"
-        Me.ApellidosDataGridViewTextBoxColumn.ReadOnly = True
-        Me.ApellidosDataGridViewTextBoxColumn.Width = 125
-        '
-        'PwdtempDataGridViewTextBoxColumn
-        '
-        Me.PwdtempDataGridViewTextBoxColumn.DataPropertyName = "pwd_temp"
-        Me.PwdtempDataGridViewTextBoxColumn.HeaderText = "pwd_temp"
-        Me.PwdtempDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.PwdtempDataGridViewTextBoxColumn.Name = "PwdtempDataGridViewTextBoxColumn"
-        Me.PwdtempDataGridViewTextBoxColumn.ReadOnly = True
-        Me.PwdtempDataGridViewTextBoxColumn.Width = 125
-        '
-        'EmailDataGridViewTextBoxColumn
-        '
-        Me.EmailDataGridViewTextBoxColumn.DataPropertyName = "email"
-        Me.EmailDataGridViewTextBoxColumn.HeaderText = "email"
-        Me.EmailDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.EmailDataGridViewTextBoxColumn.Name = "EmailDataGridViewTextBoxColumn"
-        Me.EmailDataGridViewTextBoxColumn.ReadOnly = True
-        Me.EmailDataGridViewTextBoxColumn.Width = 125
+        Me.Panel1.Controls.Add(Me.gbUser)
+        Me.Panel1.Location = New System.Drawing.Point(0, 30)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1023, 450)
+        Me.Panel1.TabIndex = 11
         '
         'TbluserBindingSource1
         '
@@ -228,15 +165,6 @@ Partial Class FrmPwd
         '
         Me.LMBADataSet1.DataSetName = "LMBADataSet"
         Me.LMBADataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.gbUser)
-        Me.Panel1.Location = New System.Drawing.Point(0, 24)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(767, 366)
-        Me.Panel1.TabIndex = 11
         '
         'TbluserBindingSource
         '
@@ -258,22 +186,22 @@ Partial Class FrmPwd
         '
         'FrmPwd
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(776, 411)
+        Me.ClientSize = New System.Drawing.Size(1035, 506)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FrmPwd"
         Me.Text = "Administar Contraseñas"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.gbUser.ResumeLayout(False)
         CType(Me.dgvUser, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         CType(Me.TbluserBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LMBADataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
         CType(Me.TbluserBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -298,11 +226,4 @@ Partial Class FrmPwd
     Friend WithEvents Panel1 As Panel
     Friend WithEvents LMBADataSet1 As LMBADataSet
     Friend WithEvents TbluserBindingSource1 As BindingSource
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents UsernameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PwdDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents NombresDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ApellidosDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PwdtempDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmailDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

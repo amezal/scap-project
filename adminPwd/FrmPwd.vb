@@ -1,15 +1,16 @@
 ﻿Public Class FrmPwd
     Dim regUser As New LMBADataSetTableAdapters.tbl_userTableAdapter
     Dim idUser As Int32
-    Dim username As String
-    Dim pwd As String
+
 
     Sub llenarGrid()
 
         dgvUser.DataSource = regUser.GetData
-        dgvUser.Refresh()
+        dgvUser.Columns("id_user").Visible = False
         dgvUser.Columns(0).Visible = False
         gbUser.Text = "Mostrando usuarios: " & dgvUser.Rows.Count.ToString
+        dgvUser.Refresh()
+
 
     End Sub
 
@@ -27,7 +28,7 @@
             dgvUser.DataSource = regUser.buscarPorUser(data)
             dgvUser.Refresh()
 
-            gbUser.Text = "Horarios encontrados: " & dgvUser.Rows.Count.ToString
+            gbUser.Text = "Usuarios encontrados: " & dgvUser.Rows.Count.ToString
 
         Catch ex As Exception
 
@@ -44,8 +45,6 @@
         Dim row = dgvUser.CurrentRow.Index
         Dim user = dgvUser.Rows(row)
         Dim id = user.Cells(0).Value
-        username = user.Cells(1).Value
-        pwd = user.Cells(2).Value
         idUser = id
 
     End Sub
@@ -61,12 +60,11 @@
         Catch ex As Exception
 
         End Try
+
     End Sub
 
     Private Sub btnMod_Click(sender As Object, e As EventArgs) Handles btnMod.Click
         FrmModPwd.idUser = idUser
-        FrmModPwd.username = username
-        FrmModPwd.pwd = pwd
         FrmModPwd.Show()
     End Sub
 End Class
