@@ -27,7 +27,6 @@ Partial Class FrmModPwd
         Me.btnSaveMod = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnCancelMod = New System.Windows.Forms.ToolStripButton()
-        Me.LMBADataSet = New SCAP_LMBA_Tech.LMBADataSet()
         Me.BtnPw2 = New System.Windows.Forms.Button()
         Me.BtnPwd = New System.Windows.Forms.Button()
         Me.TxtPwd2 = New System.Windows.Forms.TextBox()
@@ -46,6 +45,7 @@ Partial Class FrmModPwd
         Me.Label0 = New System.Windows.Forms.Label()
         Me.ChkEstado = New System.Windows.Forms.CheckBox()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.LMBADataSet = New SCAP_LMBA_Tech.LMBADataSet()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -56,7 +56,7 @@ Partial Class FrmModPwd
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnSaveMod, Me.ToolStripSeparator1, Me.btnCancelMod})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(800, 27)
+        Me.ToolStrip1.Size = New System.Drawing.Size(800, 31)
         Me.ToolStrip1.TabIndex = 16
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -65,28 +65,23 @@ Partial Class FrmModPwd
         Me.btnSaveMod.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
         Me.btnSaveMod.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnSaveMod.Name = "btnSaveMod"
-        Me.btnSaveMod.Size = New System.Drawing.Size(86, 24)
+        Me.btnSaveMod.Size = New System.Drawing.Size(86, 28)
         Me.btnSaveMod.Text = "Guardar"
         Me.btnSaveMod.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 31)
         '
         'btnCancelMod
         '
         Me.btnCancelMod.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_cancel_50
         Me.btnCancelMod.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnCancelMod.Name = "btnCancelMod"
-        Me.btnCancelMod.Size = New System.Drawing.Size(90, 24)
+        Me.btnCancelMod.Size = New System.Drawing.Size(90, 28)
         Me.btnCancelMod.Text = "Cancelar"
         Me.btnCancelMod.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        '
-        'LMBADataSet
-        '
-        Me.LMBADataSet.DataSetName = "LMBADataSet"
-        Me.LMBADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BtnPw2
         '
@@ -94,7 +89,7 @@ Partial Class FrmModPwd
         Me.BtnPw2.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnPw2.Name = "BtnPw2"
         Me.BtnPw2.Size = New System.Drawing.Size(85, 25)
-        Me.BtnPw2.TabIndex = 119
+        Me.BtnPw2.TabIndex = 8
         Me.BtnPw2.Text = "Ver"
         Me.BtnPw2.UseVisualStyleBackColor = True
         '
@@ -104,7 +99,7 @@ Partial Class FrmModPwd
         Me.BtnPwd.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnPwd.Name = "BtnPwd"
         Me.BtnPwd.Size = New System.Drawing.Size(85, 25)
-        Me.BtnPwd.TabIndex = 117
+        Me.BtnPwd.TabIndex = 6
         Me.BtnPwd.Text = "Ver"
         Me.BtnPwd.UseVisualStyleBackColor = True
         '
@@ -116,7 +111,7 @@ Partial Class FrmModPwd
         Me.TxtPwd2.Name = "TxtPwd2"
         Me.TxtPwd2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtPwd2.Size = New System.Drawing.Size(123, 22)
-        Me.TxtPwd2.TabIndex = 118
+        Me.TxtPwd2.TabIndex = 7
         '
         'TxtPwd
         '
@@ -126,7 +121,7 @@ Partial Class FrmModPwd
         Me.TxtPwd.Name = "TxtPwd"
         Me.TxtPwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtPwd.Size = New System.Drawing.Size(123, 22)
-        Me.TxtPwd.TabIndex = 116
+        Me.TxtPwd.TabIndex = 5
         '
         'Label16
         '
@@ -175,7 +170,7 @@ Partial Class FrmModPwd
         Me.TxtEmail.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtEmail.Name = "TxtEmail"
         Me.TxtEmail.Size = New System.Drawing.Size(216, 22)
-        Me.TxtEmail.TabIndex = 106
+        Me.TxtEmail.TabIndex = 3
         '
         'Label2
         '
@@ -194,7 +189,7 @@ Partial Class FrmModPwd
         Me.TxtApellido.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtApellido.Name = "TxtApellido"
         Me.TxtApellido.Size = New System.Drawing.Size(216, 22)
-        Me.TxtApellido.TabIndex = 109
+        Me.TxtApellido.TabIndex = 2
         '
         'Label1
         '
@@ -212,7 +207,7 @@ Partial Class FrmModPwd
         Me.TxtUser.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtUser.Name = "TxtUser"
         Me.TxtUser.Size = New System.Drawing.Size(216, 22)
-        Me.TxtUser.TabIndex = 108
+        Me.TxtUser.TabIndex = 4
         '
         'TxtNombre
         '
@@ -220,7 +215,7 @@ Partial Class FrmModPwd
         Me.TxtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(216, 22)
-        Me.TxtNombre.TabIndex = 107
+        Me.TxtNombre.TabIndex = 1
         '
         'Label3
         '
@@ -251,7 +246,7 @@ Partial Class FrmModPwd
         Me.ChkEstado.Margin = New System.Windows.Forms.Padding(4)
         Me.ChkEstado.Name = "ChkEstado"
         Me.ChkEstado.Size = New System.Drawing.Size(18, 17)
-        Me.ChkEstado.TabIndex = 122
+        Me.ChkEstado.TabIndex = 9
         Me.ChkEstado.UseVisualStyleBackColor = True
         '
         'Label17
@@ -264,6 +259,11 @@ Partial Class FrmModPwd
         Me.Label17.TabIndex = 123
         Me.Label17.Text = "Estado: "
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'LMBADataSet
+        '
+        Me.LMBADataSet.DataSetName = "LMBADataSet"
+        Me.LMBADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'FrmModPwd
         '
