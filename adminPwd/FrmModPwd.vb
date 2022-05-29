@@ -22,7 +22,6 @@
         TxtApellido.Text = user.apellidos
         TxtEmail.Text = user.email
         TxtUser.Text = user.username
-
         ChkEstado.Checked = user.estado
         TxtPwd.Text = user.pwd
 
