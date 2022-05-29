@@ -67,4 +67,6 @@
         FrmModPwd.idUser = idUser
         FrmModPwd.Show()
     End Sub
+
+
 End Class

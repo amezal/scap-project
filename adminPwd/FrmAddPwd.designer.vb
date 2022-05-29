@@ -106,7 +106,7 @@ Partial Class FrmAddPwd
         Me.TxtEmail.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtEmail.Name = "TxtEmail"
         Me.TxtEmail.Size = New System.Drawing.Size(216, 22)
-        Me.TxtEmail.TabIndex = 88
+        Me.TxtEmail.TabIndex = 3
         '
         'Label2
         '
@@ -125,7 +125,7 @@ Partial Class FrmAddPwd
         Me.TxtApellido.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtApellido.Name = "TxtApellido"
         Me.TxtApellido.Size = New System.Drawing.Size(216, 22)
-        Me.TxtApellido.TabIndex = 91
+        Me.TxtApellido.TabIndex = 2
         '
         'Label1
         '
@@ -143,7 +143,7 @@ Partial Class FrmAddPwd
         Me.TxtUser.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtUser.Name = "TxtUser"
         Me.TxtUser.Size = New System.Drawing.Size(216, 22)
-        Me.TxtUser.TabIndex = 90
+        Me.TxtUser.TabIndex = 4
         '
         'TxtNombre
         '
@@ -151,7 +151,7 @@ Partial Class FrmAddPwd
         Me.TxtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(216, 22)
-        Me.TxtNombre.TabIndex = 89
+        Me.TxtNombre.TabIndex = 1
         '
         'Label3
         '
@@ -181,7 +181,7 @@ Partial Class FrmAddPwd
         Me.BtnPw2.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnPw2.Name = "BtnPw2"
         Me.BtnPw2.Size = New System.Drawing.Size(85, 25)
-        Me.BtnPw2.TabIndex = 103
+        Me.BtnPw2.TabIndex = 8
         Me.BtnPw2.Text = "Ver"
         Me.BtnPw2.UseVisualStyleBackColor = True
         '
@@ -191,7 +191,7 @@ Partial Class FrmAddPwd
         Me.BtnPwd.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnPwd.Name = "BtnPwd"
         Me.BtnPwd.Size = New System.Drawing.Size(85, 25)
-        Me.BtnPwd.TabIndex = 101
+        Me.BtnPwd.TabIndex = 6
         Me.BtnPwd.Text = "Ver"
         Me.BtnPwd.UseVisualStyleBackColor = True
         '
@@ -203,7 +203,7 @@ Partial Class FrmAddPwd
         Me.TxtPwd2.Name = "TxtPwd2"
         Me.TxtPwd2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtPwd2.Size = New System.Drawing.Size(123, 22)
-        Me.TxtPwd2.TabIndex = 102
+        Me.TxtPwd2.TabIndex = 7
         '
         'TxtPwd
         '
@@ -213,7 +213,7 @@ Partial Class FrmAddPwd
         Me.TxtPwd.Name = "TxtPwd"
         Me.TxtPwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtPwd.Size = New System.Drawing.Size(123, 22)
-        Me.TxtPwd.TabIndex = 100
+        Me.TxtPwd.TabIndex = 5
         '
         'Label16
         '
@@ -244,7 +244,7 @@ Partial Class FrmAddPwd
         Me.ChkEstado.Margin = New System.Windows.Forms.Padding(4)
         Me.ChkEstado.Name = "ChkEstado"
         Me.ChkEstado.Size = New System.Drawing.Size(18, 17)
-        Me.ChkEstado.TabIndex = 106
+        Me.ChkEstado.TabIndex = 9
         Me.ChkEstado.UseVisualStyleBackColor = True
         '
         'Label17
