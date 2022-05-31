@@ -121,7 +121,7 @@
 
         empleado.UpdateQuery(
             TxtCedula.Text,
-            If(ChkEstado.Checked, 1, 0),
+            If(ChkEstado.Checked, 2, 3),
             TxtPIN.Text,
             TxtPrimerNombre.Text.Trim,
             TxtSegundoNombre.Text.Trim,
