@@ -56,7 +56,7 @@ Partial Class FrmModPwd
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnSaveMod, Me.ToolStripSeparator1, Me.btnCancelMod})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(800, 31)
+        Me.ToolStrip1.Size = New System.Drawing.Size(800, 27)
         Me.ToolStrip1.TabIndex = 16
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -65,23 +65,28 @@ Partial Class FrmModPwd
         Me.btnSaveMod.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
         Me.btnSaveMod.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnSaveMod.Name = "btnSaveMod"
-        Me.btnSaveMod.Size = New System.Drawing.Size(86, 28)
+        Me.btnSaveMod.Size = New System.Drawing.Size(86, 24)
         Me.btnSaveMod.Text = "Guardar"
         Me.btnSaveMod.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 31)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'btnCancelMod
         '
         Me.btnCancelMod.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_cancel_50
         Me.btnCancelMod.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnCancelMod.Name = "btnCancelMod"
-        Me.btnCancelMod.Size = New System.Drawing.Size(90, 28)
+        Me.btnCancelMod.Size = New System.Drawing.Size(90, 24)
         Me.btnCancelMod.Text = "Cancelar"
         Me.btnCancelMod.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        '
+        'LMBADataSet
+        '
+        Me.LMBADataSet.DataSetName = "LMBADataSet"
+        Me.LMBADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BtnPw2
         '
@@ -260,11 +265,6 @@ Partial Class FrmModPwd
         Me.Label17.Text = "Estado: "
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'LMBADataSet
-        '
-        Me.LMBADataSet.DataSetName = "LMBADataSet"
-        Me.LMBADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'FrmModPwd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -292,7 +292,7 @@ Partial Class FrmModPwd
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FrmModPwd"
-        Me.Text = "Modificar Contraseña"
+        Me.Text = "Modificar Usuario"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).EndInit()

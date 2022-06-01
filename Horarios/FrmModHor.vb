@@ -53,7 +53,8 @@
         Dim horFin = TimeSpan.Parse(txtHorIn.Text.Trim).ToString
         Dim horAl = TimeSpan.Parse(txtAlmuerzo.Text.Trim).ToString
         horario.UpdateHorario(nombreHor, horIn, horFin, horAl, idHor)
-
+        MsgBox("Horario modificado", MsgBoxStyle.Information, "Éxito")
+        Me.Close()
         FrmHorarios.llenarGrid()
     End Sub
 End Class

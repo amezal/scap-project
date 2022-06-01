@@ -194,7 +194,7 @@ Partial Class FrmPwd
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FrmPwd"
-        Me.Text = "Administar Contraseñas"
+        Me.Text = "Usuarios"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.gbUser.ResumeLayout(False)
