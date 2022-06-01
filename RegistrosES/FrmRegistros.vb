@@ -28,7 +28,7 @@
         TxtDpto.Text = "Departamento: " & emp.Departamento
     End Sub
 
-    Private Sub llenarDgv()
+    Public Sub llenarDgv()
         Dim reg = registros.GetDataDgv(CbxBuscar.SelectedValue)
         Dim emp = empleados.GetData().Select("ID='" & CbxBuscar.SelectedValue & "'")(0)
         Dim horario = horarios.GetData().Select("idHorario='" & emp("idHorario") & "'")(0)
@@ -53,9 +53,6 @@
         DgvRegistros.Columns("horaSalida").DefaultCellStyle.Format = "HH:mm:ss"
         DgvRegistros.Columns(0).Visible = False
 
-
-
-
         'Dim entrada As Date = DgvRegistros.Item("horaEntrada", 0).Value
         'Dim salida As Date = DgvRegistros.Item("horaSalida", 0).Value
         'TxtCargo.Text = salida.Subtract(entrada).ToString()
@@ -73,6 +70,8 @@
             row.Cells("horasTrabajadas").Value = horasNecesitadas
             row.Cells("horasExtra").Value = extras
         Next
+        DgvRegistros.Columns("Justificacion").DisplayIndex = 8
+        DgvRegistros.Columns("Justificacion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
     End Sub
     Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
         llenarTxt()
@@ -81,6 +80,14 @@
 
     Private Sub BtnJustificar_Click(sender As Object, e As EventArgs) Handles BtnJustificar.Click
         FrmJustificaciones.idEmp = CbxBuscar.SelectedValue
+        Dim ids As New ArrayList
+        Dim i As Integer
+
+        For i = 0 To DgvRegistros.Rows.Count - 1 Step 1
+            ids.Add(DgvRegistros.Item(0, i).Value)
+        Next
+
+        FrmJustificaciones.ids = ids
         FrmJustificaciones.Show()
     End Sub
 End Class

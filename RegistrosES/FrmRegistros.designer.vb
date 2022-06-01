@@ -43,7 +43,7 @@ Partial Class FrmRegistros
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnJustificar, Me.ToolStripSeparator3, Me.BtnBuscar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(686, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(868, 25)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -118,10 +118,14 @@ Partial Class FrmRegistros
         '
         'Panel1
         '
+        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Panel1.Controls.Add(Me.DgvRegistros)
         Me.Panel1.Location = New System.Drawing.Point(0, 57)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(686, 405)
+        Me.Panel1.Size = New System.Drawing.Size(868, 405)
         Me.Panel1.TabIndex = 10
         '
         'DgvRegistros
@@ -133,14 +137,14 @@ Partial Class FrmRegistros
         Me.DgvRegistros.Location = New System.Drawing.Point(0, 0)
         Me.DgvRegistros.Name = "DgvRegistros"
         Me.DgvRegistros.ReadOnly = True
-        Me.DgvRegistros.Size = New System.Drawing.Size(686, 405)
+        Me.DgvRegistros.Size = New System.Drawing.Size(868, 405)
         Me.DgvRegistros.TabIndex = 0
         '
         'FrmRegistros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(686, 460)
+        Me.ClientSize = New System.Drawing.Size(868, 460)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TxtDpto)
         Me.Controls.Add(Me.TxtCargo)

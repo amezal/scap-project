@@ -1,6 +1,9 @@
 ﻿Public Class FrmJustificaciones
     Public idEmp
     Dim just As New LMBADataSetTableAdapters.JustificacionTableAdapter
+    Dim reg As New LMBADataSetTableAdapters.registroESTableAdapter
+    Public ids As New ArrayList
+
 
     Private Sub TxtInicioGotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles TxtInicio.GotFocus
         If TxtInicio.Text = "HH:MM:SS" Then
@@ -52,7 +55,7 @@
         End If
 
         If (String.IsNullOrEmpty(TxtDesc.Text)) Then
-            MsgBox("Hora de salida inválida", MsgBoxStyle.Critical, "ERROR")
+            MsgBox("La justificación no puede quedar vacía", MsgBoxStyle.Critical, "ERROR")
             TxtDesc.Focus()
             Return False
         End If
@@ -62,14 +65,21 @@
 
     Private Sub GuardarJustificacion()
         Dim fechaInicio = DtpInicio.Value.Date
-        Dim horaInicio = DateTime.Parse(TxtInicio.Text)
-        Dim fechaFin = DtpInicio.Value.Date
-        Dim horaFin = DateTime.Parse(TxtFin.Text)
+        Dim horaInicio = TxtInicio.Text 'DateTime.Parse(TxtInicio.Text).ToString
+        Dim fechaFin = DtpFin.Value.Date
+        Dim horaFin = TxtFin.Text 'DateTime.Parse(TxtFin.Text).ToString
         Dim descripcion = TxtDesc.Text.Trim()
         Label1.Text = horaInicio.ToString()
         just.InsertQuery(1, descripcion, fechaInicio, fechaFin, horaInicio, horaFin)
+        Dim idJustificacion As Integer = just.Last.Value
+        Label1.Text = idJustificacion
+        Console.WriteLine(idJustificacion)
+        For Each idRegistro As Int32 In ids
+            reg.Justificar(idJustificacion, idRegistro)
+        Next
 
         MsgBox("Justificación guardada", MsgBoxStyle.Information, "Éxito")
+        FrmRegistros.llenarDgv()
         Me.Close()
     End Sub
 
