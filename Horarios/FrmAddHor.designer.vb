@@ -52,7 +52,7 @@ Partial Class FrmAddHor
         Me.txtNombre.Location = New System.Drawing.Point(189, 72)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(247, 22)
-        Me.txtNombre.TabIndex = 6
+        Me.txtNombre.TabIndex = 1
         '
         'Label2
         '
@@ -68,14 +68,14 @@ Partial Class FrmAddHor
         Me.txtHorIn.Location = New System.Drawing.Point(189, 125)
         Me.txtHorIn.Name = "txtHorIn"
         Me.txtHorIn.Size = New System.Drawing.Size(247, 22)
-        Me.txtHorIn.TabIndex = 8
+        Me.txtHorIn.TabIndex = 2
         '
         'txtHorFin
         '
         Me.txtHorFin.Location = New System.Drawing.Point(189, 182)
         Me.txtHorFin.Name = "txtHorFin"
         Me.txtHorFin.Size = New System.Drawing.Size(247, 22)
-        Me.txtHorFin.TabIndex = 9
+        Me.txtHorFin.TabIndex = 3
         '
         'Label3
         '
@@ -133,7 +133,7 @@ Partial Class FrmAddHor
         Me.txtAlmuerzo.Location = New System.Drawing.Point(189, 229)
         Me.txtAlmuerzo.Name = "txtAlmuerzo"
         Me.txtAlmuerzo.Size = New System.Drawing.Size(247, 22)
-        Me.txtAlmuerzo.TabIndex = 13
+        Me.txtAlmuerzo.TabIndex = 4
         '
         'FrmAddHor
         '

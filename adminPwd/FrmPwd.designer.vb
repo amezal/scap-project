@@ -54,11 +54,12 @@ Partial Class FrmPwd
         '
         'ToolStrip1
         '
+        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.Menu
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnAdd, Me.ToolStripSeparator1, Me.btnDelete, Me.ToolStripSeparator2, Me.btnMod, Me.ToolStripSeparator3, Me.btnSearch, Me.txtSearch})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1035, 27)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1035, 30)
         Me.ToolStrip1.TabIndex = 9
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -67,57 +68,58 @@ Partial Class FrmPwd
         Me.btnAdd.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_new_window_30
         Me.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(87, 24)
+        Me.btnAdd.Size = New System.Drawing.Size(87, 27)
         Me.btnAdd.Text = "Agregar"
         Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 30)
         '
         'btnDelete
         '
         Me.btnDelete.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_delete_24
         Me.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(87, 24)
+        Me.btnDelete.Size = New System.Drawing.Size(87, 27)
         Me.btnDelete.Text = "Eliminar"
         Me.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 30)
         '
         'btnMod
         '
         Me.btnMod.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_edit_production_order_32
         Me.btnMod.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnMod.Name = "btnMod"
-        Me.btnMod.Size = New System.Drawing.Size(97, 24)
+        Me.btnMod.Size = New System.Drawing.Size(97, 27)
         Me.btnMod.Text = "Modificar"
         Me.btnMod.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 30)
         '
         'btnSearch
         '
         Me.btnSearch.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_search_24
         Me.btnSearch.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(76, 24)
+        Me.btnSearch.Size = New System.Drawing.Size(76, 27)
         Me.btnSearch.Text = "Buscar"
         Me.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'txtSearch
         '
-        Me.txtSearch.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txtSearch.BackColor = System.Drawing.SystemColors.HighlightText
+        Me.txtSearch.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(200, 27)
+        Me.txtSearch.Size = New System.Drawing.Size(200, 30)
         '
         'gbUser
         '
@@ -135,6 +137,7 @@ Partial Class FrmPwd
         '
         Me.dgvUser.AllowUserToAddRows = False
         Me.dgvUser.AllowUserToDeleteRows = False
+        Me.dgvUser.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvUser.Location = New System.Drawing.Point(3, 17)
@@ -188,6 +191,7 @@ Partial Class FrmPwd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Menu
         Me.ClientSize = New System.Drawing.Size(1035, 506)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.Panel1)

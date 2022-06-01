@@ -203,7 +203,7 @@ Partial Class FrmAddPwd
         Me.TxtPwd2.Name = "TxtPwd2"
         Me.TxtPwd2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtPwd2.Size = New System.Drawing.Size(123, 22)
-        Me.TxtPwd2.TabIndex = 7
+        Me.TxtPwd2.TabIndex = 6
         '
         'TxtPwd
         '
@@ -244,7 +244,7 @@ Partial Class FrmAddPwd
         Me.ChkEstado.Margin = New System.Windows.Forms.Padding(4)
         Me.ChkEstado.Name = "ChkEstado"
         Me.ChkEstado.Size = New System.Drawing.Size(18, 17)
-        Me.ChkEstado.TabIndex = 9
+        Me.ChkEstado.TabIndex = 7
         Me.ChkEstado.UseVisualStyleBackColor = True
         '
         'Label17
