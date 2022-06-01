@@ -28,19 +28,36 @@
     End Sub
 
     Private Sub btnEntrada_Click(sender As Object, e As EventArgs) Handles btnEntrada.Click
-        btnEntrada.Enabled = False
-        btnSalida.Enabled = True
 
         Dim guardado As Boolean = False
         Dim idReg As Integer
+        Try
+            guardado = reg.Nuevo(DateTime.Now.Date, DateTime.Now) > 0
+            idReg = reg.Last()
+            guardado = empReg.Nuevo(idReg, idEmp) > 0
 
-        guardado = reg.Nuevo(DateTime.Now.Date, DateTime.Now) > 0
-        idReg = reg.Last()
-        guardado = empReg.Nuevo(idReg, idEmp) > 0
+            If (guardado) Then
+                MsgBox("Registro guardado correctamente", MsgBoxStyle.MsgBoxRight, "Éxito")
+                btnEntrada.Enabled = False
+                btnSalida.Enabled = True
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
+    End Sub
 
-        If (guardado) Then
-            MsgBox("Registro guardado correctamente", MsgBoxStyle.MsgBoxRight, "Éxito")
-        End If
+    Private Sub btnSalida_Click(sender As Object, e As EventArgs) Handles btnSalida.Click
+        Dim guardado As Boolean = False
+        Try
+            Dim idReg = reg.Last()
+            guardado = reg.MarcarSalida(DateTime.Now, idReg) > 0
 
+            If (guardado) Then
+                MsgBox("Registro guardado correctamente", MsgBoxStyle.MsgBoxRight, "Éxito")
+                btnSalida.Enabled = False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
+        End Try
     End Sub
 End Class
