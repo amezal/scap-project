@@ -67,8 +67,8 @@
             Dim horasTrabajadas = salida.Subtract(entrada).Subtract(almuerzo)
             Dim extras = horasTrabajadas.Subtract(horasNecesitadas)
 
-            row.Cells("horasTrabajadas").Value = horasNecesitadas
-            row.Cells("horasExtra").Value = extras
+            row.Cells("horasTrabajadas").Value = extras
+            row.Cells("horasExtra").Value = horasTrabajadas
         Next
         DgvRegistros.Columns("Justificacion").DisplayIndex = 8
         DgvRegistros.Columns("Justificacion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
