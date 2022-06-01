@@ -29,9 +29,7 @@ Partial Class FrmAddCargo
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtCargo = New System.Windows.Forms.TextBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.btnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.btnCancelar = New System.Windows.Forms.ToolStripButton()
         Me.CargoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LMBADataSet = New SCAP_LMBA_Tech.LMBADataSet()
         Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -39,6 +37,8 @@ Partial Class FrmAddCargo
         Me.CargoTableAdapter = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.CargoTableAdapter()
         Me.txtDesc = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnGuardar = New System.Windows.Forms.ToolStripButton()
+        Me.btnCancelar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStrip1.SuspendLayout()
         CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,28 +93,10 @@ Partial Class FrmAddCargo
         Me.ToolStrip1.TabIndex = 7
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'btnGuardar
-        '
-        Me.btnGuardar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
-        Me.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(69, 22)
-        Me.btnGuardar.Text = "Guardar"
-        Me.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
-        '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'btnCancelar
-        '
-        Me.btnCancelar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_cancel_50
-        Me.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(73, 22)
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'CargoBindingSource
         '
@@ -157,6 +139,24 @@ Partial Class FrmAddCargo
         Me.Label3.Size = New System.Drawing.Size(86, 17)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Descripción:"
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
+        Me.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(69, 22)
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_cancel_50
+        Me.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(73, 22)
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'FrmAddCargo
         '

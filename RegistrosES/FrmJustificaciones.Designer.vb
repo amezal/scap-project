@@ -45,7 +45,7 @@ Partial Class FrmJustificaciones
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(774, 25)
-        Me.ToolStrip1.TabIndex = 13
+        Me.ToolStrip1.TabIndex = 6
         Me.ToolStrip1.Text = "ToolStrip1"
         '
         'BtnGuardar
@@ -85,14 +85,14 @@ Partial Class FrmJustificaciones
         Me.DtpInicio.Location = New System.Drawing.Point(141, 80)
         Me.DtpInicio.Name = "DtpInicio"
         Me.DtpInicio.Size = New System.Drawing.Size(200, 20)
-        Me.DtpInicio.TabIndex = 15
+        Me.DtpInicio.TabIndex = 1
         '
         'DtpFin
         '
         Me.DtpFin.Location = New System.Drawing.Point(494, 83)
         Me.DtpFin.Name = "DtpFin"
         Me.DtpFin.Size = New System.Drawing.Size(200, 20)
-        Me.DtpFin.TabIndex = 17
+        Me.DtpFin.TabIndex = 2
         '
         'Label2
         '
@@ -136,7 +136,7 @@ Partial Class FrmJustificaciones
         Me.TxtDesc.Multiline = True
         Me.TxtDesc.Name = "TxtDesc"
         Me.TxtDesc.Size = New System.Drawing.Size(553, 138)
-        Me.TxtDesc.TabIndex = 23
+        Me.TxtDesc.TabIndex = 5
         '
         'TxtInicio
         '
@@ -144,7 +144,7 @@ Partial Class FrmJustificaciones
         Me.TxtInicio.Location = New System.Drawing.Point(141, 138)
         Me.TxtInicio.Name = "TxtInicio"
         Me.TxtInicio.Size = New System.Drawing.Size(200, 20)
-        Me.TxtInicio.TabIndex = 24
+        Me.TxtInicio.TabIndex = 3
         Me.TxtInicio.Text = "HH:MM:SS"
         '
         'TxtFin
@@ -153,7 +153,7 @@ Partial Class FrmJustificaciones
         Me.TxtFin.Location = New System.Drawing.Point(494, 137)
         Me.TxtFin.Name = "TxtFin"
         Me.TxtFin.Size = New System.Drawing.Size(200, 20)
-        Me.TxtFin.TabIndex = 25
+        Me.TxtFin.TabIndex = 4
         Me.TxtFin.Text = "HH:MM:SS"
         '
         'FrmJustificaciones
