@@ -167,7 +167,7 @@ Partial Class FrmModRol
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "FrmModRol"
-        Me.Text = "FrmModRol"
+        Me.Text = "Modificar Roles"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         CType(Me.DgvOpcion, System.ComponentModel.ISupportInitialize).EndInit()

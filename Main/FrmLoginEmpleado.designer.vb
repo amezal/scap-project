@@ -22,6 +22,7 @@ Partial Class FrmLoginEmpleado
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLoginEmpleado))
         Me.txtPIN = New System.Windows.Forms.TextBox()
         Me.cbxEmp = New System.Windows.Forms.ComboBox()
         Me.btnIngresar = New System.Windows.Forms.Button()
@@ -95,10 +96,11 @@ Partial Class FrmLoginEmpleado
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmLoginEmpleado"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmLoginEmplado"
+        Me.Text = "Acceso Empleado"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

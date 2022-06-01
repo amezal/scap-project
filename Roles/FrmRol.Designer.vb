@@ -123,7 +123,7 @@ Partial Class FrmRol
         Me.Controls.Add(Me.DgvRoles)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "FrmRol"
-        Me.Text = "FrmRol"
+        Me.Text = "Roles"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         CType(Me.DgvRoles, System.ComponentModel.ISupportInitialize).EndInit()

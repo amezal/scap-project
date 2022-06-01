@@ -22,6 +22,7 @@ Partial Class FrmEmpleados
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEmpleados))
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BtnAgregar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -98,7 +99,6 @@ Partial Class FrmEmpleados
         '
         'TxtBuscar
         '
-        Me.TxtBuscar.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.TxtBuscar.Name = "TxtBuscar"
         Me.TxtBuscar.Size = New System.Drawing.Size(86, 25)
         '
@@ -122,9 +122,10 @@ Partial Class FrmEmpleados
         Me.ClientSize = New System.Drawing.Size(844, 464)
         Me.Controls.Add(Me.DgvEmpleados)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmEmpleados"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "FrmEmpleados"
+        Me.Text = "Empleados"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         CType(Me.DgvEmpleados, System.ComponentModel.ISupportInitialize).EndInit()
