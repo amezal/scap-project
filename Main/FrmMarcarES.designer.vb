@@ -22,78 +22,83 @@ Partial Class FrmMarcarES
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.components = New System.ComponentModel.Container()
+        Me.labelBienvenida = New System.Windows.Forms.Label()
+        Me.reloj = New System.Windows.Forms.TextBox()
+        Me.btnEntrada = New System.Windows.Forms.Button()
+        Me.btnSalida = New System.Windows.Forms.Button()
+        Me.btnRegresar = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
-        'Label1
+        'labelBienvenida
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(182, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "*Mensaje de bienvenida*"
+        Me.labelBienvenida.AutoSize = True
+        Me.labelBienvenida.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.labelBienvenida.Location = New System.Drawing.Point(9, 6)
+        Me.labelBienvenida.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.labelBienvenida.Name = "labelBienvenida"
+        Me.labelBienvenida.Size = New System.Drawing.Size(168, 15)
+        Me.labelBienvenida.TabIndex = 0
+        Me.labelBienvenida.Text = "*Mensaje de bienvenida*"
         '
-        'Button4
+        'reloj
         '
-        Me.Button4.BackColor = System.Drawing.SystemColors.ControlText
-        Me.Button4.ForeColor = System.Drawing.Color.Cornsilk
-        Me.Button4.Location = New System.Drawing.Point(12, 367)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(147, 34)
-        Me.Button4.TabIndex = 18
-        Me.Button4.Text = "REGRESAR"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.reloj.BackColor = System.Drawing.SystemColors.Control
+        Me.reloj.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.reloj.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Bold)
+        Me.reloj.ForeColor = System.Drawing.Color.Black
+        Me.reloj.Location = New System.Drawing.Point(80, 73)
+        Me.reloj.Margin = New System.Windows.Forms.Padding(2)
+        Me.reloj.Name = "reloj"
+        Me.reloj.Size = New System.Drawing.Size(224, 55)
+        Me.reloj.TabIndex = 21
+        Me.reloj.Text = "00:00:00"
+        Me.reloj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Button1
+        'btnEntrada
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ControlText
-        Me.Button1.ForeColor = System.Drawing.Color.Cornsilk
-        Me.Button1.Location = New System.Drawing.Point(68, 218)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(147, 71)
-        Me.Button1.TabIndex = 19
-        Me.Button1.Text = "ENTRADA"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnEntrada.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.btnEntrada.Location = New System.Drawing.Point(22, 169)
+        Me.btnEntrada.Name = "btnEntrada"
+        Me.btnEntrada.Size = New System.Drawing.Size(155, 63)
+        Me.btnEntrada.TabIndex = 22
+        Me.btnEntrada.Text = "Entrada"
+        Me.btnEntrada.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnSalida
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.ControlText
-        Me.Button2.ForeColor = System.Drawing.Color.Cornsilk
-        Me.Button2.Location = New System.Drawing.Point(292, 218)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(147, 71)
-        Me.Button2.TabIndex = 20
-        Me.Button2.Text = "SALIDA"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnSalida.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
+        Me.btnSalida.Location = New System.Drawing.Point(206, 169)
+        Me.btnSalida.Name = "btnSalida"
+        Me.btnSalida.Size = New System.Drawing.Size(155, 63)
+        Me.btnSalida.TabIndex = 22
+        Me.btnSalida.Text = "Salida"
+        Me.btnSalida.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'btnRegresar
         '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox1.ForeColor = System.Drawing.Color.Black
-        Me.TextBox1.Location = New System.Drawing.Point(106, 83)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(299, 80)
-        Me.TextBox1.TabIndex = 21
-        Me.TextBox1.Text = "00:00:00"
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.btnRegresar.Location = New System.Drawing.Point(12, 290)
+        Me.btnRegresar.Name = "btnRegresar"
+        Me.btnRegresar.Size = New System.Drawing.Size(75, 23)
+        Me.btnRegresar.TabIndex = 23
+        Me.btnRegresar.Text = "Regresar"
+        Me.btnRegresar.UseVisualStyleBackColor = True
+        '
+        'Timer1
+        '
         '
         'FrmMarcarES
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(509, 413)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(382, 325)
+        Me.Controls.Add(Me.btnRegresar)
+        Me.Controls.Add(Me.btnSalida)
+        Me.Controls.Add(Me.btnEntrada)
+        Me.Controls.Add(Me.reloj)
+        Me.Controls.Add(Me.labelBienvenida)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmMarcarES"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmMarcarES"
@@ -102,9 +107,10 @@ Partial Class FrmMarcarES
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents labelBienvenida As Label
+    Friend WithEvents reloj As TextBox
+    Friend WithEvents btnEntrada As Button
+    Friend WithEvents btnSalida As Button
+    Friend WithEvents btnRegresar As Button
+    Friend WithEvents Timer1 As Timer
 End Class
