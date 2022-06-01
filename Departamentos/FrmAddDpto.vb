@@ -8,8 +8,9 @@
             Dim email As String = tbEmail.Text.Trim
             Dim ext As Int32 = tbExt.Text.Trim
             dp.InsertarDpto(newDp, ext, email)
-
-
+            MsgBox("Departamento añadido", MsgBoxStyle.Information, "Éxito")
+            Me.Close()
+            FrmDpto.llenarGrid()
         Catch ex As Exception
 
         End Try

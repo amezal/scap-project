@@ -81,7 +81,7 @@ Partial Class FrmAddDpto
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(64, 104)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(96, 16)
+        Me.Label3.Size = New System.Drawing.Size(102, 17)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Departamento:"
         '
@@ -90,7 +90,7 @@ Partial Class FrmAddDpto
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(116, 218)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 16)
+        Me.Label2.Size = New System.Drawing.Size(46, 17)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Email:"
         '
@@ -106,7 +106,7 @@ Partial Class FrmAddDpto
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(53, 162)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(107, 16)
+        Me.Label4.Size = New System.Drawing.Size(116, 17)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Extensión de tel.:"
         '
@@ -132,7 +132,7 @@ Partial Class FrmAddDpto
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmAddDpto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmAddDpto"
+        Me.Text = "Añadir Departamento"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)

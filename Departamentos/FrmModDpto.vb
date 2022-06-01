@@ -38,8 +38,9 @@
         Dim nombreDpto As String = tbDpto.Text.Trim
         Dim email As String = tbEmail.Text.Trim
         Dim ext As Int32 = (tbExt.Text.Trim).ToString
-        Dpto.UpdateDepartamento(nombreDpto, email, ext, idDpto, estado)
-
+        Dpto.UpdateDepartamento(nombreDpto, ext, email, estado, idDpto)
+        MsgBox("Departamento modificado", MsgBoxStyle.Information, "Éxito")
+        Me.Close()
         FrmDpto.llenarGrid()
     End Sub
 
