@@ -38,4 +38,8 @@
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         FrmRegistros.Show()
     End Sub
+
+    Private Sub BtnOpcion_Click(sender As Object, e As EventArgs) Handles BtnOpcion.Click
+        FrmOpcion.Show()
+    End Sub
 End Class

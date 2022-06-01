@@ -38,10 +38,18 @@
             txtCargo.Focus()
             Exit Sub
         End If
-        Dim nombreCarg As String = txtCargo.Text.Trim
-        Dim des As String = txtDesc.Text.Trim
-        Dim idDepto As Integer = CInt(cbDto.SelectedValue)
-        car.ActualizarRegistro(nombreCarg, des, estado, idDepto, idCar)
-        FrmCargo.llenarGrid()
+        Try
+            Dim nombreCarg As String = txtCargo.Text.Trim
+            Dim des As String = txtDesc.Text.Trim
+            Dim idDepto As Integer = CInt(cbDto.SelectedValue)
+
+            car.ActualizarRegistro(nombreCarg, des, estado, idDepto, idCar)
+            FrmCargo.llenarGrid()
+            MessageBox.Show("Guardado con éxito", "Cargo registrado", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+        End Try
+
+
     End Sub
 End Class
