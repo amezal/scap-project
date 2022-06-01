@@ -114,4 +114,8 @@
         Dim idDpto = cargos.GetData.Select("idCargo='" & CbxCargo.SelectedValue & "'")(0)("idDepartamento")
         CbxDpto.SelectedValue = idDpto
     End Sub
+
+    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+        Me.Close()
+    End Sub
 End Class

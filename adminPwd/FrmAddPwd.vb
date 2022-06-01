@@ -66,7 +66,7 @@
             TxtEmail.Text.Trim,
             If(ChkEstado.Checked, 1, 0))
 
-        MsgBox("Empleado añadido", MsgBoxStyle.Information, "Éxito")
+        MsgBox("Usuario añadido", MsgBoxStyle.Information, "Éxito")
         Me.Close()
         FrmPwd.llenarGrid()
     End Sub

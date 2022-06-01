@@ -22,4 +22,13 @@
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         FrmOpcion.Show()
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        FrmMenuAdmin.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub userRol_Click(sender As Object, e As EventArgs) Handles userRol.Click
+        FrmUserRol.Show()
+    End Sub
 End Class
