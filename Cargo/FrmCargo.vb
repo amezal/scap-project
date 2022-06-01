@@ -44,6 +44,7 @@
                 llenarGrid()
             End If
         Catch ex As Exception
+            Console.WriteLine(ex.Message)
         End Try
     End Sub
 

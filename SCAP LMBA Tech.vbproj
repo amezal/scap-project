@@ -181,6 +181,24 @@
     <Compile Include="Horarios\FrmModHor.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Opciones\FrmAddOpcion.Designer.vb">
+      <DependentUpon>FrmAddOpcion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Opciones\FrmAddOpcion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones\FrmModOpcion.Designer.vb">
+      <DependentUpon>FrmModOpcion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Opciones\FrmModOpcion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones\FrmOpcion.Designer.vb">
+      <DependentUpon>FrmOpcion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Opciones\FrmOpcion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\Datasets\LMBADataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -325,6 +343,15 @@
       <LastGenOutput>Resources1.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opciones\FrmAddOpcion.resx">
+      <DependentUpon>FrmAddOpcion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opciones\FrmModOpcion.resx">
+      <DependentUpon>FrmModOpcion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opciones\FrmOpcion.resx">
+      <DependentUpon>FrmOpcion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrosES\FrmJustificaciones.resx">
       <DependentUpon>FrmJustificaciones.vb</DependentUpon>

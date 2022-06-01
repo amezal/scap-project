@@ -117,6 +117,7 @@ Partial Class FrmCargo
         'txtSearch
         '
         Me.txtSearch.AutoSize = False
+        Me.txtSearch.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(200, 23)
         '
@@ -124,7 +125,7 @@ Partial Class FrmCargo
         '
         Me.Panel1.Controls.Add(Me.DgvCargo)
         Me.Panel1.Location = New System.Drawing.Point(4, 16)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(563, 284)
         Me.Panel1.TabIndex = 14
@@ -134,12 +135,14 @@ Partial Class FrmCargo
         Me.DgvCargo.AllowUserToAddRows = False
         Me.DgvCargo.AllowUserToDeleteRows = False
         Me.DgvCargo.AutoGenerateColumns = False
+        Me.DgvCargo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DgvCargo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DgvCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvCargo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idCargo, Me.NombreCargoDataGridViewTextBoxColumn, Me.DescripcionDataGridViewTextBoxColumn, Me.Departamento})
         Me.DgvCargo.DataSource = Me.CargoBindingSource
         Me.DgvCargo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvCargo.Location = New System.Drawing.Point(0, 0)
-        Me.DgvCargo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DgvCargo.Margin = New System.Windows.Forms.Padding(2)
         Me.DgvCargo.Name = "DgvCargo"
         Me.DgvCargo.ReadOnly = True
         Me.DgvCargo.RowTemplate.Height = 24
@@ -153,6 +156,7 @@ Partial Class FrmCargo
         Me.idCargo.HeaderText = "ID"
         Me.idCargo.Name = "idCargo"
         Me.idCargo.ReadOnly = True
+        Me.idCargo.Width = 43
         '
         'NombreCargoDataGridViewTextBoxColumn
         '
@@ -160,6 +164,7 @@ Partial Class FrmCargo
         Me.NombreCargoDataGridViewTextBoxColumn.HeaderText = "Cargo"
         Me.NombreCargoDataGridViewTextBoxColumn.Name = "NombreCargoDataGridViewTextBoxColumn"
         Me.NombreCargoDataGridViewTextBoxColumn.ReadOnly = True
+        Me.NombreCargoDataGridViewTextBoxColumn.Width = 60
         '
         'DescripcionDataGridViewTextBoxColumn
         '
@@ -167,6 +172,7 @@ Partial Class FrmCargo
         Me.DescripcionDataGridViewTextBoxColumn.HeaderText = "descripcion"
         Me.DescripcionDataGridViewTextBoxColumn.Name = "DescripcionDataGridViewTextBoxColumn"
         Me.DescripcionDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DescripcionDataGridViewTextBoxColumn.Width = 86
         '
         'Departamento
         '
@@ -174,6 +180,7 @@ Partial Class FrmCargo
         Me.Departamento.HeaderText = "Departamento"
         Me.Departamento.Name = "Departamento"
         Me.Departamento.ReadOnly = True
+        Me.Departamento.Width = 99
         '
         'CargoBindingSource
         '
@@ -202,9 +209,9 @@ Partial Class FrmCargo
         '
         Me.GbCargo.Controls.Add(Me.Panel1)
         Me.GbCargo.Location = New System.Drawing.Point(9, 34)
-        Me.GbCargo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GbCargo.Margin = New System.Windows.Forms.Padding(2)
         Me.GbCargo.Name = "GbCargo"
-        Me.GbCargo.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GbCargo.Padding = New System.Windows.Forms.Padding(2)
         Me.GbCargo.Size = New System.Drawing.Size(572, 304)
         Me.GbCargo.TabIndex = 15
         Me.GbCargo.TabStop = False
@@ -218,7 +225,7 @@ Partial Class FrmCargo
         Me.Controls.Add(Me.GbCargo)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmCargo"
         Me.Text = "Cargo"
         Me.ToolStrip1.ResumeLayout(False)
