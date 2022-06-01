@@ -58,6 +58,6 @@
     End Sub
 
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
-
+        FrmAddRol.Show()
     End Sub
 End Class

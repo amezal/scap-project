@@ -123,6 +123,7 @@ Partial Class FrmEmpleados
         Me.Controls.Add(Me.DgvEmpleados)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "FrmEmpleados"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "FrmEmpleados"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()

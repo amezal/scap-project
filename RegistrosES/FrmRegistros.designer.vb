@@ -153,6 +153,7 @@ Partial Class FrmRegistros
         Me.Controls.Add(Me.CbxBuscar)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "FrmRegistros"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmRegistros"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
