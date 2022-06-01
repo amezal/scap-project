@@ -69,6 +69,8 @@ Partial Class FrmOpcion
         '
         'DgvOpcion
         '
+        Me.DgvOpcion.AllowUserToAddRows = False
+        Me.DgvOpcion.AllowUserToDeleteRows = False
         Me.DgvOpcion.AutoGenerateColumns = False
         Me.DgvOpcion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DgvOpcion.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
@@ -78,6 +80,7 @@ Partial Class FrmOpcion
         Me.DgvOpcion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvOpcion.Location = New System.Drawing.Point(0, 0)
         Me.DgvOpcion.Name = "DgvOpcion"
+        Me.DgvOpcion.ReadOnly = True
         Me.DgvOpcion.Size = New System.Drawing.Size(449, 237)
         Me.DgvOpcion.TabIndex = 0
         '
@@ -94,6 +97,7 @@ Partial Class FrmOpcion
         Me.OpcionDataGridViewTextBoxColumn.DataPropertyName = "opcion"
         Me.OpcionDataGridViewTextBoxColumn.HeaderText = "Opción"
         Me.OpcionDataGridViewTextBoxColumn.Name = "OpcionDataGridViewTextBoxColumn"
+        Me.OpcionDataGridViewTextBoxColumn.ReadOnly = True
         Me.OpcionDataGridViewTextBoxColumn.Width = 66
         '
         'TblopcionBindingSource

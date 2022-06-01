@@ -84,7 +84,7 @@ Partial Class Form1
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmAccesoPrincipal"
+        Me.Text = "Acceso Principal"
         Me.ResumeLayout(False)
 
     End Sub
