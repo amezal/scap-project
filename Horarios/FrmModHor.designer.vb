@@ -70,21 +70,21 @@ Partial Class FrmModHor
         Me.txtName.Location = New System.Drawing.Point(212, 76)
         Me.txtName.Name = "txtName"
         Me.txtName.Size = New System.Drawing.Size(247, 22)
-        Me.txtName.TabIndex = 5
+        Me.txtName.TabIndex = 1
         '
         'txtHorIn
         '
         Me.txtHorIn.Location = New System.Drawing.Point(212, 130)
         Me.txtHorIn.Name = "txtHorIn"
         Me.txtHorIn.Size = New System.Drawing.Size(247, 22)
-        Me.txtHorIn.TabIndex = 6
+        Me.txtHorIn.TabIndex = 2
         '
         'txtHorFin
         '
         Me.txtHorFin.Location = New System.Drawing.Point(212, 182)
         Me.txtHorFin.Name = "txtHorFin"
         Me.txtHorFin.Size = New System.Drawing.Size(247, 22)
-        Me.txtHorFin.TabIndex = 7
+        Me.txtHorFin.TabIndex = 3
         '
         'ToolStrip1
         '
@@ -133,7 +133,7 @@ Partial Class FrmModHor
         Me.txtAlmuerzo.Location = New System.Drawing.Point(212, 224)
         Me.txtAlmuerzo.Name = "txtAlmuerzo"
         Me.txtAlmuerzo.Size = New System.Drawing.Size(247, 22)
-        Me.txtAlmuerzo.TabIndex = 16
+        Me.txtAlmuerzo.TabIndex = 4
         '
         'FrmModHor
         '

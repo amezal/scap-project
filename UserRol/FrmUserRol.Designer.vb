@@ -27,6 +27,11 @@ Partial Class FrmUserRol
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.gbUserRol = New System.Windows.Forms.GroupBox()
         Me.DgvUserRol = New System.Windows.Forms.DataGridView()
+        Me.IdUserRolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.RolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.UsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TbluserRolBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LMBADataSet = New SCAP_LMBA_Tech.LMBADataSet()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.BtnAddUR = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -34,18 +39,13 @@ Partial Class FrmUserRol
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.BtnModUR = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.LMBADataSet = New SCAP_LMBA_Tech.LMBADataSet()
-        Me.TbluserRolBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Tbl_userRolTableAdapter = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.tbl_userRolTableAdapter()
-        Me.IdUserRolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.RolDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.UsuarioDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.gbUserRol.SuspendLayout()
         CType(Me.DgvUserRol, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ToolStrip1.SuspendLayout()
-        CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TbluserRolBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -69,7 +69,7 @@ Partial Class FrmUserRol
         'DgvUserRol
         '
         Me.DgvUserRol.AutoGenerateColumns = False
-        Me.DgvUserRol.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DgvUserRol.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.DgvUserRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvUserRol.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdUserRolDataGridViewTextBoxColumn, Me.RolDataGridViewTextBoxColumn, Me.UsuarioDataGridViewTextBoxColumn})
         Me.DgvUserRol.DataSource = Me.TbluserRolBindingSource
@@ -81,6 +81,43 @@ Partial Class FrmUserRol
         Me.DgvUserRol.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvUserRol.Size = New System.Drawing.Size(555, 273)
         Me.DgvUserRol.TabIndex = 0
+        '
+        'IdUserRolDataGridViewTextBoxColumn
+        '
+        Me.IdUserRolDataGridViewTextBoxColumn.DataPropertyName = "id_UserRol"
+        Me.IdUserRolDataGridViewTextBoxColumn.HeaderText = "id_UserRol"
+        Me.IdUserRolDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IdUserRolDataGridViewTextBoxColumn.Name = "IdUserRolDataGridViewTextBoxColumn"
+        Me.IdUserRolDataGridViewTextBoxColumn.ReadOnly = True
+        Me.IdUserRolDataGridViewTextBoxColumn.Width = 125
+        '
+        'RolDataGridViewTextBoxColumn
+        '
+        Me.RolDataGridViewTextBoxColumn.DataPropertyName = "Rol"
+        Me.RolDataGridViewTextBoxColumn.HeaderText = "Rol"
+        Me.RolDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.RolDataGridViewTextBoxColumn.Name = "RolDataGridViewTextBoxColumn"
+        Me.RolDataGridViewTextBoxColumn.ReadOnly = True
+        Me.RolDataGridViewTextBoxColumn.Width = 125
+        '
+        'UsuarioDataGridViewTextBoxColumn
+        '
+        Me.UsuarioDataGridViewTextBoxColumn.DataPropertyName = "Usuario"
+        Me.UsuarioDataGridViewTextBoxColumn.HeaderText = "Usuario"
+        Me.UsuarioDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.UsuarioDataGridViewTextBoxColumn.Name = "UsuarioDataGridViewTextBoxColumn"
+        Me.UsuarioDataGridViewTextBoxColumn.ReadOnly = True
+        Me.UsuarioDataGridViewTextBoxColumn.Width = 125
+        '
+        'TbluserRolBindingSource
+        '
+        Me.TbluserRolBindingSource.DataMember = "tbl_userRol"
+        Me.TbluserRolBindingSource.DataSource = Me.LMBADataSet
+        '
+        'LMBADataSet
+        '
+        Me.LMBADataSet.DataSetName = "LMBADataSet"
+        Me.LMBADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ToolStrip1
         '
@@ -134,46 +171,9 @@ Partial Class FrmUserRol
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
         '
-        'LMBADataSet
-        '
-        Me.LMBADataSet.DataSetName = "LMBADataSet"
-        Me.LMBADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TbluserRolBindingSource
-        '
-        Me.TbluserRolBindingSource.DataMember = "tbl_userRol"
-        Me.TbluserRolBindingSource.DataSource = Me.LMBADataSet
-        '
         'Tbl_userRolTableAdapter
         '
         Me.Tbl_userRolTableAdapter.ClearBeforeFill = True
-        '
-        'IdUserRolDataGridViewTextBoxColumn
-        '
-        Me.IdUserRolDataGridViewTextBoxColumn.DataPropertyName = "id_UserRol"
-        Me.IdUserRolDataGridViewTextBoxColumn.HeaderText = "id_UserRol"
-        Me.IdUserRolDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IdUserRolDataGridViewTextBoxColumn.Name = "IdUserRolDataGridViewTextBoxColumn"
-        Me.IdUserRolDataGridViewTextBoxColumn.ReadOnly = True
-        Me.IdUserRolDataGridViewTextBoxColumn.Width = 125
-        '
-        'RolDataGridViewTextBoxColumn
-        '
-        Me.RolDataGridViewTextBoxColumn.DataPropertyName = "Rol"
-        Me.RolDataGridViewTextBoxColumn.HeaderText = "Rol"
-        Me.RolDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.RolDataGridViewTextBoxColumn.Name = "RolDataGridViewTextBoxColumn"
-        Me.RolDataGridViewTextBoxColumn.ReadOnly = True
-        Me.RolDataGridViewTextBoxColumn.Width = 125
-        '
-        'UsuarioDataGridViewTextBoxColumn
-        '
-        Me.UsuarioDataGridViewTextBoxColumn.DataPropertyName = "Usuario"
-        Me.UsuarioDataGridViewTextBoxColumn.HeaderText = "Usuario"
-        Me.UsuarioDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.UsuarioDataGridViewTextBoxColumn.Name = "UsuarioDataGridViewTextBoxColumn"
-        Me.UsuarioDataGridViewTextBoxColumn.ReadOnly = True
-        Me.UsuarioDataGridViewTextBoxColumn.Width = 125
         '
         'FrmUserRol
         '
@@ -184,14 +184,14 @@ Partial Class FrmUserRol
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmUserRol"
-        Me.Text = "UserRol"
+        Me.Text = "Usuario-Rol"
         Me.Panel1.ResumeLayout(False)
         Me.gbUserRol.ResumeLayout(False)
         CType(Me.DgvUserRol, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TbluserRolBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
-        CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TbluserRolBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

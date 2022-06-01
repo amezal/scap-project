@@ -23,6 +23,7 @@ Partial Class FrmHorarios
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmHorarios))
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.addHor = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -55,11 +56,12 @@ Partial Class FrmHorarios
         '
         'ToolStrip1
         '
+        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.Menu
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.addHor, Me.ToolStripSeparator1, Me.btnEliminarHor, Me.ToolStripSeparator2, Me.modHor, Me.ToolStripSeparator3, Me.searchHor, Me.tbBuscar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(580, 27)
+        Me.ToolStrip1.Size = New System.Drawing.Size(773, 30)
         Me.ToolStrip1.TabIndex = 7
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -68,49 +70,49 @@ Partial Class FrmHorarios
         Me.addHor.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_new_window_30
         Me.addHor.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.addHor.Name = "addHor"
-        Me.addHor.Size = New System.Drawing.Size(73, 24)
+        Me.addHor.Size = New System.Drawing.Size(87, 27)
         Me.addHor.Text = "Agregar"
         Me.addHor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 30)
         '
         'btnEliminarHor
         '
         Me.btnEliminarHor.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_delete_24
         Me.btnEliminarHor.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnEliminarHor.Name = "btnEliminarHor"
-        Me.btnEliminarHor.Size = New System.Drawing.Size(74, 24)
+        Me.btnEliminarHor.Size = New System.Drawing.Size(87, 27)
         Me.btnEliminarHor.Text = "Eliminar"
         Me.btnEliminarHor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 30)
         '
         'modHor
         '
         Me.modHor.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_edit_production_order_32
         Me.modHor.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.modHor.Name = "modHor"
-        Me.modHor.Size = New System.Drawing.Size(82, 24)
+        Me.modHor.Size = New System.Drawing.Size(97, 27)
         Me.modHor.Text = "Modificar"
         Me.modHor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 30)
         '
         'searchHor
         '
         Me.searchHor.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_search_24
         Me.searchHor.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.searchHor.Name = "searchHor"
-        Me.searchHor.Size = New System.Drawing.Size(66, 24)
+        Me.searchHor.Size = New System.Drawing.Size(76, 27)
         Me.searchHor.Text = "Buscar"
         Me.searchHor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
@@ -119,16 +121,16 @@ Partial Class FrmHorarios
         Me.tbBuscar.AutoSize = False
         Me.tbBuscar.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.tbBuscar.Name = "tbBuscar"
-        Me.tbBuscar.Size = New System.Drawing.Size(151, 25)
+        Me.tbBuscar.Size = New System.Drawing.Size(200, 30)
         '
         'gbHorario
         '
         Me.gbHorario.Controls.Add(Me.Panel1)
-        Me.gbHorario.Location = New System.Drawing.Point(16, 42)
-        Me.gbHorario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.gbHorario.Location = New System.Drawing.Point(21, 52)
+        Me.gbHorario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.gbHorario.Name = "gbHorario"
-        Me.gbHorario.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.gbHorario.Size = New System.Drawing.Size(542, 248)
+        Me.gbHorario.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.gbHorario.Size = New System.Drawing.Size(723, 305)
         Me.gbHorario.TabIndex = 8
         Me.gbHorario.TabStop = False
         Me.gbHorario.Text = "Horarios"
@@ -136,10 +138,10 @@ Partial Class FrmHorarios
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.dgvHorario)
-        Me.Panel1.Location = New System.Drawing.Point(0, 17)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Location = New System.Drawing.Point(0, 21)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(562, 283)
+        Me.Panel1.Size = New System.Drawing.Size(749, 348)
         Me.Panel1.TabIndex = 0
         '
         'dgvHorario
@@ -147,18 +149,19 @@ Partial Class FrmHorarios
         Me.dgvHorario.AllowUserToAddRows = False
         Me.dgvHorario.AllowUserToDeleteRows = False
         Me.dgvHorario.AutoGenerateColumns = False
+        Me.dgvHorario.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.dgvHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvHorario.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdHorarioDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.HoraEntradaDataGridViewTextBoxColumn, Me.HoraSalidaDataGridViewTextBoxColumn, Me.almuerzo})
         Me.dgvHorario.DataSource = Me.HorarioBindingSource
         Me.dgvHorario.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvHorario.Location = New System.Drawing.Point(0, 0)
-        Me.dgvHorario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvHorario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvHorario.Name = "dgvHorario"
         Me.dgvHorario.ReadOnly = True
         Me.dgvHorario.RowHeadersWidth = 51
         Me.dgvHorario.RowTemplate.Height = 24
         Me.dgvHorario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvHorario.Size = New System.Drawing.Size(562, 283)
+        Me.dgvHorario.Size = New System.Drawing.Size(749, 348)
         Me.dgvHorario.TabIndex = 0
         '
         'IdHorarioDataGridViewTextBoxColumn
@@ -227,12 +230,13 @@ Partial Class FrmHorarios
         '
         'FrmHorarios
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(580, 334)
+        Me.ClientSize = New System.Drawing.Size(773, 411)
         Me.Controls.Add(Me.gbHorario)
         Me.Controls.Add(Me.ToolStrip1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FrmHorarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Horarios de empleados"

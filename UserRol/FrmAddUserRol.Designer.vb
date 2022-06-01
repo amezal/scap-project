@@ -37,36 +37,40 @@ Partial Class FrmAddUserRol
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(149, 159)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(42, 17)
+        Me.Label1.Size = New System.Drawing.Size(59, 25)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "User:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(152, 216)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(149, 226)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(33, 17)
+        Me.Label2.Size = New System.Drawing.Size(46, 25)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Rol:"
         '
         'cbxUser
         '
+        Me.cbxUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbxUser.FormattingEnabled = True
         Me.cbxUser.Location = New System.Drawing.Point(289, 159)
         Me.cbxUser.Name = "cbxUser"
-        Me.cbxUser.Size = New System.Drawing.Size(315, 24)
-        Me.cbxUser.TabIndex = 3
+        Me.cbxUser.Size = New System.Drawing.Size(315, 33)
+        Me.cbxUser.TabIndex = 1
         '
         'cbxRol
         '
+        Me.cbxRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbxRol.FormattingEnabled = True
-        Me.cbxRol.Location = New System.Drawing.Point(289, 207)
+        Me.cbxRol.Location = New System.Drawing.Point(289, 226)
         Me.cbxRol.Name = "cbxRol"
-        Me.cbxRol.Size = New System.Drawing.Size(315, 24)
-        Me.cbxRol.TabIndex = 4
+        Me.cbxRol.Size = New System.Drawing.Size(315, 33)
+        Me.cbxRol.TabIndex = 2
         '
         'ToolStrip1
         '
@@ -113,7 +117,7 @@ Partial Class FrmAddUserRol
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmAddUserRol"
-        Me.Text = "Añadir UserRol"
+        Me.Text = "Añadir Usuario-Rol"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)

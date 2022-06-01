@@ -36,35 +36,39 @@ Partial Class FrmModUserRol
         '
         'cbxRol
         '
+        Me.cbxRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbxRol.FormattingEnabled = True
         Me.cbxRol.Location = New System.Drawing.Point(313, 236)
         Me.cbxRol.Name = "cbxRol"
-        Me.cbxRol.Size = New System.Drawing.Size(315, 24)
-        Me.cbxRol.TabIndex = 8
+        Me.cbxRol.Size = New System.Drawing.Size(315, 33)
+        Me.cbxRol.TabIndex = 2
         '
         'cbxUser
         '
+        Me.cbxUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbxUser.FormattingEnabled = True
-        Me.cbxUser.Location = New System.Drawing.Point(313, 188)
+        Me.cbxUser.Location = New System.Drawing.Point(313, 178)
         Me.cbxUser.Name = "cbxUser"
-        Me.cbxUser.Size = New System.Drawing.Size(315, 24)
-        Me.cbxUser.TabIndex = 7
+        Me.cbxUser.Size = New System.Drawing.Size(315, 33)
+        Me.cbxUser.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(176, 245)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(33, 17)
+        Me.Label2.Size = New System.Drawing.Size(46, 25)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Rol:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(173, 188)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(174, 178)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(42, 17)
+        Me.Label1.Size = New System.Drawing.Size(59, 25)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "User:"
         '
@@ -74,7 +78,7 @@ Partial Class FrmModUserRol
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnGuardar, Me.ToolStripSeparator1, Me.btnCancelar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(800, 27)
+        Me.ToolStrip1.Size = New System.Drawing.Size(800, 31)
         Me.ToolStrip1.TabIndex = 9
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -83,21 +87,21 @@ Partial Class FrmModUserRol
         Me.btnGuardar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
         Me.btnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(86, 24)
+        Me.btnGuardar.Size = New System.Drawing.Size(86, 28)
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 31)
         '
         'btnCancelar
         '
         Me.btnCancelar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_cancel_50
         Me.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(90, 24)
+        Me.btnCancelar.Size = New System.Drawing.Size(90, 28)
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
@@ -113,7 +117,7 @@ Partial Class FrmModUserRol
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmModUserRol"
-        Me.Text = "Modificar UserRol"
+        Me.Text = "Modificar Usuario-Rol"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
