@@ -23,8 +23,8 @@ Partial Class FrmAddRol
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BtnCancelar = New System.Windows.Forms.ToolStripButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtRol = New System.Windows.Forms.TextBox()
@@ -40,11 +40,6 @@ Partial Class FrmAddRol
         Me.ToolStrip1.TabIndex = 30
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
         'BtnGuardar
         '
         Me.BtnGuardar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
@@ -53,6 +48,11 @@ Partial Class FrmAddRol
         Me.BtnGuardar.Size = New System.Drawing.Size(69, 22)
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'BtnCancelar
         '

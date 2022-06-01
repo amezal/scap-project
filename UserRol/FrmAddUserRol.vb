@@ -18,8 +18,8 @@
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
 
         Try
-            Dim idRol As Integer = CInt(cbxRol.SelectedValue)
-            Dim idUser As Integer = CInt(cbxUser.SelectedValue)
+            Dim idRol As Integer = cbxRol.SelectedValue
+            Dim idUser As Integer = cbxUser.SelectedValue
             regUR.InsertUserRol(idRol, idUser)
             MsgBox("UserRol añadido", MsgBoxStyle.Information, "Éxito")
             Me.Close()

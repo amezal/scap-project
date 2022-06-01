@@ -289,6 +289,8 @@
       <DependentUpon>FrmRol.vb</DependentUpon>
     </Compile>
     <Compile Include="Roles\FrmRol.vb">
+    <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UserRol\FrmAddUserRol.Designer.vb">
       <DependentUpon>FrmAddUserRol.vb</DependentUpon>
     </Compile>
@@ -404,6 +406,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Roles\FrmRol.resx">
       <DependentUpon>FrmRol.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserRol\FrmAddUserRol.resx">
       <DependentUpon>FrmAddUserRol.vb</DependentUpon>
     </EmbeddedResource>

@@ -29,6 +29,7 @@ Partial Class FrmConfig
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.userRol = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -69,10 +70,10 @@ Partial Class FrmConfig
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(12, 311)
+        Me.Button3.Location = New System.Drawing.Point(12, 386)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(110, 23)
-        Me.Button3.TabIndex = 7
+        Me.Button3.TabIndex = 8
         Me.Button3.Text = "Regresar"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -94,19 +95,29 @@ Partial Class FrmConfig
         Me.Button5.Text = "Opciones"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'userRol
+        '
+        Me.userRol.Location = New System.Drawing.Point(101, 289)
+        Me.userRol.Name = "userRol"
+        Me.userRol.Size = New System.Drawing.Size(180, 23)
+        Me.userRol.TabIndex = 7
+        Me.userRol.Text = "Usuario Rol"
+        Me.userRol.UseVisualStyleBackColor = True
+        '
         'FrmConfig
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(382, 375)
+        Me.ClientSize = New System.Drawing.Size(382, 421)
         Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.userRol)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmConfig"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmConfig"
@@ -121,4 +132,5 @@ Partial Class FrmConfig
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents userRol As Button
 End Class

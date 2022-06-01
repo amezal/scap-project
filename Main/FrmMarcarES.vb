@@ -60,4 +60,9 @@
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
         End Try
     End Sub
+
+    Private Sub btnRegresar_Click(sender As Object, e As EventArgs) Handles btnRegresar.Click
+        FrmLoginEmpleado.Show()
+        Me.Hide()
+    End Sub
 End Class

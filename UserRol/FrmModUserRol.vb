@@ -37,11 +37,11 @@
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        Dim idrol As Integer = CInt(cbxRol.SelectedValue)
-        Dim idUser As Integer = CInt(cbxUser.SelectedValue)
+        Dim idrol As Integer = cbxRol.SelectedValue
+        Dim idUser As Integer = cbxUser.SelectedValue
         regUR.UpdateUserRol(idrol, idUser, idUserRol)
         MsgBox("UserRol modificado", MsgBoxStyle.Information, "Éxito")
         Me.Close()
-        FrmCargo.llenarGrid()
+        FrmUserRol.llenarGrid()
     End Sub
 End Class
