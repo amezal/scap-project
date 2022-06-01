@@ -3,6 +3,8 @@
     Dim Dpto As New LMBADataSetTableAdapters.DepartamentoTableAdapter
     Dim idDpto As New Int32
     Dim nombreDpto As String
+    Dim ext As String
+    Dim email As String
 
     Sub llenarGrid()
         dgvDpto.DataSource = Dpto.GetData
@@ -42,10 +44,17 @@
         Dim id = Dpto.Cells(0).Value
         idDpto = id
         nombreDpto = Dpto.Cells(1).Value
+        ext = Dpto.Cells(2).Value
+        email = Dpto.Cells(3).Value
+
 
     End Sub
 
     Private Sub modDpto_Click(sender As Object, e As EventArgs) Handles modDpto.Click
+        FrmModDpto.idDpto = idDpto
+        FrmModDpto.nombreDpto = nombreDpto
+        FrmModDpto.ext = ext
+        FrmModDpto.email = email
         FrmModDpto.Show()
     End Sub
     Private Sub btnEliminarDpto_Click(sender As Object, e As EventArgs) Handles btnEliminarDpto.Click
