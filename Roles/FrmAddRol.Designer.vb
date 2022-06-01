@@ -26,6 +26,8 @@ Partial Class FrmAddRol
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
         Me.BtnCancelar = New System.Windows.Forms.ToolStripButton()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtRol = New System.Windows.Forms.TextBox()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -34,7 +36,7 @@ Partial Class FrmAddRol
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar, Me.ToolStripSeparator1, Me.BtnCancelar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(614, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(432, 25)
         Me.ToolStrip1.TabIndex = 30
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -61,11 +63,29 @@ Partial Class FrmAddRol
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(80, 102)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(26, 13)
+        Me.Label1.TabIndex = 31
+        Me.Label1.Text = "Rol:"
+        '
+        'txtRol
+        '
+        Me.txtRol.Location = New System.Drawing.Point(138, 99)
+        Me.txtRol.Name = "txtRol"
+        Me.txtRol.Size = New System.Drawing.Size(184, 20)
+        Me.txtRol.TabIndex = 32
+        '
         'FrmAddRol
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(614, 450)
+        Me.ClientSize = New System.Drawing.Size(432, 273)
+        Me.Controls.Add(Me.txtRol)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "FrmAddRol"
         Me.Text = "FrmAddRol"
@@ -80,4 +100,6 @@ Partial Class FrmAddRol
     Friend WithEvents BtnGuardar As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents BtnCancelar As ToolStripButton
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtRol As TextBox
 End Class

@@ -518,6 +518,7 @@ Partial Class FrmAddEmp
         Me.Controls.Add(Me.Label0)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "FrmAddEmp"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmAddEmp"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()

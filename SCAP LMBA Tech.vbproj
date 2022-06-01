@@ -380,6 +380,9 @@
     <EmbeddedResource Include="RegistrosES\FrmRegistros.resx">
       <DependentUpon>FrmRegistros.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Roles\FrmAddRol.resx">
+      <DependentUpon>FrmAddRol.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Roles\FrmModRol.resx">
       <DependentUpon>FrmModRol.vb</DependentUpon>
     </EmbeddedResource>

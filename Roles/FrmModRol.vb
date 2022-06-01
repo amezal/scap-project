@@ -27,10 +27,9 @@
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        Dim existe As Boolean = False
         Dim id As Int32 = Convert.ToInt32(cbxOpcion.SelectedValue)
         Dim nombre As String = cbxOpcion.Text
-        Dim dt = DsRolOpcion.ListarRolOpcion(idRol)
+        Dim dt = DgvOpcion.DataSource 'DsRolOpcion.ListarRolOpcion(idRol)
         Dim row As DataRow = dt.NewRow()
         row.Item(1) = id
         row.Item(2) = idRol
@@ -41,6 +40,11 @@
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Dim guardado As Boolean = False
+        Dim valido As Boolean = Validar()
+
+        If Not valido Then
+            Return
+        End If
 
         Try
             guardado = DsRol.ModificarRol(txtRol.Text, idRol) > 0
@@ -54,6 +58,7 @@
 
             If (guardado) Then
                 MsgBox("Rol modificado correctamente", MsgBoxStyle.MsgBoxRight, "Éxito")
+                FrmRol.Actualizar()
             End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "Error")
@@ -70,4 +75,19 @@
             End If
         Next
     End Sub
+
+    Private Function Validar() As Boolean
+        If (String.IsNullOrEmpty(txtRol.Text)) Then
+            MsgBox("No puede quedar vacío el rol", MsgBoxStyle.Critical, "ERROR")
+            txtRol.Focus()
+            Return False
+        End If
+        Dim existe As Boolean = DsRol.GetData.Select($"rol='{txtRol.Text}' AND id_rol <> {txtID.Text}").Count > 0
+        If (existe) Then
+            MsgBox("Ya existe ese rol", MsgBoxStyle.Critical, "ERROR")
+            txtRol.Focus()
+            Return False
+        End If
+        Return True
+    End Function
 End Class
