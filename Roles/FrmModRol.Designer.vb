@@ -23,10 +23,10 @@ Partial Class FrmModRol
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnGuardar = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.BtnCancelar = New System.Windows.Forms.ToolStripButton()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtID = New System.Windows.Forms.TextBox()
@@ -48,20 +48,6 @@ Partial Class FrmModRol
         Me.ToolStrip1.TabIndex = 30
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(57, 75)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(21, 13)
-        Me.Label1.TabIndex = 31
-        Me.Label1.Text = "ID:"
-        '
         'BtnGuardar
         '
         Me.BtnGuardar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
@@ -71,6 +57,11 @@ Partial Class FrmModRol
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
         'BtnCancelar
         '
         Me.BtnCancelar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_cancel_50
@@ -79,6 +70,15 @@ Partial Class FrmModRol
         Me.BtnCancelar.Size = New System.Drawing.Size(73, 22)
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(57, 75)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(21, 13)
+        Me.Label1.TabIndex = 31
+        Me.Label1.Text = "ID:"
         '
         'Label2
         '
@@ -141,9 +141,13 @@ Partial Class FrmModRol
         '
         'DgvOpcion
         '
+        Me.DgvOpcion.AllowUserToAddRows = False
+        Me.DgvOpcion.AllowUserToDeleteRows = False
         Me.DgvOpcion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvOpcion.Location = New System.Drawing.Point(328, 28)
         Me.DgvOpcion.Name = "DgvOpcion"
+        Me.DgvOpcion.ReadOnly = True
+        Me.DgvOpcion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DgvOpcion.Size = New System.Drawing.Size(184, 268)
         Me.DgvOpcion.TabIndex = 39
         '

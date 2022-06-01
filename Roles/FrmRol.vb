@@ -2,6 +2,7 @@
     Dim query As String = "%"
     Dim rolActual As Integer
     Dim roldgv As New LMBADataSetTableAdapters.tbl_rolDgvTableAdapter
+    Dim DsRol As New LMBADataSetTableAdapters.tbl_rolTableAdapter
 
     Private Sub FrmRol_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ListarRoles()
@@ -38,5 +39,25 @@
     Private Sub BtnMod_Click(sender As Object, e As EventArgs) Handles BtnMod.Click
         FrmModRol.idRol = rolActual
         FrmModRol.Show()
+    End Sub
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+
+        Try
+            Dim delete = MsgBox("¿Seguro que desea eliminar este rol?", MsgBoxStyle.YesNo, "Eliminar")
+
+            If (delete = delete.Yes) Then
+                DsRol.Eliminar(rolActual)
+                MsgBox("Rol eliminado con éxito", MsgBoxStyle.Information, "Eliminar")
+                Me.ListarRoles()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Information, "Eliminar")
+        End Try
+
+    End Sub
+
+    Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles BtnAgregar.Click
+
     End Sub
 End Class
