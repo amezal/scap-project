@@ -270,6 +270,27 @@
     <Compile Include="RegistrosES\FrmRegistros.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\Datasets\LMBADataSet.vb">
+      <DependentUpon>LMBADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\FrmAddRol.Designer.vb">
+      <DependentUpon>FrmAddRol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\FrmAddRol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Roles\FrmModRol.Designer.vb">
+      <DependentUpon>FrmModRol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\FrmModRol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Roles\FrmRol.Designer.vb">
+      <DependentUpon>FrmRol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Roles\FrmRol.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="adminPwd\FrmAddPwd.resx">
@@ -358,6 +379,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrosES\FrmRegistros.resx">
       <DependentUpon>FrmRegistros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Roles\FrmModRol.resx">
+      <DependentUpon>FrmModRol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Roles\FrmRol.resx">
+      <DependentUpon>FrmRol.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
