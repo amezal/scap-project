@@ -83,7 +83,7 @@
             idUser
             )
 
-        MsgBox("Empleado modificado", MsgBoxStyle.Information, "Éxito")
+        MsgBox("Usuario modificado", MsgBoxStyle.Information, "Éxito")
         Me.Close()
         FrmPwd.llenarGrid()
     End Sub

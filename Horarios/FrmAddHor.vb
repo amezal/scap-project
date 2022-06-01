@@ -8,6 +8,8 @@
         Dim horFin = TimeSpan.Parse(txtHorIn.Text.Trim).ToString
         Dim horAl = TimeSpan.Parse(txtAlmuerzo.Text.Trim).ToString
         hor.InsertHorario(nombreHor, horIn, horFin, horAl)
+        MsgBox("Horario añadido", MsgBoxStyle.Information, "Éxito")
+        Me.Close()
         FrmHorarios.llenarGrid()
         txtNombre.Text = ""
         txtHorFin.Clear()
