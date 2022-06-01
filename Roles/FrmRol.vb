@@ -1,7 +1,7 @@
 ﻿Public Class FrmRol
     Dim query As String = "%"
     Dim rolActual As Integer
-    Dim roldgv As New LMBADataSetTableAdapters.tbl_rolDgv
+    Dim roldgv As New LMBADataSetTableAdapters.tbl_rolDgvTableAdapter
 
     Private Sub FrmRol_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ListarRoles()
