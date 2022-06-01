@@ -25,62 +25,66 @@ Partial Class FrmMenuAdmin
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ControlText
-        Me.Button1.ForeColor = System.Drawing.Color.Cornsilk
-        Me.Button1.Location = New System.Drawing.Point(132, 83)
+        Me.Button1.Location = New System.Drawing.Point(99, 50)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(240, 34)
-        Me.Button1.TabIndex = 14
-        Me.Button1.Text = "EMPLEADOS"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Button1.Size = New System.Drawing.Size(180, 23)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Empleados"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.ControlText
-        Me.Button2.ForeColor = System.Drawing.Color.Cornsilk
-        Me.Button2.Location = New System.Drawing.Point(132, 164)
+        Me.Button2.Location = New System.Drawing.Point(99, 103)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(240, 34)
-        Me.Button2.TabIndex = 15
-        Me.Button2.Text = "REGISTROS"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.Button2.Size = New System.Drawing.Size(180, 23)
+        Me.Button2.TabIndex = 18
+        Me.Button2.Text = "Registros"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.ControlText
-        Me.Button3.ForeColor = System.Drawing.Color.Cornsilk
-        Me.Button3.Location = New System.Drawing.Point(132, 242)
+        Me.Button3.Location = New System.Drawing.Point(99, 154)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(240, 34)
-        Me.Button3.TabIndex = 16
-        Me.Button3.Text = "GENERAR REPORTES"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.Button3.Size = New System.Drawing.Size(180, 23)
+        Me.Button3.TabIndex = 18
+        Me.Button3.Text = "Generar reportes"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(12, 291)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(110, 23)
+        Me.Button5.TabIndex = 18
+        Me.Button5.Text = "Regresar"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.BackColor = System.Drawing.SystemColors.ControlText
-        Me.Button4.ForeColor = System.Drawing.Color.Cornsilk
-        Me.Button4.Location = New System.Drawing.Point(12, 367)
+        Me.Button4.Location = New System.Drawing.Point(99, 204)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(147, 34)
-        Me.Button4.TabIndex = 17
-        Me.Button4.Text = "REGRESAR"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.Button4.Size = New System.Drawing.Size(180, 23)
+        Me.Button4.TabIndex = 18
+        Me.Button4.Text = "Configuración"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'FrmMenuAdmin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(509, 413)
+        Me.ClientSize = New System.Drawing.Size(382, 326)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmMenuAdmin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmMenuAdmin"
@@ -91,5 +95,6 @@ Partial Class FrmMenuAdmin
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
 End Class

@@ -285,7 +285,7 @@ Partial Class FrmAddPwd
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FrmAddPwd"
-        Me.Text = "Añadir Contraseña"
+        Me.Text = "Añadir Usuario"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
