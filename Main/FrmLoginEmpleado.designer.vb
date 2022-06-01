@@ -22,83 +22,80 @@ Partial Class FrmLoginEmpleado
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.txtPIN = New System.Windows.Forms.TextBox()
+        Me.cbxEmp = New System.Windows.Forms.ComboBox()
+        Me.btnIngresar = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Label1
+        'txtPIN
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(115, 68)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(88, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "EMPLEADO:"
+        Me.txtPIN.Location = New System.Drawing.Point(88, 147)
+        Me.txtPIN.Name = "txtPIN"
+        Me.txtPIN.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPIN.Size = New System.Drawing.Size(197, 20)
+        Me.txtPIN.TabIndex = 2
         '
-        'Button3
+        'cbxEmp
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.ControlText
-        Me.Button3.ForeColor = System.Drawing.Color.Cornsilk
-        Me.Button3.Location = New System.Drawing.Point(295, 323)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(147, 34)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "INGRESAR"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.cbxEmp.FormattingEnabled = True
+        Me.cbxEmp.Location = New System.Drawing.Point(88, 73)
+        Me.cbxEmp.Name = "cbxEmp"
+        Me.cbxEmp.Size = New System.Drawing.Size(197, 21)
+        Me.cbxEmp.TabIndex = 1
         '
-        'ComboBox1
+        'btnIngresar
         '
-        Me.ComboBox1.BackColor = System.Drawing.Color.Silver
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(115, 100)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(272, 28)
-        Me.ComboBox1.TabIndex = 4
+        Me.btnIngresar.Location = New System.Drawing.Point(278, 204)
+        Me.btnIngresar.Name = "btnIngresar"
+        Me.btnIngresar.Size = New System.Drawing.Size(75, 23)
+        Me.btnIngresar.TabIndex = 4
+        Me.btnIngresar.Text = "Ingresar"
+        Me.btnIngresar.UseVisualStyleBackColor = True
         '
-        'ComboBox2
+        'btnSalir
         '
-        Me.ComboBox2.BackColor = System.Drawing.Color.Silver
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(115, 213)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(272, 28)
-        Me.ComboBox2.TabIndex = 6
+        Me.btnSalir.Location = New System.Drawing.Point(29, 204)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
+        Me.btnSalir.TabIndex = 3
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(85, 116)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(28, 13)
+        Me.Label3.TabIndex = 20
+        Me.Label3.Text = "PIN:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(115, 181)
+        Me.Label2.Location = New System.Drawing.Point(85, 42)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(35, 20)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "PIN:"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ControlText
-        Me.Button1.ForeColor = System.Drawing.Color.Cornsilk
-        Me.Button1.Location = New System.Drawing.Point(63, 323)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(147, 34)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "SALIR"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Label2.Size = New System.Drawing.Size(57, 13)
+        Me.Label2.TabIndex = 19
+        Me.Label2.Text = "Empleado:"
         '
         'FrmLoginEmpleado
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(509, 413)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.ClientSize = New System.Drawing.Size(382, 268)
+        Me.Controls.Add(Me.txtPIN)
+        Me.Controls.Add(Me.cbxEmp)
+        Me.Controls.Add(Me.btnIngresar)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmLoginEmpleado"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmLoginEmplado"
@@ -107,10 +104,10 @@ Partial Class FrmLoginEmpleado
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Button3 As Button
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents txtPIN As TextBox
+    Friend WithEvents cbxEmp As ComboBox
+    Friend WithEvents btnIngresar As Button
+    Friend WithEvents btnSalir As Button
+    Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
 End Class

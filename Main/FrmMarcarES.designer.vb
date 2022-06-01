@@ -38,9 +38,9 @@ Partial Class FrmMarcarES
         Me.labelBienvenida.Location = New System.Drawing.Point(9, 6)
         Me.labelBienvenida.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.labelBienvenida.Name = "labelBienvenida"
-        Me.labelBienvenida.Size = New System.Drawing.Size(168, 15)
+        Me.labelBienvenida.Size = New System.Drawing.Size(90, 15)
         Me.labelBienvenida.TabIndex = 0
-        Me.labelBienvenida.Text = "*Mensaje de bienvenida*"
+        Me.labelBienvenida.Text = "Buenos dias!"
         '
         'reloj
         '
