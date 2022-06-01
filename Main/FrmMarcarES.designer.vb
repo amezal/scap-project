@@ -107,10 +107,18 @@ Partial Class FrmMarcarES
 
     End Sub
 
+<<<<<<< HEAD
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents TextBox1 As TextBox
+=======
     Friend WithEvents labelBienvenida As Label
     Friend WithEvents reloj As TextBox
     Friend WithEvents btnEntrada As Button
     Friend WithEvents btnSalida As Button
     Friend WithEvents btnRegresar As Button
     Friend WithEvents Timer1 As Timer
+>>>>>>> bc2a099e9a7ff2bc4ac405b85b03493a419f70ab
 End Class
