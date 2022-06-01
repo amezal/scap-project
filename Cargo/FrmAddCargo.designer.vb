@@ -60,10 +60,10 @@ Partial Class FrmAddCargo
         '
         Me.cbDto.FormattingEnabled = True
         Me.cbDto.Location = New System.Drawing.Point(280, 108)
-        Me.cbDto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.cbDto.Margin = New System.Windows.Forms.Padding(2)
         Me.cbDto.Name = "cbDto"
         Me.cbDto.Size = New System.Drawing.Size(146, 21)
-        Me.cbDto.TabIndex = 3
+        Me.cbDto.TabIndex = 1
         '
         'Label2
         '
@@ -79,10 +79,10 @@ Partial Class FrmAddCargo
         'txtCargo
         '
         Me.txtCargo.Location = New System.Drawing.Point(280, 171)
-        Me.txtCargo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCargo.Margin = New System.Windows.Forms.Padding(2)
         Me.txtCargo.Name = "txtCargo"
         Me.txtCargo.Size = New System.Drawing.Size(146, 20)
-        Me.txtCargo.TabIndex = 5
+        Me.txtCargo.TabIndex = 2
         '
         'ToolStrip1
         '
@@ -124,10 +124,10 @@ Partial Class FrmAddCargo
         'txtDesc
         '
         Me.txtDesc.Location = New System.Drawing.Point(280, 233)
-        Me.txtDesc.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtDesc.Margin = New System.Windows.Forms.Padding(2)
         Me.txtDesc.Name = "txtDesc"
         Me.txtDesc.Size = New System.Drawing.Size(146, 20)
-        Me.txtDesc.TabIndex = 9
+        Me.txtDesc.TabIndex = 2
         '
         'Label3
         '
@@ -171,7 +171,7 @@ Partial Class FrmAddCargo
         Me.Controls.Add(Me.cbDto)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmAddCargo"
         Me.Text = "Añadir Cargo"
         Me.ToolStrip1.ResumeLayout(False)
