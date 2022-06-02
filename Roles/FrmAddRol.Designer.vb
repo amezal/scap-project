@@ -88,7 +88,7 @@ Partial Class FrmAddRol
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "FrmAddRol"
-        Me.Text = "FrmAddRol"
+        Me.Text = "Agregar Rol"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)

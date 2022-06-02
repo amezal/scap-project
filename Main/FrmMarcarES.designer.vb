@@ -23,6 +23,7 @@ Partial Class FrmMarcarES
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMarcarES))
         Me.labelBienvenida = New System.Windows.Forms.Label()
         Me.reloj = New System.Windows.Forms.TextBox()
         Me.btnEntrada = New System.Windows.Forms.Button()
@@ -98,10 +99,11 @@ Partial Class FrmMarcarES
         Me.Controls.Add(Me.btnEntrada)
         Me.Controls.Add(Me.reloj)
         Me.Controls.Add(Me.labelBienvenida)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmMarcarES"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmMarcarES"
+        Me.Text = "Marcar Entrada y Salida"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

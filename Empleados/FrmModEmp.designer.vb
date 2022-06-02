@@ -22,6 +22,7 @@ Partial Class FrmModEmp
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmModEmp))
         Me.TxtEmailCorp = New System.Windows.Forms.TextBox()
         Me.TxtTelefono = New System.Windows.Forms.TextBox()
         Me.CbxDpto = New System.Windows.Forms.ComboBox()
@@ -514,9 +515,10 @@ Partial Class FrmModEmp
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label0)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmModEmp"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmModEmp"
+        Me.Text = "Modificar Empleado"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)
