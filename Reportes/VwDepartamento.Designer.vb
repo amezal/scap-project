@@ -22,18 +22,42 @@ Partial Class VwDepartamento
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
+        Me.DepartamentoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LMBADataSet = New SCAP_LMBA_Tech.LMBADataSet()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.DepartamentoTableAdapter = New SCAP_LMBA_Tech.LMBADataSetTableAdapters.DepartamentoTableAdapter()
+        CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'DepartamentoBindingSource
+        '
+        Me.DepartamentoBindingSource.DataMember = "Departamento"
+        Me.DepartamentoBindingSource.DataSource = Me.LMBADataSet
+        '
+        'LMBADataSet
+        '
+        Me.LMBADataSet.DataSetName = "LMBADataSet"
+        Me.LMBADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource1.Name = "dtDepartamento"
+        ReportDataSource1.Value = Me.DepartamentoBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "SCAP_LMBA_Tech.rptDepartamento.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
         Me.ReportViewer1.Size = New System.Drawing.Size(800, 450)
         Me.ReportViewer1.TabIndex = 0
+        '
+        'DepartamentoTableAdapter
+        '
+        Me.DepartamentoTableAdapter.ClearBeforeFill = True
         '
         'VwDepartamento
         '
@@ -42,10 +66,16 @@ Partial Class VwDepartamento
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "VwDepartamento"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "VwDepartamento"
+        CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
+    Friend WithEvents LMBADataSet As LMBADataSet
+    Friend WithEvents DepartamentoBindingSource As BindingSource
+    Friend WithEvents DepartamentoTableAdapter As LMBADataSetTableAdapters.DepartamentoTableAdapter
 End Class

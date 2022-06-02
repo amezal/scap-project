@@ -291,6 +291,12 @@
     <Compile Include="Reportes\VwEmpleados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\VwRegistrosvb.Designer.vb">
+      <DependentUpon>VwRegistrosvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VwRegistrosvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Roles\FrmAddRol.Designer.vb">
       <DependentUpon>FrmAddRol.vb</DependentUpon>
     </Compile>
@@ -307,7 +313,7 @@
       <DependentUpon>FrmRol.vb</DependentUpon>
     </Compile>
     <Compile Include="Roles\FrmRol.vb">
-    <SubType>Form</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserRol\FrmAddUserRol.Designer.vb">
       <DependentUpon>FrmAddUserRol.vb</DependentUpon>
@@ -419,6 +425,7 @@
     <EmbeddedResource Include="Reportes\rptCargo.rdlc" />
     <EmbeddedResource Include="Reportes\rptDepartamento.rdlc" />
     <EmbeddedResource Include="Reportes\rptEmpleados.rdlc" />
+    <EmbeddedResource Include="Reportes\rptRegistros.rdlc" />
     <EmbeddedResource Include="Reportes\VwCargo.resx">
       <DependentUpon>VwCargo.vb</DependentUpon>
     </EmbeddedResource>
@@ -427,7 +434,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\VwEmpleados.resx">
       <DependentUpon>VwEmpleados.vb</DependentUpon>
-      </EmbeddedResource>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\VwRegistrosvb.resx">
+      <DependentUpon>VwRegistrosvb.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Roles\FrmAddRol.resx">
       <DependentUpon>FrmAddRol.vb</DependentUpon>
     </EmbeddedResource>

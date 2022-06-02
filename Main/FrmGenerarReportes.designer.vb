@@ -26,12 +26,13 @@ Partial Class FrmGenerarReportes
         Me.btnVwCargo = New System.Windows.Forms.Button()
         Me.btnVwDepartamento = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnVwRegistros = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnVwEmpleado
         '
         Me.btnVwEmpleado.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.btnVwEmpleado.Location = New System.Drawing.Point(95, 100)
+        Me.btnVwEmpleado.Location = New System.Drawing.Point(92, 55)
         Me.btnVwEmpleado.Margin = New System.Windows.Forms.Padding(4)
         Me.btnVwEmpleado.Name = "btnVwEmpleado"
         Me.btnVwEmpleado.Size = New System.Drawing.Size(317, 46)
@@ -42,7 +43,7 @@ Partial Class FrmGenerarReportes
         'btnVwCargo
         '
         Me.btnVwCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.btnVwCargo.Location = New System.Drawing.Point(95, 192)
+        Me.btnVwCargo.Location = New System.Drawing.Point(92, 147)
         Me.btnVwCargo.Margin = New System.Windows.Forms.Padding(4)
         Me.btnVwCargo.Name = "btnVwCargo"
         Me.btnVwCargo.Size = New System.Drawing.Size(317, 46)
@@ -53,7 +54,7 @@ Partial Class FrmGenerarReportes
         'btnVwDepartamento
         '
         Me.btnVwDepartamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.btnVwDepartamento.Location = New System.Drawing.Point(95, 282)
+        Me.btnVwDepartamento.Location = New System.Drawing.Point(92, 237)
         Me.btnVwDepartamento.Margin = New System.Windows.Forms.Padding(4)
         Me.btnVwDepartamento.Name = "btnVwDepartamento"
         Me.btnVwDepartamento.Size = New System.Drawing.Size(317, 46)
@@ -72,17 +73,30 @@ Partial Class FrmGenerarReportes
         Me.Button1.Text = "Regresar"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'btnVwRegistros
+        '
+        Me.btnVwRegistros.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.btnVwRegistros.Location = New System.Drawing.Point(92, 322)
+        Me.btnVwRegistros.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnVwRegistros.Name = "btnVwRegistros"
+        Me.btnVwRegistros.Size = New System.Drawing.Size(317, 46)
+        Me.btnVwRegistros.TabIndex = 27
+        Me.btnVwRegistros.Text = "Reporte Registros E/S"
+        Me.btnVwRegistros.UseVisualStyleBackColor = True
+        '
         'FrmGenerarReportes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(509, 481)
+        Me.Controls.Add(Me.btnVwRegistros)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnVwDepartamento)
         Me.Controls.Add(Me.btnVwCargo)
         Me.Controls.Add(Me.btnVwEmpleado)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FrmGenerarReportes"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmGenerarReportes"
         Me.ResumeLayout(False)
 
@@ -92,4 +106,5 @@ Partial Class FrmGenerarReportes
     Friend WithEvents btnVwCargo As Button
     Friend WithEvents btnVwDepartamento As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnVwRegistros As Button
 End Class
