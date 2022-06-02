@@ -97,7 +97,7 @@ Partial Class FrmGenerarReportes
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "FrmGenerarReportes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmGenerarReportes"
+        Me.Text = "Generar Reportes"
         Me.ResumeLayout(False)
 
     End Sub

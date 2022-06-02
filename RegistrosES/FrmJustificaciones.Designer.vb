@@ -41,10 +41,11 @@ Partial Class FrmJustificaciones
         '
         'ToolStrip1
         '
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnGuardar, Me.ToolStripSeparator1, Me.BtnCancelar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(774, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1032, 27)
         Me.ToolStrip1.TabIndex = 6
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -53,114 +54,124 @@ Partial Class FrmJustificaciones
         Me.BtnGuardar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_save_26
         Me.BtnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(69, 22)
+        Me.BtnGuardar.Size = New System.Drawing.Size(86, 24)
         Me.BtnGuardar.Text = "Guardar"
         Me.BtnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 27)
         '
         'BtnCancelar
         '
         Me.BtnCancelar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_cancel_50
         Me.BtnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(73, 22)
+        Me.BtnCancelar.Size = New System.Drawing.Size(90, 24)
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(51, 83)
+        Me.Label1.Location = New System.Drawing.Point(68, 102)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(68, 13)
+        Me.Label1.Size = New System.Drawing.Size(82, 16)
         Me.Label1.TabIndex = 14
         Me.Label1.Text = "Fecha Inicio:"
         '
         'DtpInicio
         '
-        Me.DtpInicio.Location = New System.Drawing.Point(141, 80)
+        Me.DtpInicio.Location = New System.Drawing.Point(188, 98)
+        Me.DtpInicio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DtpInicio.Name = "DtpInicio"
-        Me.DtpInicio.Size = New System.Drawing.Size(200, 20)
+        Me.DtpInicio.Size = New System.Drawing.Size(265, 22)
         Me.DtpInicio.TabIndex = 1
         '
         'DtpFin
         '
-        Me.DtpFin.Location = New System.Drawing.Point(494, 83)
+        Me.DtpFin.Location = New System.Drawing.Point(659, 102)
+        Me.DtpFin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DtpFin.Name = "DtpFin"
-        Me.DtpFin.Size = New System.Drawing.Size(200, 20)
+        Me.DtpFin.Size = New System.Drawing.Size(265, 22)
         Me.DtpFin.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(418, 86)
+        Me.Label2.Location = New System.Drawing.Point(557, 106)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 13)
+        Me.Label2.Size = New System.Drawing.Size(69, 16)
         Me.Label2.TabIndex = 16
         Me.Label2.Text = "Fecha Fin:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(58, 138)
+        Me.Label3.Location = New System.Drawing.Point(77, 170)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(61, 13)
+        Me.Label3.Size = New System.Drawing.Size(74, 16)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Hora Inicio:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(425, 138)
+        Me.Label4.Location = New System.Drawing.Point(567, 170)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(50, 13)
+        Me.Label4.Size = New System.Drawing.Size(61, 16)
         Me.Label4.TabIndex = 20
         Me.Label4.Text = "Hora Fin:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(54, 206)
+        Me.Label5.Location = New System.Drawing.Point(72, 254)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(68, 13)
+        Me.Label5.Size = New System.Drawing.Size(83, 16)
         Me.Label5.TabIndex = 22
         Me.Label5.Text = "Justificación:"
         '
         'TxtDesc
         '
-        Me.TxtDesc.Location = New System.Drawing.Point(141, 206)
+        Me.TxtDesc.Location = New System.Drawing.Point(188, 254)
+        Me.TxtDesc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtDesc.Multiline = True
         Me.TxtDesc.Name = "TxtDesc"
-        Me.TxtDesc.Size = New System.Drawing.Size(553, 138)
+        Me.TxtDesc.Size = New System.Drawing.Size(736, 169)
         Me.TxtDesc.TabIndex = 5
         '
         'TxtInicio
         '
         Me.TxtInicio.ForeColor = System.Drawing.Color.Gray
-        Me.TxtInicio.Location = New System.Drawing.Point(141, 138)
+        Me.TxtInicio.Location = New System.Drawing.Point(188, 170)
+        Me.TxtInicio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtInicio.Name = "TxtInicio"
-        Me.TxtInicio.Size = New System.Drawing.Size(200, 20)
+        Me.TxtInicio.Size = New System.Drawing.Size(265, 22)
         Me.TxtInicio.TabIndex = 3
         Me.TxtInicio.Text = "HH:MM:SS"
         '
         'TxtFin
         '
         Me.TxtFin.ForeColor = System.Drawing.Color.Gray
-        Me.TxtFin.Location = New System.Drawing.Point(494, 137)
+        Me.TxtFin.Location = New System.Drawing.Point(659, 169)
+        Me.TxtFin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TxtFin.Name = "TxtFin"
-        Me.TxtFin.Size = New System.Drawing.Size(200, 20)
+        Me.TxtFin.Size = New System.Drawing.Size(265, 22)
         Me.TxtFin.TabIndex = 4
         Me.TxtFin.Text = "HH:MM:SS"
         '
         'FrmJustificaciones
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(774, 385)
+        Me.ClientSize = New System.Drawing.Size(1032, 474)
         Me.Controls.Add(Me.TxtFin)
         Me.Controls.Add(Me.TxtInicio)
         Me.Controls.Add(Me.TxtDesc)
@@ -172,9 +183,10 @@ Partial Class FrmJustificaciones
         Me.Controls.Add(Me.DtpInicio)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmJustificaciones"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmJustificaciones"
+        Me.Text = "Justificaciones"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.ResumeLayout(False)

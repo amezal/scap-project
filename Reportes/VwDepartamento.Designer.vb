@@ -67,7 +67,7 @@ Partial Class VwDepartamento
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "VwDepartamento"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "VwDepartamento"
+        Me.Text = "Departamento"
         CType(Me.DepartamentoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

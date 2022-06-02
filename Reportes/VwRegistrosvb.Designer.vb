@@ -74,7 +74,7 @@ Partial Class VwRegistrosvb
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "VwRegistrosvb"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "VwRegistrosvb"
+        Me.Text = "Registros"
         CType(Me.RegistroESBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LMBADataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

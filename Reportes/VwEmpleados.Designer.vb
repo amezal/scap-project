@@ -74,7 +74,7 @@ Partial Class VwEmpleados
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "VwEmpleados"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "VwEmpleados"
+        Me.Text = "Empleados"
         CType(Me.EmpleadoBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmpleadoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
