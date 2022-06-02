@@ -40,10 +40,11 @@ Partial Class FrmRegistros
         '
         'ToolStrip1
         '
+        Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BtnJustificar, Me.ToolStripSeparator3, Me.BtnBuscar})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(868, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1157, 27)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -52,21 +53,21 @@ Partial Class FrmRegistros
         Me.BtnJustificar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_new_window_30
         Me.BtnJustificar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnJustificar.Name = "BtnJustificar"
-        Me.BtnJustificar.Size = New System.Drawing.Size(73, 22)
+        Me.BtnJustificar.Size = New System.Drawing.Size(90, 24)
         Me.BtnJustificar.Text = "Justificar"
         Me.BtnJustificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 27)
         '
         'BtnBuscar
         '
         Me.BtnBuscar.Image = Global.SCAP_LMBA_Tech.My.Resources.Resources.icons8_search_24
         Me.BtnBuscar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BtnBuscar.Name = "BtnBuscar"
-        Me.BtnBuscar.Size = New System.Drawing.Size(62, 22)
+        Me.BtnBuscar.Size = New System.Drawing.Size(76, 24)
         Me.BtnBuscar.Text = "Buscar"
         Me.BtnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
         '
@@ -75,44 +76,49 @@ Partial Class FrmRegistros
         Me.CbxBuscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.CbxBuscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CbxBuscar.FormattingEnabled = True
-        Me.CbxBuscar.Location = New System.Drawing.Point(157, 2)
+        Me.CbxBuscar.Location = New System.Drawing.Point(209, 2)
+        Me.CbxBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.CbxBuscar.Name = "CbxBuscar"
-        Me.CbxBuscar.Size = New System.Drawing.Size(299, 21)
+        Me.CbxBuscar.Size = New System.Drawing.Size(397, 24)
         Me.CbxBuscar.TabIndex = 5
         '
         'TxtID
         '
         Me.TxtID.AutoSize = True
-        Me.TxtID.Location = New System.Drawing.Point(12, 31)
+        Me.TxtID.Location = New System.Drawing.Point(16, 38)
+        Me.TxtID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TxtID.Name = "TxtID"
-        Me.TxtID.Size = New System.Drawing.Size(24, 13)
+        Me.TxtID.Size = New System.Drawing.Size(26, 16)
         Me.TxtID.TabIndex = 6
         Me.TxtID.Text = "ID: "
         '
         'TxtEmpleado
         '
         Me.TxtEmpleado.AutoSize = True
-        Me.TxtEmpleado.Location = New System.Drawing.Point(72, 31)
+        Me.TxtEmpleado.Location = New System.Drawing.Point(96, 38)
+        Me.TxtEmpleado.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TxtEmpleado.Name = "TxtEmpleado"
-        Me.TxtEmpleado.Size = New System.Drawing.Size(57, 13)
+        Me.TxtEmpleado.Size = New System.Drawing.Size(73, 16)
         Me.TxtEmpleado.TabIndex = 7
         Me.TxtEmpleado.Text = "Empleado:"
         '
         'TxtCargo
         '
         Me.TxtCargo.AutoSize = True
-        Me.TxtCargo.Location = New System.Drawing.Point(345, 31)
+        Me.TxtCargo.Location = New System.Drawing.Point(460, 38)
+        Me.TxtCargo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TxtCargo.Name = "TxtCargo"
-        Me.TxtCargo.Size = New System.Drawing.Size(41, 13)
+        Me.TxtCargo.Size = New System.Drawing.Size(50, 16)
         Me.TxtCargo.TabIndex = 8
         Me.TxtCargo.Text = "Cargo: "
         '
         'TxtDpto
         '
         Me.TxtDpto.AutoSize = True
-        Me.TxtDpto.Location = New System.Drawing.Point(517, 31)
+        Me.TxtDpto.Location = New System.Drawing.Point(689, 38)
+        Me.TxtDpto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.TxtDpto.Name = "TxtDpto"
-        Me.TxtDpto.Size = New System.Drawing.Size(77, 13)
+        Me.TxtDpto.Size = New System.Drawing.Size(96, 16)
         Me.TxtDpto.TabIndex = 9
         Me.TxtDpto.Text = "Departamento:"
         '
@@ -123,9 +129,10 @@ Partial Class FrmRegistros
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Panel1.Controls.Add(Me.DgvRegistros)
-        Me.Panel1.Location = New System.Drawing.Point(0, 57)
+        Me.Panel1.Location = New System.Drawing.Point(0, 70)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(868, 405)
+        Me.Panel1.Size = New System.Drawing.Size(1157, 498)
         Me.Panel1.TabIndex = 10
         '
         'DgvRegistros
@@ -135,16 +142,18 @@ Partial Class FrmRegistros
         Me.DgvRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvRegistros.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvRegistros.Location = New System.Drawing.Point(0, 0)
+        Me.DgvRegistros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DgvRegistros.Name = "DgvRegistros"
         Me.DgvRegistros.ReadOnly = True
-        Me.DgvRegistros.Size = New System.Drawing.Size(868, 405)
+        Me.DgvRegistros.RowHeadersWidth = 51
+        Me.DgvRegistros.Size = New System.Drawing.Size(1157, 498)
         Me.DgvRegistros.TabIndex = 0
         '
         'FrmRegistros
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(868, 460)
+        Me.ClientSize = New System.Drawing.Size(1157, 566)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TxtDpto)
         Me.Controls.Add(Me.TxtCargo)
@@ -152,9 +161,10 @@ Partial Class FrmRegistros
         Me.Controls.Add(Me.TxtID)
         Me.Controls.Add(Me.CbxBuscar)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmRegistros"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FrmRegistros"
+        Me.Text = "Registros"
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)

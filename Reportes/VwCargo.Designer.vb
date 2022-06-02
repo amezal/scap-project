@@ -67,7 +67,7 @@ Partial Class VwCargo
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "VwCargo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "VwCargo"
+        Me.Text = "Cargo"
         CType(Me.CargoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LMBADataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
